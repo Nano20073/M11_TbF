@@ -26,7 +26,7 @@ namespace M11_TbF
         {
             Username = textBox_UserName.ToString().Substring(36,textBox_UserName.TextLength);
             Password = textBox_PassWord.ToString().Substring(36, textBox_PassWord.TextLength);
-            User.Utilizadore_set(Username, Password);
+            User.Utilizador_set(Username, Password);
             
         }
 

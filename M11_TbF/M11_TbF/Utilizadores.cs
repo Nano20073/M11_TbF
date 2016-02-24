@@ -12,7 +12,7 @@ namespace M11_TbF
     class Utilizadores
     {
         private string Username_atual;
-        public void Utilizadore_set(string Username, string Password)
+        public void Utilizador_set(string Username, string Password)
         {
             // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
@@ -73,5 +73,14 @@ namespace M11_TbF
                 MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
+
+        public string Utilizador_get()
+        {
+            return Username_atual;
+        }
+
+
+
+    
     }
 }
