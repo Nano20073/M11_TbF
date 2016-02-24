@@ -28,29 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_escolher_utilizador = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label_UserName = new System.Windows.Forms.Label();
             this.label_PassWord = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_PassWord = new System.Windows.Forms.TextBox();
+            this.textBox_UserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label_escolher_utilizador
+            // label_UserName
             // 
-            this.label_escolher_utilizador.AutoSize = true;
-            this.label_escolher_utilizador.Location = new System.Drawing.Point(12, 9);
-            this.label_escolher_utilizador.Name = "label_escolher_utilizador";
-            this.label_escolher_utilizador.Size = new System.Drawing.Size(123, 13);
-            this.label_escolher_utilizador.TabIndex = 0;
-            this.label_escolher_utilizador.Text = "Escolha o seu Utilizador:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.label_UserName.AutoSize = true;
+            this.label_UserName.Location = new System.Drawing.Point(12, 9);
+            this.label_UserName.Name = "label_UserName";
+            this.label_UserName.Size = new System.Drawing.Size(60, 13);
+            this.label_UserName.TabIndex = 0;
+            this.label_UserName.Text = "UserName:";
             // 
             // label_PassWord
             // 
@@ -63,31 +55,38 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 40);
+            this.button1.Location = new System.Drawing.Point(200, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 51);
             this.button1.TabIndex = 3;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBox_PassWord
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBox_PassWord.Location = new System.Drawing.Point(77, 37);
+            this.textBox_PassWord.Name = "textBox_PassWord";
+            this.textBox_PassWord.Size = new System.Drawing.Size(100, 20);
+            this.textBox_PassWord.TabIndex = 4;
+            // 
+            // textBox_UserName
+            // 
+            this.textBox_UserName.Location = new System.Drawing.Point(77, 6);
+            this.textBox_UserName.Name = "textBox_UserName";
+            this.textBox_UserName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UserName.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 87);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_UserName);
+            this.Controls.Add(this.textBox_PassWord);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_PassWord);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label_escolher_utilizador);
+            this.Controls.Add(this.label_UserName);
             this.Name = "Form1";
             this.Text = "Quem quer ser milionário";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -98,11 +97,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_escolher_utilizador;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label_UserName;
         private System.Windows.Forms.Label label_PassWord;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_PassWord;
+        private System.Windows.Forms.TextBox textBox_UserName;
     }
 }
 
