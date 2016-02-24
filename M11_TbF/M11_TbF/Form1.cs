@@ -24,7 +24,7 @@ namespace M11_TbF
             // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
                 //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:\M11_TbF_DB.accdb;");
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
             // Prepare SQL query
             string query = "SELECT Perguntas.* FROM Perguntas;";
@@ -33,18 +33,17 @@ namespace M11_TbF
             try
             {
                 cn.Open();
-                Console.WriteLine("{0}: Successfully connected to database. Data source name:\n {1}"
-                    , cn.DataSource);
-                Console.WriteLine("{0}: SQL query:\n {1}", query);
+                MessageBox.Show("{Successfully connected to database. Data source name:" +  cn.DataSource);
+                MessageBox.Show("SQL query:\n {0}" + query);
 
                 // Run the query and create a record set
                 OleDbDataReader dr = cmd.ExecuteReader();
-                Console.WriteLine("{0}: Retrieve schema info for the given result set:");
+                MessageBox.Show("{0}: Retrieve schema info for the given result set:");
                 for (int column = 0; column < dr.FieldCount; column++)
                 {
-                    Console.Write(" | {0}", dr.GetName(column));
+                    MessageBox.Show(" | {0}", dr.GetName(column));
                 }
-                Console.WriteLine("\n{0}: Fetch the actual data: ");
+                MessageBox.Show("\n{0}: Fetch the actual data: ");
                 int row = 0;
                 while (dr.Read())
                 {
