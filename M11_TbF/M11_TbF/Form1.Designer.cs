@@ -164,7 +164,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label_escolher_utilizador);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Quem quer ser milionário";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

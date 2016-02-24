@@ -69,5 +69,10 @@ namespace M11_TbF
                 MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
