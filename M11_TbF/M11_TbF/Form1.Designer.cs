@@ -47,7 +47,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 34);
+            this.comboBox1.Location = new System.Drawing.Point(141, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
@@ -55,7 +55,7 @@
             // label_PassWord
             // 
             this.label_PassWord.AutoSize = true;
-            this.label_PassWord.Location = new System.Drawing.Point(149, 9);
+            this.label_PassWord.Location = new System.Drawing.Point(12, 40);
             this.label_PassWord.Name = "label_PassWord";
             this.label_PassWord.Size = new System.Drawing.Size(59, 13);
             this.label_PassWord.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(152, 34);
+            this.button1.Location = new System.Drawing.Point(204, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 6);
+            this.textBox1.Location = new System.Drawing.Point(77, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 74);
+            this.ClientSize = new System.Drawing.Size(309, 87);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_PassWord);
