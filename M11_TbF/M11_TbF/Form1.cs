@@ -42,6 +42,7 @@ namespace M11_TbF
         private void Form1_Load(object sender, EventArgs e)
         {
             User = new Utilizadores();
+
         }
     }
 }

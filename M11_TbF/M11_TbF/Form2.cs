@@ -12,9 +12,30 @@ namespace M11_TbF
 {
     public partial class Form2 : Form
     {
+        Utilizadores User;
+
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 F1 = new Form1();
+            F1.Show();
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            User = new Utilizadores();
+            label_utilizador.Text = User.Utilizador_get();
         }
     }
 }

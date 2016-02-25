@@ -32,11 +32,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label_utilizador = new System.Windows.Forms.Label();
+            this.button_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 63);
+            this.button1.Location = new System.Drawing.Point(68, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 27);
             this.button1.TabIndex = 0;
@@ -45,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(38, 28);
+            this.button2.Location = new System.Drawing.Point(68, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 29);
             this.button2.TabIndex = 1;
@@ -54,7 +56,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(38, 96);
+            this.button3.Location = new System.Drawing.Point(68, 136);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 25);
             this.button3.TabIndex = 2;
@@ -63,25 +65,49 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(38, 127);
+            this.button4.Location = new System.Drawing.Point(68, 167);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 24);
             this.button4.TabIndex = 3;
             this.button4.Text = "Sair";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // label_utilizador
+            // 
+            this.label_utilizador.AutoSize = true;
+            this.label_utilizador.Location = new System.Drawing.Point(37, 25);
+            this.label_utilizador.Name = "label_utilizador";
+            this.label_utilizador.Size = new System.Drawing.Size(19, 13);
+            this.label_utilizador.TabIndex = 4;
+            this.label_utilizador.Text = "----";
+            this.label_utilizador.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button_logout
+            // 
+            this.button_logout.Location = new System.Drawing.Point(145, 25);
+            this.button_logout.Name = "button_logout";
+            this.button_logout.Size = new System.Drawing.Size(75, 23);
+            this.button_logout.TabIndex = 5;
+            this.button_logout.Text = "Log out";
+            this.button_logout.UseVisualStyleBackColor = true;
+            this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 206);
+            this.ClientSize = new System.Drawing.Size(258, 249);
+            this.Controls.Add(this.button_logout);
+            this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -91,5 +117,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label_utilizador;
+        private System.Windows.Forms.Button button_logout;
     }
 }
