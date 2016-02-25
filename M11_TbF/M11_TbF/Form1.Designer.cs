@@ -30,7 +30,7 @@
         {
             this.label_UserName = new System.Windows.Forms.Label();
             this.label_PassWord = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Logar = new System.Windows.Forms.Button();
             this.textBox_PassWord = new System.Windows.Forms.TextBox();
             this.textBox_UserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -53,15 +53,15 @@
             this.label_PassWord.TabIndex = 2;
             this.label_PassWord.Text = "PassWord:";
             // 
-            // button1
+            // button_Logar
             // 
-            this.button1.Location = new System.Drawing.Point(200, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 51);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Logar.Location = new System.Drawing.Point(200, 6);
+            this.button_Logar.Name = "button_Logar";
+            this.button_Logar.Size = new System.Drawing.Size(75, 51);
+            this.button_Logar.TabIndex = 3;
+            this.button_Logar.Text = "Login";
+            this.button_Logar.UseVisualStyleBackColor = true;
+            this.button_Logar.Click += new System.EventHandler(this.button_Logar_Click);
             // 
             // textBox_PassWord
             // 
@@ -84,7 +84,7 @@
             this.ClientSize = new System.Drawing.Size(309, 87);
             this.Controls.Add(this.textBox_UserName);
             this.Controls.Add(this.textBox_PassWord);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Logar);
             this.Controls.Add(this.label_PassWord);
             this.Controls.Add(this.label_UserName);
             this.Name = "Form1";
@@ -99,7 +99,7 @@
 
         private System.Windows.Forms.Label label_UserName;
         private System.Windows.Forms.Label label_PassWord;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Logar;
         private System.Windows.Forms.TextBox textBox_PassWord;
         private System.Windows.Forms.TextBox textBox_UserName;
     }

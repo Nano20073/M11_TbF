@@ -22,12 +22,21 @@ namespace M11_TbF
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Logar_Click(object sender, EventArgs e)
         {
             Username = textBox_UserName.ToString().Substring(36,textBox_UserName.TextLength);
             Password = textBox_PassWord.ToString().Substring(36, textBox_PassWord.TextLength);
             User.Utilizador_set(Username, Password);
-            
+            if(User.Utilizador_get() == "")
+            {
+                MessageBox.Show("Erro de Login");
+            }
+            else
+            {
+                this.Hide();
+                Form2 F2 = new Form2();
+                F2.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

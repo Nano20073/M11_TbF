@@ -11,7 +11,7 @@ namespace M11_TbF
 {
     class Utilizadores
     {
-        private string Username_atual;
+        private string Username_atual="";
         public void Utilizador_set(string Username, string Password)
         {
             // Connection string for ADO.NET via OleDB
@@ -45,11 +45,7 @@ namespace M11_TbF
                             Username_atual = Username;
                             MessageBox.Show("conetou-se");
                             //abrir form2
-                            /*Form1 F1 = new Form1();
-                            F1.Hide();
-                            Form2 F2 = new Form2();
-                            F2.Show();*/
-                            break;
+                            
                         }
                     }
                     row++;
