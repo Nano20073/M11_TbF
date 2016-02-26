@@ -16,10 +16,17 @@ namespace M11_TbF
         private int Nivel_da_Pergunta = 1;
         private int Vitorias_consecutivas = 0;
         private int Numero_da_Pergunta;
-        private string Pergutna;
+
+        private string Pergunta;
+        private string Resposta1;
+        private string Resposta2;
+        private string Resposta3;
+        private string Resposta4;
+        private string Resposta_Correta;
 
 
-        public string Pergunta_Set()
+
+        public void Pergunta_Set()
         {
             Random rnd = new Random();
             int nivel = 0;
@@ -63,14 +70,15 @@ namespace M11_TbF
                 {
                     if (dr.GetValue(0).ToString() == nivel.ToString())
                     {
-                        if (dr.GetValue(1).ToString() == Password)
+                        /*if (dr.GetValue(1).ToString() == Password)
                         {
-                            Username_atual = Username;
+                            //Username_atual = Username;
                             MessageBox.Show("conetou-se");
 
-                        }
+                        }*/
                     }
                     row++;
+                    
                 }
             }
             catch (OleDbException ex)
@@ -86,7 +94,8 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-                MessageBox.Show("{0}: Cleanup. Done.");
+                //MessageBox.Show("{0}: Cleanup. Done.");
+                
             }
 
         }

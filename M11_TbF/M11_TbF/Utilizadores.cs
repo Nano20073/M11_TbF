@@ -11,7 +11,9 @@ namespace M11_TbF
 {
     class Utilizadores
     {
-        private string Username_atual="";
+        private static string Username_atual="";
+        private string Username_login="";
+
         public void Utilizador_set(string Username, string Password)
         {
             // Connection string for ADO.NET via OleDB
@@ -32,25 +34,24 @@ namespace M11_TbF
                 // Run the query and create a record set
                 OleDbDataReader dr = cmd.ExecuteReader();
 
-                MessageBox.Show("\n{0}: Fetch the actual data: ");
-                int row = 0;
+                //MessageBox.Show("\n{0}: Fetch the actual data: ");
                 while (dr.Read())
                 {
 
-                    MessageBox.Show(dr.GetValue(0).ToString() + " " + dr.GetValue(1).ToString());
+                    //MessageBox.Show(dr.GetValue(0).ToString() + " " + dr.GetValue(1).ToString());
                     if (dr.GetValue(0).ToString() == Username)
                     {
                         if (dr.GetValue(1).ToString() == Password)
                         {
                             Username_atual = Username;
-                            MessageBox.Show("conetou-se");
+                            Username_login = Username;
+                            //MessageBox.Show("conetou-se");
                             //abrir form2
                             
                         }
                     }
-                    row++;
                 }
-                MessageBox.Show("Total Row Count: {1}" + row.ToString());
+                //MessageBox.Show("Total Row Count: {1}" + row.ToString());
                 dr.Close();
             }
             catch (OleDbException ex)
@@ -66,7 +67,7 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-                MessageBox.Show("{0}: Cleanup. Done.");
+                //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
 
@@ -75,8 +76,13 @@ namespace M11_TbF
             return Username_atual;
         }
 
+        public string Utilizador_login_get()
+        {
+            return Username_login;
+        }
 
 
-    
+
+
     }
 }

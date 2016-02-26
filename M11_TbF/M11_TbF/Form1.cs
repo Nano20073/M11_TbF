@@ -27,7 +27,7 @@ namespace M11_TbF
             Username = textBox_UserName.ToString().Substring(36,textBox_UserName.TextLength);
             Password = textBox_PassWord.ToString().Substring(36, textBox_PassWord.TextLength);
             User.Utilizador_set(Username, Password);
-            if(User.Utilizador_get() == "")
+            if(User.Utilizador_login_get() == "")
             {
                 MessageBox.Show("Erro de Login");
             }
@@ -35,6 +35,7 @@ namespace M11_TbF
             {
                 this.Hide();
                 Form2 F2 = new Form2();
+                
                 F2.Show();
             }
         }
