@@ -16,5 +16,17 @@ namespace M11_TbF
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form6 F6 = new Form6();
+            F6.Show();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

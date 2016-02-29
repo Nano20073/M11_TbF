@@ -44,5 +44,12 @@ namespace M11_TbF
             Form5 F5 = new Form5();
             F5.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 F3 = new Form3();
+            F3.Show();
+        }
     }
 }
