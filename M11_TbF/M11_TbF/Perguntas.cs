@@ -29,7 +29,7 @@ namespace M11_TbF
         public void Pergunta_Set()
         {
             Random rnd = new Random();
-            int nivel = 0;
+            int NPergunta = 0;
 
 
             if (Vitorias_consecutivas % 3 == 0)
@@ -39,7 +39,7 @@ namespace M11_TbF
 
             if (Nivel_da_Pergunta == 1)
             {
-                nivel = rnd.Next(1, 6);
+                NPergunta = rnd.Next(1, 6);
             }
 
 
@@ -65,19 +65,15 @@ namespace M11_TbF
                 // Run the query and create a record set
                 OleDbDataReader dr = cmd.ExecuteReader();
 
-                int row = 0;
+                //int row = 0;
                 while (dr.Read())
                 {
-                    if (dr.GetValue(0).ToString() == nivel.ToString())
+                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
                     {
-                        /*if (dr.GetValue(1).ToString() == Password)
-                        {
-                            //Username_atual = Username;
-                            MessageBox.Show("conetou-se");
-
-                        }*/
+                        Pergunta = dr.GetValue(0).ToString();
+                         
                     }
-                    row++;
+                    //row++;
                     
                 }
             }
@@ -97,13 +93,41 @@ namespace M11_TbF
                 //MessageBox.Show("{0}: Cleanup. Done.");
                 
             }
-
         }
+
+        public int Nivel_Get()
+        {
+            return Nivel_da_Pergunta;
+        }
+
         public string Pergunta_Get()
         {
-            return "";
+            return Pergunta;
         }
 
+        public string Resposta1_Get()
+        {
+            return Resposta1;
+        }
 
+        public string Resposta2_Get()
+        {
+            return Resposta2;
+        }
+
+        public string Resposta3_Get()
+        {
+            return Resposta3;
+        }
+
+        public string Resposta4_Get()
+        {
+            return Resposta4;
+        }
+
+        public string Resposta_Correta_Get()
+        {
+            return Resposta_Correta;
+        }
     }
 }

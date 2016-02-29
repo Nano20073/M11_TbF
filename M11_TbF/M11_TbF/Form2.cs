@@ -37,5 +37,12 @@ namespace M11_TbF
             User = new Utilizadores();
             label_utilizador.Text = User.Utilizador_get();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form5 F5 = new Form5();
+            F5.Show();
+        }
     }
 }
