@@ -98,7 +98,7 @@
             // label_pergunta
             // 
             this.label_pergunta.AutoSize = true;
-            this.label_pergunta.Location = new System.Drawing.Point(43, 25);
+            this.label_pergunta.Location = new System.Drawing.Point(12, 27);
             this.label_pergunta.Name = "label_pergunta";
             this.label_pergunta.Size = new System.Drawing.Size(50, 13);
             this.label_pergunta.TabIndex = 5;

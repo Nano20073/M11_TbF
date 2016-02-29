@@ -32,7 +32,7 @@ namespace M11_TbF
             int NPergunta = 0;
 
 
-            if (Vitorias_consecutivas % 3 == 0)
+            if (Vitorias_consecutivas % 3 == 0 && Vitorias_consecutivas != 0)
             {
                 Nivel_da_Pergunta++;
             }
@@ -70,8 +70,15 @@ namespace M11_TbF
                 {
                     if (dr.GetValue(0).ToString() == NPergunta.ToString())
                     {
-                        Pergunta = dr.GetValue(0).ToString();
-                         
+                        Pergunta = dr.GetValue(1).ToString();
+                        Resposta1 = dr.GetValue(2).ToString();
+                        Resposta2 = dr.GetValue(3).ToString();
+                        Resposta3 = dr.GetValue(4).ToString();
+                        Resposta4 = dr.GetValue(5).ToString();
+                        Resposta_Correta = dr.GetValue(6).ToString();
+
+                        //Resposta1 = dr
+
                     }
                     //row++;
                     
