@@ -9,9 +9,8 @@ using System.Data;
 
 namespace M11_TbF
 {
-    class Utilizadores
+    class Utilizador
     {
-        private static string Username_atual="";
         private string Username_login="";
 
         public void Utilizador_set(string Username, string Password)
@@ -43,7 +42,6 @@ namespace M11_TbF
                     {
                         if (dr.GetValue(1).ToString() == Password)
                         {
-                            Username_atual = Username;
                             Username_login = Username;
                             //MessageBox.Show("conetou-se");
                             //abrir form2
@@ -69,11 +67,6 @@ namespace M11_TbF
                 cn.Close();
                 //MessageBox.Show("{0}: Cleanup. Done.");
             }
-        }
-
-        public string Utilizador_get()
-        {
-            return Username_atual;
         }
 
         public string Utilizador_login_get()

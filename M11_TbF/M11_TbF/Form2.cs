@@ -12,12 +12,14 @@ namespace M11_TbF
 {
     public partial class Form2 : Form
     {
-        Utilizadores User;
+        Utilizador User;
         Background BG;
+        string Username_Atual;
         private Image defaultBackground;
 
-        public Form2()
+        public Form2(string Username)
         {
+            Username_Atual = Username;
             InitializeComponent();
         }
 
@@ -36,12 +38,13 @@ namespace M11_TbF
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            User = new Utilizadores();
+            User = new Utilizador();
+            label_utilizador.Text = Username_Atual;
             BG = new Background();
             string strPath = Application.StartupPath + "\\images\\";
 
             this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
-            label_utilizador.Text = User.Utilizador_get();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

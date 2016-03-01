@@ -35,16 +35,17 @@ namespace M11_TbF
 
         private void button_voltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             Form2 F2 = new Form2();
-            F2.Show();
+            F2.Show();*/
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
+            /*this.Hide();            
             Form7 F7 = new Form7();
-            F7.Show();
+            F7.Show();*/
         }
     }
 }

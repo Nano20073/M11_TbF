@@ -13,7 +13,7 @@ namespace M11_TbF
 {
     public partial class Form1 : Form
     {
-        Utilizadores User;
+        Utilizador User;
         Background BG;
         string Username, Password;
         private Image defaultBackground;
@@ -36,7 +36,7 @@ namespace M11_TbF
             else
             {
                 this.Hide();
-                Form2 F2 = new Form2();
+                Form2 F2 = new Form2(Username);
                 
                 F2.Show();
             }
@@ -73,7 +73,7 @@ namespace M11_TbF
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            User = new Utilizadores();
+            User = new Utilizador();
             BG = new Background();
             string strPath = Application.StartupPath + "\\images\\";
 

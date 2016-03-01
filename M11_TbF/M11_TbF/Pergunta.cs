@@ -9,7 +9,7 @@ using System.Data.OleDb;
 
 namespace M11_TbF
 {
-    class Perguntas
+    class Pergunta
     {
 
 
@@ -17,7 +17,7 @@ namespace M11_TbF
         private int Vitorias_consecutivas = 0;
         private int NPergunta = 0;
 
-        private string Pergunta;
+        private string Pergunta_Atual;
         private string Resposta1;
         private string Resposta2;
         private string Resposta3;
@@ -40,7 +40,7 @@ namespace M11_TbF
 
             if (Nivel_da_Pergunta == 1)
             {
-                NPergunta = rand.Next(0, 100 - exclude.Count);
+                NPergunta = rand.Next(0, 6 - exclude.Count);
             }
 
 
@@ -63,7 +63,8 @@ namespace M11_TbF
                 {
                     if (dr.GetValue(0).ToString() == NPergunta.ToString())
                     {
-                        Pergunta = dr.GetValue(1).ToString();
+                        exclude.Add(NPergunta);
+                        Pergunta_Atual = dr.GetValue(1).ToString();
                         Resposta1 = dr.GetValue(2).ToString();
                         Resposta2 = dr.GetValue(3).ToString();
                         Resposta3 = dr.GetValue(4).ToString();
@@ -89,71 +90,9 @@ namespace M11_TbF
             }
         }
 
-        public bool Pergunta_Verificar(string Resposta)
+        public void Pergunta_Verificar(string Resposta)
         {
-            return false;
-            Random rnd = new Random();
-            int NPergunta = 0;
 
-
-            if (Vitorias_consecutivas % 3 == 0 && Vitorias_consecutivas != 0)
-            {
-                Nivel_da_Pergunta++;
-            }
-
-            if (Nivel_da_Pergunta == 1)
-            {
-                NPergunta = rnd.Next(1, 6);
-            }
-
-
-
-            // Connection string for ADO.NET via OleDB
-            OleDbConnection cn =
-                //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
-            // Prepare SQL query
-            string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Resposta_Correta FROM Perguntas WHERE(((Perguntas.ID_Pergunta) =" + NPergunta.ToString() + ")); ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
-
-            try
-            {
-
-                cn.Open();
-
-                OleDbDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
-                    {
-                        if (dr.GetValue(1).ToString() == Resposta)
-                        {
-                            Vitorias_consecutivas++;
-                            return true;
-
-                        }
-
-
-                    }
-
-                }
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
-                     ex.ToString());
-            }
-            finally
-            {
-                cn.Close();
-            }
         }
 
         public int Nivel_Get()
@@ -163,7 +102,7 @@ namespace M11_TbF
 
         public string Pergunta_Get()
         {
-            return Pergunta;
+            return Pergunta_Atual;
         }
 
         public string Resposta1_Get()

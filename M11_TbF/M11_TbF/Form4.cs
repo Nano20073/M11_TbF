@@ -28,9 +28,9 @@ namespace M11_TbF
 
         private void button_sair_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             Form2 F2 = new Form2();
-            F2.Show();
+            F2.Show();*/
         }
     }
 }

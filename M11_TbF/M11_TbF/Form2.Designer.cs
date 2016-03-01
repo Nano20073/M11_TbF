@@ -39,12 +39,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(253, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Estatísticas";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -82,6 +83,8 @@
             // label_utilizador
             // 
             this.label_utilizador.AutoSize = true;
+            this.label_utilizador.BackColor = System.Drawing.Color.Transparent;
+            this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_utilizador.Location = new System.Drawing.Point(170, 25);
             this.label_utilizador.Name = "label_utilizador";
             this.label_utilizador.Size = new System.Drawing.Size(19, 13);
@@ -102,6 +105,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 13);
