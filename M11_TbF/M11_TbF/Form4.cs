@@ -12,9 +12,18 @@ namespace M11_TbF
 {
     public partial class Form4 : Form
     {
+        Background BG;
         public Form4()
         {
             InitializeComponent();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            BG = new Background();
+            string strPath = Application.StartupPath + "\\images\\";
+
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
     }
 }

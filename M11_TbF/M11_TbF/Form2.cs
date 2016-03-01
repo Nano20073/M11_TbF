@@ -13,6 +13,7 @@ namespace M11_TbF
     public partial class Form2 : Form
     {
         Utilizadores User;
+        Background BG;
 
         public Form2()
         {
@@ -35,6 +36,10 @@ namespace M11_TbF
         private void Form2_Load(object sender, EventArgs e)
         {
             User = new Utilizadores();
+            BG = new Background();
+            string strPath = Application.StartupPath + "\\images\\";
+
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
             label_utilizador.Text = User.Utilizador_get();
         }
 

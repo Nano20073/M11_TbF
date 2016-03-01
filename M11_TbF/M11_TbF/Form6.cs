@@ -12,7 +12,8 @@ namespace M11_TbF
 {
     public partial class Form6 : Form
     {
-        
+        Background BG;
+
         public Form6()
         {
             InitializeComponent();
@@ -20,21 +21,29 @@ namespace M11_TbF
 
         private void button_mudar_IMG1_Click(object sender, EventArgs e)
         {
-            imagem = 6;
+            BG.BG_Set(6);
             string strPath = Application.StartupPath + "\\images\\";
 
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + imagem + ".jpg"); // 1.jpg Image file name
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg"); // 1.jpg Image file name
 
             
         }
 
         private void button_mudar_IMG2_Click(object sender, EventArgs e)
         {
-            imagem = 3;
+            BG.BG_Set(3);
             string strPath = Application.StartupPath + "\\images\\";
 
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + imagem + ".jpg"); // 1.jpg Image file name
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg"); // 1.jpg Image file name
 
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            BG = new Background();
+            string strPath = Application.StartupPath + "\\images\\";
+
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
     }
 }

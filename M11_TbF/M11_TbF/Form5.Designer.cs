@@ -121,6 +121,7 @@
             this.button_submeter.TabIndex = 7;
             this.button_submeter.Text = "Submeter";
             this.button_submeter.UseVisualStyleBackColor = true;
+            this.button_submeter.Click += new System.EventHandler(this.button_submeter_Click);
             // 
             // Form5
             // 

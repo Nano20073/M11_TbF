@@ -12,6 +12,7 @@ namespace M11_TbF
 {
     public partial class Form3 : Form
     {
+        Background BG;
         public Form3()
         {
             InitializeComponent();
@@ -26,7 +27,10 @@ namespace M11_TbF
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            BG = new Background();
+            string strPath = Application.StartupPath + "\\images\\";
 
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
     }
 }

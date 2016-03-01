@@ -14,6 +14,7 @@ namespace M11_TbF
     public partial class Form1 : Form
     {
         Utilizadores User;
+        Background BG;
         string Username, Password;
 
         public Form1()
@@ -48,7 +49,10 @@ namespace M11_TbF
         private void Form1_Load(object sender, EventArgs e)
         {
             User = new Utilizadores();
-            
+            BG = new Background();
+            string strPath = Application.StartupPath + "\\images\\";
+
+            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
     }
 }

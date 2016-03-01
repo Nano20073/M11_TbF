@@ -61,6 +61,7 @@
             this.Controls.Add(this.button_mudar_IMG1);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
 
         }
