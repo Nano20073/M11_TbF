@@ -62,6 +62,8 @@
             this.button_Logar.Text = "Login";
             this.button_Logar.UseVisualStyleBackColor = true;
             this.button_Logar.Click += new System.EventHandler(this.button_Logar_Click);
+            this.button_Logar.MouseEnter += new System.EventHandler(this.button_Logar_MouseEnter);
+            this.button_Logar.MouseLeave += new System.EventHandler(this.button_Logar_MouseLeave);
             // 
             // textBox_PassWord
             // 
@@ -69,6 +71,7 @@
             this.textBox_PassWord.Name = "textBox_PassWord";
             this.textBox_PassWord.Size = new System.Drawing.Size(100, 20);
             this.textBox_PassWord.TabIndex = 4;
+            this.textBox_PassWord.TextChanged += new System.EventHandler(this.textBox_PassWord_TextChanged);
             // 
             // textBox_UserName
             // 

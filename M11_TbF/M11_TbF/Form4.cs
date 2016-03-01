@@ -25,5 +25,12 @@ namespace M11_TbF
 
             this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 F2 = new Form2();
+            F2.Show();
+        }
     }
 }

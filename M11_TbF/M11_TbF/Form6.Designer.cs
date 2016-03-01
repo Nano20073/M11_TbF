@@ -30,6 +30,7 @@
         {
             this.button_mudar_IMG1 = new System.Windows.Forms.Button();
             this.button_mudar_IMG2 = new System.Windows.Forms.Button();
+            this.button_voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_mudar_IMG1
@@ -52,11 +53,22 @@
             this.button_mudar_IMG2.UseVisualStyleBackColor = true;
             this.button_mudar_IMG2.Click += new System.EventHandler(this.button_mudar_IMG2_Click);
             // 
+            // button_voltar
+            // 
+            this.button_voltar.BackgroundImage = global::M11_TbF.Properties.Resources.botão_voltar;
+            this.button_voltar.Location = new System.Drawing.Point(40, 34);
+            this.button_voltar.Name = "button_voltar";
+            this.button_voltar.Size = new System.Drawing.Size(54, 38);
+            this.button_voltar.TabIndex = 2;
+            this.button_voltar.UseVisualStyleBackColor = true;
+            this.button_voltar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 301);
+            this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_mudar_IMG2);
             this.Controls.Add(this.button_mudar_IMG1);
             this.Name = "Form6";
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button button_mudar_IMG1;
         private System.Windows.Forms.Button button_mudar_IMG2;
+        private System.Windows.Forms.Button button_voltar;
     }
 }

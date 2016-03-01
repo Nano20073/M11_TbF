@@ -14,6 +14,7 @@ namespace M11_TbF
     {
         Utilizadores User;
         Background BG;
+        private Image defaultBackground;
 
         public Form2()
         {
@@ -55,6 +56,28 @@ namespace M11_TbF
             this.Hide();
             Form3 F3 = new Form3();
             F3.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 F4 = new Form4();
+            F4.Show();
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            this.button2.BackgroundImage = (System.Drawing.Image)(Properties.Resources.IMG1);
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            this.button2.BackgroundImage = defaultBackground;
         }
     }
 }

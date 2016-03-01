@@ -38,6 +38,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button_sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,11 +121,22 @@
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 9;
             // 
+            // button_sair
+            // 
+            this.button_sair.BackgroundImage = global::M11_TbF.Properties.Resources.botão_voltar;
+            this.button_sair.Location = new System.Drawing.Point(105, 235);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(48, 34);
+            this.button_sair.TabIndex = 10;
+            this.button_sair.UseVisualStyleBackColor = true;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 246);
+            this.ClientSize = new System.Drawing.Size(286, 281);
+            this.Controls.Add(this.button_sair);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
@@ -155,5 +167,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button_sair;
     }
 }

@@ -88,6 +88,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>M11_TbF_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Mudança de Nome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mudança de Nome.Designer.cs">
+      <DependentUpon>Mudança de Nome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perguntas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mudança de Nome.resx">
+      <DependentUpon>Mudança de Nome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,6 +157,8 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\botão_login.jpg" />
+    <None Include="Resources\botão_voltar.png" />
     <None Include="Resources\IMG64.jpg" />
     <None Include="Resources\IMG63.jpg" />
     <None Include="Resources\IMG62.jpg" />
