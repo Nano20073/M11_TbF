@@ -13,7 +13,48 @@ namespace M11_TbF
     {
         private string Username_login="";
 
-        public void Utilizador_set(string Username, string Password)
+        public void Criar_Utilizador(string Username, string Password)
+        {
+            // Connection string for ADO.NET via OleDB
+            OleDbConnection cn =
+                //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+            
+            OleDbCommand cmd = new OleDbCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into Utilizadores ([Nome],[PassWord]) values (?,?)";
+            cmd.Parameters.AddWithValue("@Nome", Username);
+            cmd.Parameters.AddWithValue("@PassWord", Password);
+            cmd.Connection = cn;
+
+            try
+            {
+                cn.Open();
+                //MessageBox.Show("{Successfully connected to database. Data source name:" + cn.DataSource);
+                //MessageBox.Show("SQL query:\n {0}" + query);
+
+                //MessageBox.Show("\n{0}: Fetch the actual data: ");
+               
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+                //MessageBox.Show("{0}: Cleanup. Done.");
+            }
+        }
+
+        public void Utilizador_login(string Username, string Password)
         {
             // Connection string for ADO.NET via OleDB
             OleDbConnection cn =

@@ -158,6 +158,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\botão_login.jpg" />
+    <None Include="Resources\quiz_answer.jpg" />
+    <None Include="Resources\quiz_question.jpg" />
     <None Include="Resources\buttonBG109x27.png" />
     <None Include="Resources\buttonBG.png" />
     <None Include="Resources\botão_voltar.png" />

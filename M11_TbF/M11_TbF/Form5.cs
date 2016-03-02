@@ -23,13 +23,15 @@ namespace M11_TbF
         {
             
             Per = new Pergunta();
-            label_nivel.Text = Per.Nivel_Get().ToString();
+            label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+            label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
             Per.Pergunta_Set();
             label_pergunta.Text = Per.Pergunta_Get();
-            radioButton_r1.Text = Per.Resposta1_Get();
-            radioButton_r2.Text = Per.Resposta2_Get();
-            radioButton_r3.Text = Per.Resposta3_Get();
-            radioButton_r4.Text = Per.Resposta4_Get();
+            button_R1.Text = Per.Resposta1_Get();
+            button_R2.Text = Per.Resposta2_Get();
+            button_R3.Text = Per.Resposta3_Get();
+            button_R4.Text = Per.Resposta4_Get();
+
             BG = new Background();
             string strPath = Application.StartupPath + "\\images\\";
 
@@ -40,26 +42,79 @@ namespace M11_TbF
             
         }
 
-        private void button_submeter_Click(object sender, EventArgs e)
+        private void button_R1_Click(object sender, EventArgs e)
         {
-            if (radioButton_r1.Checked == true)
+            if (Per.Resposta_Verificar(button_R1.Text) == true)
             {
-                Per.Pergunta_Verificar(radioButton_r1.Text);
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                button_R1.Text = Per.Resposta1_Get();
+                button_R2.Text = Per.Resposta2_Get();
+                button_R3.Text = Per.Resposta3_Get();
+                button_R4.Text = Per.Resposta4_Get();
             }
-
-            if (radioButton_r2.Checked == true)
+            else
             {
-                Per.Pergunta_Verificar(radioButton_r2.Text);
+                MessageBox.Show("Perdeu");
             }
+        }
 
-            if (radioButton_r3.Checked == true)
+        private void button_R2_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(button_R2.Text) == true)
             {
-                Per.Pergunta_Verificar(radioButton_r3.Text);
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                button_R1.Text = Per.Resposta1_Get();
+                button_R2.Text = Per.Resposta2_Get();
+                button_R3.Text = Per.Resposta3_Get();
+                button_R4.Text = Per.Resposta4_Get();
             }
-
-            if (radioButton_r4.Checked == true)
+            else
             {
+                MessageBox.Show("Perdeu");
+            }
+        }
 
+        private void button_R3_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(button_R3.Text) == true)
+            {
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
+                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                button_R1.Text = Per.Resposta1_Get();
+                button_R2.Text = Per.Resposta2_Get();
+                button_R3.Text = Per.Resposta3_Get();
+                button_R4.Text = Per.Resposta4_Get();
+            }
+            else
+            {
+                MessageBox.Show("Perdeu");
+            }
+        }
+
+        private void button_R4_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(button_R4.Text) == true)
+            {
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
+                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                button_R1.Text = Per.Resposta1_Get();
+                button_R2.Text = Per.Resposta2_Get();
+                button_R3.Text = Per.Resposta3_Get();
+                button_R4.Text = Per.Resposta4_Get();
+            }
+            else
+            {
+                MessageBox.Show("Perdeu");
             }
         }
     }

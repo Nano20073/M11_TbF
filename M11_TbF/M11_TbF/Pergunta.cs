@@ -30,7 +30,6 @@ namespace M11_TbF
         {
             var rand = new System.Random();
             var exclude = new HashSet<int>() {};
-            var range = Enumerable.Range(1, 5).Where(i => !exclude.Contains(i));
 
 
             if (Vitorias_consecutivas % 3 == 0 && Vitorias_consecutivas != 0)
@@ -40,11 +39,32 @@ namespace M11_TbF
 
             if (Nivel_da_Pergunta == 1)
             {
-                NPergunta = rand.Next(0, 6 - exclude.Count);
+                NPergunta = rand.Next(1, 6 - exclude.Count);
+            }
+
+            if (Nivel_da_Pergunta == 2)
+            {
+                NPergunta = rand.Next(6, 11 - exclude.Count);
+            }
+
+            if (Nivel_da_Pergunta == 3)
+            {
+                NPergunta = rand.Next(11, 16 - exclude.Count);
+            }
+
+            if (Nivel_da_Pergunta == 4)
+            {
+                NPergunta = rand.Next(16, 21 - exclude.Count);
+            }
+
+            if (Nivel_da_Pergunta == 5)
+            {
+                NPergunta = rand.Next(21, 26 - exclude.Count);
             }
 
 
-            
+
+
             // Connection string for ADO.NET via OleDB
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
@@ -70,6 +90,7 @@ namespace M11_TbF
                         Resposta3 = dr.GetValue(4).ToString();
                         Resposta4 = dr.GetValue(5).ToString();
                         Resposta_Correta = dr.GetValue(6).ToString();
+                        Vitorias_consecutivas++;
                     }
 
                 }
@@ -90,14 +111,65 @@ namespace M11_TbF
             }
         }
 
-        public void Pergunta_Verificar(string Resposta)
+        public bool Resposta_Verificar(string Resposta)
         {
+            // Connection string for ADO.NET via OleDB
+            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
+            // Prepare SQL query
+            string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Pergunta, Perguntas.Resposta1, Perguntas.Resposta2, Perguntas.Resposta3, Perguntas.Resposta4, Perguntas.Resposta_Correta, Perguntas.Nivel FROM Perguntas WHERE (((Perguntas.Nivel)=" + Nivel_da_Pergunta.ToString() + "));";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            try
+            {
+
+                cn.Open();
+
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
+                    {
+                        if (dr.GetValue(6).ToString() == Resposta)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                        
+
+                }
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                    ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return false;
         }
 
-        public int Nivel_Get()
+        public string Nivel_Get()
         {
-            return Nivel_da_Pergunta;
+            return Nivel_da_Pergunta.ToString();
+        }
+
+        public string Vitorias_Consecutivas_Get()
+        {
+            return Vitorias_consecutivas.ToString();
         }
 
         public string Pergunta_Get()

@@ -28,7 +28,7 @@ namespace M11_TbF
         {
             Username = textBox_UserName.ToString().Substring(36,textBox_UserName.TextLength);
             Password = textBox_PassWord.ToString().Substring(36, textBox_PassWord.TextLength);
-            User.Utilizador_set(Username, Password);
+            User.Utilizador_login(Username, Password);
             if(User.Utilizador_login_get() == "")
             {
                 MessageBox.Show("Erro de Login");
@@ -69,6 +69,11 @@ namespace M11_TbF
         private void button_Logar_MouseLeave(object sender, EventArgs e)
         {
             this.button_Logar.BackgroundImage = defaultBackground;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            User.Criar_Utilizador(textBox_UserName.Text, textBox_PassWord.Text);
         }
 
         private void Form1_Load(object sender, EventArgs e)
