@@ -36,27 +36,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(233, 70);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.button1.Location = new System.Drawing.Point(54, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
+            this.button1.Size = new System.Drawing.Size(210, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Começar de novo o jogo";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(233, 99);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.button2.Location = new System.Drawing.Point(54, 115);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 23);
+            this.button2.Size = new System.Drawing.Size(210, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "Mudar o Nome de Utilizador";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(233, 128);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.button3.Location = new System.Drawing.Point(54, 144);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 23);
+            this.button3.Size = new System.Drawing.Size(210, 23);
             this.button3.TabIndex = 2;
             this.button3.Text = "Mudar a Password";
             this.button3.UseVisualStyleBackColor = true;
@@ -65,7 +68,7 @@
             // button_voltar
             // 
             this.button_voltar.BackgroundImage = global::M11_TbF.Properties.Resources.botão_voltar;
-            this.button_voltar.Location = new System.Drawing.Point(34, 35);
+            this.button_voltar.Location = new System.Drawing.Point(12, 196);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(55, 37);
             this.button_voltar.TabIndex = 4;
@@ -76,8 +79,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG64;
-            this.ClientSize = new System.Drawing.Size(604, 301);
+            this.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
+            this.ClientSize = new System.Drawing.Size(310, 245);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

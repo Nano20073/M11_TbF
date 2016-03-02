@@ -35,7 +35,6 @@
             this.button_R2 = new System.Windows.Forms.Button();
             this.button_R3 = new System.Windows.Forms.Button();
             this.button_R4 = new System.Windows.Forms.Button();
-            this.label_vitorias_consecutivas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_nivel
@@ -115,26 +114,13 @@
             this.button_R4.UseVisualStyleBackColor = true;
             this.button_R4.Click += new System.EventHandler(this.button_R4_Click);
             // 
-            // label_vitorias_consecutivas
-            // 
-            this.label_vitorias_consecutivas.AutoSize = true;
-            this.label_vitorias_consecutivas.BackColor = System.Drawing.Color.Transparent;
-            this.label_vitorias_consecutivas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_vitorias_consecutivas.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_vitorias_consecutivas.Location = new System.Drawing.Point(12, 36);
-            this.label_vitorias_consecutivas.Name = "label_vitorias_consecutivas";
-            this.label_vitorias_consecutivas.Size = new System.Drawing.Size(156, 17);
-            this.label_vitorias_consecutivas.TabIndex = 11;
-            this.label_vitorias_consecutivas.Text = "Vitorias Consecutivas - ";
-            // 
             // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG6;
+            this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG62;
             this.ClientSize = new System.Drawing.Size(619, 341);
-            this.Controls.Add(this.label_vitorias_consecutivas);
             this.Controls.Add(this.button_R4);
             this.Controls.Add(this.button_R3);
             this.Controls.Add(this.button_R2);
@@ -159,6 +145,5 @@
         private System.Windows.Forms.Button button_R2;
         private System.Windows.Forms.Button button_R3;
         private System.Windows.Forms.Button button_R4;
-        private System.Windows.Forms.Label label_vitorias_consecutivas;
     }
 }

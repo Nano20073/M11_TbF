@@ -13,7 +13,6 @@ namespace M11_TbF
     public partial class Form_Estatisticas : Form
     {
         string Username_Atual;
-        Background BG;
 
         public Form_Estatisticas(string Username)
         {
@@ -24,10 +23,6 @@ namespace M11_TbF
         private void Form4_Load(object sender, EventArgs e)
         {
             label_utilizador.Text = Username_Atual;
-            BG = new Background();
-            string strPath = Application.StartupPath + "\\images\\";
-
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
 
         private void button_sair_Click(object sender, EventArgs e)

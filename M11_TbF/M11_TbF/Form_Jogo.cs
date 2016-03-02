@@ -13,7 +13,6 @@ namespace M11_TbF
     public partial class Form_Jogo : Form
     {
         Pergunta Per;
-        Background BG;
         Form Owner;
         public Form_Jogo(Form f)
         {
@@ -32,11 +31,6 @@ namespace M11_TbF
             button_R2.Text = Per.Resposta2_Get();
             button_R3.Text = Per.Resposta3_Get();
             button_R4.Text = Per.Resposta4_Get();
-
-            BG = new Background();
-            string strPath = Application.StartupPath + "\\images\\";
-
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
 
 
             

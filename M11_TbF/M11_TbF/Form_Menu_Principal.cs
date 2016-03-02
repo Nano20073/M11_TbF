@@ -13,7 +13,6 @@ namespace M11_TbF
     public partial class Form_Menu_Principal : Form
     {
         Utilizador User;
-        Background BG;
         string Username_Atual;
         private Image defaultBackground;
 
@@ -40,10 +39,6 @@ namespace M11_TbF
         {
             User = new Utilizador();
             label_utilizador.Text = Username_Atual;
-            BG = new Background();
-            string strPath = Application.StartupPath + "\\images\\";
-
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
             
         }
 

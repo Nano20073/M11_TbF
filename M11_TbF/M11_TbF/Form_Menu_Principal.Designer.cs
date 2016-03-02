@@ -66,7 +66,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(572, 1);
+            this.button3.Location = new System.Drawing.Point(540, -1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(27, 25);
             this.button3.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.label_utilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label_utilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_utilizador.Location = new System.Drawing.Point(500, 1);
+            this.label_utilizador.Location = new System.Drawing.Point(468, -1);
             this.label_utilizador.Name = "label_utilizador";
             this.label_utilizador.Size = new System.Drawing.Size(75, 25);
             this.label_utilizador.TabIndex = 4;
@@ -99,12 +99,16 @@
             // 
             // button_logout
             // 
-            this.button_logout.Location = new System.Drawing.Point(253, 205);
+            this.button_logout.BackColor = System.Drawing.Color.Transparent;
+            this.button_logout.BackgroundImage = global::M11_TbF.Properties.Resources.logout;
+            this.button_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_logout.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button_logout.Location = new System.Drawing.Point(563, -1);
             this.button_logout.Name = "button_logout";
-            this.button_logout.Size = new System.Drawing.Size(109, 23);
+            this.button_logout.Size = new System.Drawing.Size(27, 25);
             this.button_logout.TabIndex = 5;
-            this.button_logout.Text = "Log out";
-            this.button_logout.UseVisualStyleBackColor = true;
+            this.button_logout.UseVisualStyleBackColor = false;
             this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
             // Form_Menu_Principal

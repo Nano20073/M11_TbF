@@ -12,7 +12,6 @@ namespace M11_TbF
 {
     public partial class Form_Opcoes : Form
     {
-        Background BG;
         Form Owner;
         public Form_Opcoes(Form f)
         {
@@ -20,19 +19,8 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form_MudarBG F6 = new Form_MudarBG();
-            F6.Show();
-        }
-
         private void Form3_Load(object sender, EventArgs e)
         {
-            BG = new Background();
-            string strPath = Application.StartupPath + "\\images\\";
-
-            this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
 
         private void button_voltar_Click(object sender, EventArgs e)

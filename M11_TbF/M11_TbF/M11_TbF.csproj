@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Background.cs" />
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +76,6 @@
     <Compile Include="Form_Jogo.Designer.cs">
       <DependentUpon>Form_Jogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_MudarBG.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_MudarBG.Designer.cs">
-      <DependentUpon>Form_MudarBG.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Jogo.resx">
       <DependentUpon>Form_Jogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_MudarBG.resx">
-      <DependentUpon>Form_MudarBG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SignUp.resx">
       <DependentUpon>Form_SignUp.cs</DependentUpon>
