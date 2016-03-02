@@ -83,6 +83,12 @@
     <Compile Include="Form_MudarBG.Designer.cs">
       <DependentUpon>Form_MudarBG.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SignUp.Designer.cs">
+      <DependentUpon>Form_SignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="M11_TbF_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
