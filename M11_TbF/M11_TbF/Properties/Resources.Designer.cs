@@ -63,6 +63,16 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundDefault {
+            get {
+                object obj = ResourceManager.GetObject("backgroundDefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_login {
             get {
                 object obj = ResourceManager.GetObject("botão_login", resourceCulture);

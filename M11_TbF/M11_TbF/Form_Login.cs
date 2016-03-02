@@ -71,7 +71,7 @@ namespace M11_TbF
             this.button_Logar.BackgroundImage = defaultBackground;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form_SignUp FS = new Form_SignUp();

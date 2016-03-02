@@ -12,10 +12,10 @@ namespace M11_TbF
 
         public int Mudar_para_IMG1()
         {
-            imagem = 6;
-            if (imagem == 6)
+            imagem = 62;
+            if (imagem == 62)
             {
-                return 6;
+                return 62;
             }
             else
             {
@@ -25,10 +25,10 @@ namespace M11_TbF
 
         public int Mudar_para_IMG2()
         {
-            imagem = 6;
-            if (imagem == 6)
+            imagem = 62;
+            if (imagem == 62)
             {
-                return 6;
+                return 62;
             }
             else
             {
