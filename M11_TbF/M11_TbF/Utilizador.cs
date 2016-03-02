@@ -31,11 +31,12 @@ namespace M11_TbF
             try
             {
                 cn.Open();
+                cmd.ExecuteNonQuery();
                 //MessageBox.Show("{Successfully connected to database. Data source name:" + cn.DataSource);
                 //MessageBox.Show("SQL query:\n {0}" + query);
 
                 //MessageBox.Show("\n{0}: Fetch the actual data: ");
-               
+
             }
             catch (OleDbException ex)
             {

@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form3
+    partial class Form_Opcoes
     {
         /// <summary>
         /// Required designer variable.

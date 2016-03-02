@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form2 : Form
+    public partial class Form_Menu_Principal : Form
     {
         Utilizador User;
         Background BG;
         string Username_Atual;
         private Image defaultBackground;
 
-        public Form2(string Username)
+        public Form_Menu_Principal(string Username)
         {
             Username_Atual = Username;
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace M11_TbF
         private void button_logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 F1 = new Form1();
+            Form_Login F1 = new Form_Login();
             F1.Show();
 
         }
@@ -50,14 +50,14 @@ namespace M11_TbF
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 F5 = new Form5();
+            Form_Jogo F5 = new Form_Jogo();
             F5.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 F3 = new Form3();
+            Form_Opcoes F3 = new Form_Opcoes();
             F3.Show();
         }
 
@@ -69,7 +69,7 @@ namespace M11_TbF
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form4 F4 = new Form4();
+            Form_Estatisticas F4 = new Form_Estatisticas();
             F4.Show();
         }
 

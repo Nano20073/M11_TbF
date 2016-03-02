@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form5 : Form
+    public partial class Form_Jogo : Form
     {
         Pergunta Per;
         Background BG;
-        public Form5()
+        public Form_Jogo()
         {
             InitializeComponent();
         }

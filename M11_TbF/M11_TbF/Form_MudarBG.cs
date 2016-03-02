@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form6 : Form
+    public partial class Form_MudarBG : Form
     {
         Background BG;
 
-        public Form6()
+        public Form_MudarBG()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace M11_TbF
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 F3 = new Form3();
+            Form_Opcoes F3 = new Form_Opcoes();
             F3.Show();
         }
     }

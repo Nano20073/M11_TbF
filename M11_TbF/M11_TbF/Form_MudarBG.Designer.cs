@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form6
+    partial class Form_MudarBG
     {
         /// <summary>
         /// Required designer variable.

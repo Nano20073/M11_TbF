@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form5
+    partial class Form_Jogo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Jogo));
             this.label_nivel = new System.Windows.Forms.Label();
             this.label_pergunta = new System.Windows.Forms.Label();
             this.button_R1 = new System.Windows.Forms.Button();

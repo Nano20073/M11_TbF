@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form4
+    partial class Form_Estatisticas
     {
         /// <summary>
         /// Required designer variable.

@@ -10,22 +10,15 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form3 : Form
+    public partial class Form_Estatisticas : Form
     {
         Background BG;
-        public Form3()
+        public Form_Estatisticas()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form6 F6 = new Form6();
-            F6.Show();
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
             BG = new Background();
             string strPath = Application.StartupPath + "\\images\\";
@@ -33,19 +26,11 @@ namespace M11_TbF
             this.BackgroundImage = Image.FromFile(strPath + "IMG" + BG.BG_Get().ToString() + ".jpg");
         }
 
-        private void button_voltar_Click(object sender, EventArgs e)
+        private void button_sair_Click(object sender, EventArgs e)
         {
             /*this.Hide();
             Form2 F2 = new Form2();
             F2.Show();*/
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-            /*this.Hide();            
-            Form7 F7 = new Form7();
-            F7.Show();*/
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form2
+    partial class Form_Menu_Principal
     {
         /// <summary>
         /// Required designer variable.

@@ -16,13 +16,5 @@ namespace M11_TbF
         {
             InitializeComponent();
         }
-
-        private void button_cancelar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Nova Password cancelada");
-            this.Hide();
-            Form3 F3 = new Form3();
-            F3.Show();
-        }
     }
 }

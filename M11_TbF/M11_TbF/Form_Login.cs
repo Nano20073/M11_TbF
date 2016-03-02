@@ -11,14 +11,14 @@ using System.Data.OleDb;
 
 namespace M11_TbF
 {
-    public partial class Form1 : Form
+    public partial class Form_Login : Form
     {
         Utilizador User;
         Background BG;
         string Username, Password;
         private Image defaultBackground;
 
-        public Form1()
+        public Form_Login()
         {
             InitializeComponent();
             
@@ -36,7 +36,7 @@ namespace M11_TbF
             else
             {
                 this.Hide();
-                Form2 F2 = new Form2(Username);
+                Form_Menu_Principal F2 = new Form_Menu_Principal(Username);
                 
                 F2.Show();
             }
