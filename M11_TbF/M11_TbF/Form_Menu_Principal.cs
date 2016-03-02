@@ -50,14 +50,14 @@ namespace M11_TbF
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Jogo F5 = new Form_Jogo();
+            Form_Jogo F5 = new Form_Jogo(this);
             F5.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Opcoes F3 = new Form_Opcoes();
+            Form_Opcoes F3 = new Form_Opcoes(this);
             F3.Show();
         }
 

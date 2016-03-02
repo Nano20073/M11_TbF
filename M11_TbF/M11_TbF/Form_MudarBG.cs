@@ -48,9 +48,9 @@ namespace M11_TbF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             Form_Opcoes F3 = new Form_Opcoes();
-            F3.Show();
+            F3.Show();*/
         }
     }
 }

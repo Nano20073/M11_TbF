@@ -127,13 +127,13 @@
             this.label_vitorias_consecutivas.TabIndex = 11;
             this.label_vitorias_consecutivas.Text = "Vitorias Consecutivas - ";
             // 
-            // Form5
+            // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG6;
-            this.ClientSize = new System.Drawing.Size(604, 301);
+            this.ClientSize = new System.Drawing.Size(619, 341);
             this.Controls.Add(this.label_vitorias_consecutivas);
             this.Controls.Add(this.button_R4);
             this.Controls.Add(this.button_R3);
@@ -141,7 +141,10 @@
             this.Controls.Add(this.button_R1);
             this.Controls.Add(this.label_nivel);
             this.Controls.Add(this.label_pergunta);
-            this.Name = "Form5";
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(635, 380);
+            this.MinimumSize = new System.Drawing.Size(635, 380);
+            this.Name = "Form_Jogo";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);

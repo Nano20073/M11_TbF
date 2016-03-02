@@ -14,8 +14,10 @@ namespace M11_TbF
     {
         Pergunta Per;
         Background BG;
-        public Form_Jogo()
+        Form Owner;
+        public Form_Jogo(Form f)
         {
+            Owner = f;
             InitializeComponent();
         }
 
@@ -45,17 +47,30 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(button_R1.Text) == true)
             {
-                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                Per.Pergunta_Set();
-                label_pergunta.Text = Per.Pergunta_Get();
-                button_R1.Text = Per.Resposta1_Get();
-                button_R2.Text = Per.Resposta2_Get();
-                button_R3.Text = Per.Resposta3_Get();
-                button_R4.Text = Per.Resposta4_Get();
+                if (Per.Nivel_Get().ToString() == "6")
+                {
+                    MessageBox.Show("Tu Ganhaste!");
+
+                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
+                    Owner.Show();
+                    this.Close();
+                }
+                else
+                {
+                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                    Per.Pergunta_Set();
+                    label_pergunta.Text = Per.Pergunta_Get();
+                    button_R1.Text = Per.Resposta1_Get();
+                    button_R2.Text = Per.Resposta2_Get();
+                    button_R3.Text = Per.Resposta3_Get();
+                    button_R4.Text = Per.Resposta4_Get();
+                }
             }
             else
             {
                 MessageBox.Show("Perdeu");
+                Owner.Show();
+                this.Close();
             }
         }
 
@@ -63,17 +78,30 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(button_R2.Text) == true)
             {
-                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                Per.Pergunta_Set();
-                label_pergunta.Text = Per.Pergunta_Get();
-                button_R1.Text = Per.Resposta1_Get();
-                button_R2.Text = Per.Resposta2_Get();
-                button_R3.Text = Per.Resposta3_Get();
-                button_R4.Text = Per.Resposta4_Get();
+                if (Per.Nivel_Get().ToString() == "6")
+                {
+                    MessageBox.Show("Tu Ganhaste!");
+
+                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
+                    Owner.Show();
+                    this.Close();
+                }
+                else
+                {
+                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                    Per.Pergunta_Set();
+                    label_pergunta.Text = Per.Pergunta_Get();
+                    button_R1.Text = Per.Resposta1_Get();
+                    button_R2.Text = Per.Resposta2_Get();
+                    button_R3.Text = Per.Resposta3_Get();
+                    button_R4.Text = Per.Resposta4_Get();
+                }
             }
             else
             {
                 MessageBox.Show("Perdeu");
+                Owner.Show();
+                this.Close();
             }
         }
 
@@ -81,17 +109,30 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(button_R3.Text) == true)
             {
-                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
-                Per.Pergunta_Set();
-                label_pergunta.Text = Per.Pergunta_Get();
-                button_R1.Text = Per.Resposta1_Get();
-                button_R2.Text = Per.Resposta2_Get();
-                button_R3.Text = Per.Resposta3_Get();
-                button_R4.Text = Per.Resposta4_Get();
+                if (Per.Nivel_Get().ToString() == "6")
+                {
+                    MessageBox.Show("Tu Ganhaste!");
+
+                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
+                    Owner.Show();
+                    this.Close();
+                }
+                else
+                {
+                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                    Per.Pergunta_Set();
+                    label_pergunta.Text = Per.Pergunta_Get();
+                    button_R1.Text = Per.Resposta1_Get();
+                    button_R2.Text = Per.Resposta2_Get();
+                    button_R3.Text = Per.Resposta3_Get();
+                    button_R4.Text = Per.Resposta4_Get();
+                }
             }
             else
             {
                 MessageBox.Show("Perdeu");
+                Owner.Show();
+                this.Close();
             }
         }
 
@@ -99,17 +140,30 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(button_R4.Text) == true)
             {
-                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
-                Per.Pergunta_Set();
-                label_pergunta.Text = Per.Pergunta_Get();
-                button_R1.Text = Per.Resposta1_Get();
-                button_R2.Text = Per.Resposta2_Get();
-                button_R3.Text = Per.Resposta3_Get();
-                button_R4.Text = Per.Resposta4_Get();
+                if (Per.Nivel_Get().ToString() == "6")
+                {
+                    MessageBox.Show("Tu Ganhaste!");
+
+                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
+                    Owner.Show();
+                    this.Close();
+                }
+                else
+                {
+                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                    Per.Pergunta_Set();
+                    label_pergunta.Text = Per.Pergunta_Get();
+                    button_R1.Text = Per.Resposta1_Get();
+                    button_R2.Text = Per.Resposta2_Get();
+                    button_R3.Text = Per.Resposta3_Get();
+                    button_R4.Text = Per.Resposta4_Get();
+                }
             }
             else
             {
                 MessageBox.Show("Perdeu");
+                Owner.Show();
+                this.Close();
             }
         }
     }

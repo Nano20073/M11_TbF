@@ -157,6 +157,7 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\options_icon.png" />
     <None Include="Resources\backgroundDefault.jpg" />
     <Content Include="Resources\botão_login.jpg" />
     <None Include="Resources\IMG_sign_up_.gif" />

@@ -34,7 +34,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label_utilizador = new System.Windows.Forms.Label();
             this.button_logout = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -62,12 +61,16 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(253, 144);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::M11_TbF.Properties.Resources.options_icon2;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(572, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 25);
+            this.button3.Size = new System.Drawing.Size(27, 25);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Opções";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -82,14 +85,16 @@
             // 
             // label_utilizador
             // 
-            this.label_utilizador.AutoSize = true;
-            this.label_utilizador.BackColor = System.Drawing.Color.Transparent;
-            this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_utilizador.Location = new System.Drawing.Point(170, 25);
+            this.label_utilizador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label_utilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_utilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_utilizador.Location = new System.Drawing.Point(500, 1);
             this.label_utilizador.Name = "label_utilizador";
-            this.label_utilizador.Size = new System.Drawing.Size(19, 13);
+            this.label_utilizador.Size = new System.Drawing.Size(75, 25);
             this.label_utilizador.TabIndex = 4;
             this.label_utilizador.Text = "----";
+            this.label_utilizador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_utilizador.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_logout
@@ -102,35 +107,25 @@
             this.button_logout.UseVisualStyleBackColor = true;
             this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Voçê está agora logado como ";
-            // 
-            // Form2
+            // Form_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG63;
-            this.ClientSize = new System.Drawing.Size(604, 301);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(619, 341);
             this.Controls.Add(this.button_logout);
             this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(635, 380);
+            this.MinimumSize = new System.Drawing.Size(635, 380);
+            this.Name = "Form_Menu_Principal";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -142,7 +137,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label_utilizador;
         private System.Windows.Forms.Button button_logout;
-        private System.Windows.Forms.Label label1;
 
         public Form_Menu_Principal()
         {

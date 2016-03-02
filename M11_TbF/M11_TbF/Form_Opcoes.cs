@@ -13,8 +13,10 @@ namespace M11_TbF
     public partial class Form_Opcoes : Form
     {
         Background BG;
-        public Form_Opcoes()
+        Form Owner;
+        public Form_Opcoes(Form f)
         {
+            Owner = f;
             InitializeComponent();
         }
 

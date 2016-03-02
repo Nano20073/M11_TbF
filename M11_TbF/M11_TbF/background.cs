@@ -8,7 +8,7 @@ namespace M11_TbF
 {
     class Background
     {
-        private static int imagem = 6;
+        private static int imagem = 62;
 
         public int Mudar_para_IMG1()
         {
