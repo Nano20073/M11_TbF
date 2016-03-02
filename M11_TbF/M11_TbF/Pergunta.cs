@@ -14,7 +14,6 @@ namespace M11_TbF
 
 
         private int Nivel_da_Pergunta = 1;
-        private int Vitorias_consecutivas = 0;
         private int NPergunta = 0;
 
         private string Pergunta_Atual;
@@ -30,12 +29,6 @@ namespace M11_TbF
         {
             var rand = new System.Random();
             var exclude = new HashSet<int>() {};
-
-
-            if (Vitorias_consecutivas % 3 == 0 && Vitorias_consecutivas != 0)
-            {
-                Nivel_da_Pergunta++;
-            }
 
             if (Nivel_da_Pergunta == 1)
             {
@@ -90,7 +83,6 @@ namespace M11_TbF
                         Resposta3 = dr.GetValue(4).ToString();
                         Resposta4 = dr.GetValue(5).ToString();
                         Resposta_Correta = dr.GetValue(6).ToString();
-                        Vitorias_consecutivas++;
                     }
 
                 }
@@ -133,6 +125,7 @@ namespace M11_TbF
                     {
                         if (dr.GetValue(6).ToString() == Resposta)
                         {
+                            Nivel_da_Pergunta++;
                             return true;
                         }
                         else
@@ -165,11 +158,6 @@ namespace M11_TbF
         public string Nivel_Get()
         {
             return Nivel_da_Pergunta.ToString();
-        }
-
-        public string Vitorias_Consecutivas_Get()
-        {
-            return Vitorias_consecutivas.ToString();
         }
 
         public string Pergunta_Get()

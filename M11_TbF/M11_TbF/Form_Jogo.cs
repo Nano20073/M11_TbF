@@ -24,7 +24,6 @@ namespace M11_TbF
             
             Per = new Pergunta();
             label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-            label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
             Per.Pergunta_Set();
             label_pergunta.Text = Per.Pergunta_Get();
             button_R1.Text = Per.Resposta1_Get();
@@ -47,7 +46,6 @@ namespace M11_TbF
             if (Per.Resposta_Verificar(button_R1.Text) == true)
             {
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
                 Per.Pergunta_Set();
                 label_pergunta.Text = Per.Pergunta_Get();
                 button_R1.Text = Per.Resposta1_Get();
@@ -66,7 +64,6 @@ namespace M11_TbF
             if (Per.Resposta_Verificar(button_R2.Text) == true)
             {
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
                 Per.Pergunta_Set();
                 label_pergunta.Text = Per.Pergunta_Get();
                 button_R1.Text = Per.Resposta1_Get();
@@ -85,7 +82,6 @@ namespace M11_TbF
             if (Per.Resposta_Verificar(button_R3.Text) == true)
             {
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
-                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
                 Per.Pergunta_Set();
                 label_pergunta.Text = Per.Pergunta_Get();
                 button_R1.Text = Per.Resposta1_Get();
@@ -104,7 +100,6 @@ namespace M11_TbF
             if (Per.Resposta_Verificar(button_R4.Text) == true)
             {
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get();
-                label_vitorias_consecutivas.Text = "Vitorias consecutiveis: " + Per.Vitorias_Consecutivas_Get();
                 Per.Pergunta_Set();
                 label_pergunta.Text = Per.Pergunta_Get();
                 button_R1.Text = Per.Resposta1_Get();
