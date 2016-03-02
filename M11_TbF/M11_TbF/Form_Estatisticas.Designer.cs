@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button_sair = new System.Windows.Forms.Button();
+            this.label_utilizador = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +132,25 @@
             this.button_sair.UseVisualStyleBackColor = true;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
-            // Form4
+            // label_utilizador
+            // 
+            this.label_utilizador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label_utilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_utilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_utilizador.Location = new System.Drawing.Point(26, 9);
+            this.label_utilizador.Name = "label_utilizador";
+            this.label_utilizador.Size = new System.Drawing.Size(75, 25);
+            this.label_utilizador.TabIndex = 11;
+            this.label_utilizador.Text = "----";
+            this.label_utilizador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Form_Estatisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 281);
+            this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
@@ -147,7 +162,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
+            this.Name = "Form_Estatisticas";
             this.Text = "Estatísticas";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
@@ -168,5 +183,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Label label_utilizador;
     }
 }

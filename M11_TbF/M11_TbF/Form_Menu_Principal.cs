@@ -56,9 +56,8 @@ namespace M11_TbF
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form_Opcoes F3 = new Form_Opcoes(this);
-            F3.Show();
+            F3.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -69,7 +68,7 @@ namespace M11_TbF
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Estatisticas F4 = new Form_Estatisticas();
+            Form_Estatisticas F4 = new Form_Estatisticas(label_utilizador.Text);
             F4.Show();
         }
 
