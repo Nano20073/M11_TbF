@@ -73,7 +73,9 @@ namespace M11_TbF
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            User.Criar_Utilizador(textBox_UserName.Text, textBox_PassWord.Text);
+            this.Hide();
+            Form_SignUp FS = new Form_SignUp();
+            FS.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

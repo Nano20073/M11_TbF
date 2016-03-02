@@ -33,7 +33,7 @@
             this.button_Logar = new System.Windows.Forms.Button();
             this.textBox_PassWord = new System.Windows.Forms.TextBox();
             this.textBox_UserName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_criar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_UserName
@@ -87,29 +87,29 @@
             this.textBox_UserName.Size = new System.Drawing.Size(100, 20);
             this.textBox_UserName.TabIndex = 5;
             // 
-            // button1
+            // button_criar
             // 
-            this.button1.Location = new System.Drawing.Point(433, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button_criar.Location = new System.Drawing.Point(451, 20);
+            this.button_criar.Name = "button_criar";
+            this.button_criar.Size = new System.Drawing.Size(75, 23);
+            this.button_criar.TabIndex = 6;
+            this.button_criar.Text = "Criar Conta";
+            this.button_criar.UseVisualStyleBackColor = true;
+            this.button_criar.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Form1
+            // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.IMG62;
             this.ClientSize = new System.Drawing.Size(604, 301);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_criar);
             this.Controls.Add(this.textBox_UserName);
             this.Controls.Add(this.textBox_PassWord);
             this.Controls.Add(this.button_Logar);
             this.Controls.Add(this.label_PassWord);
             this.Controls.Add(this.label_UserName);
-            this.Name = "Form1";
+            this.Name = "Form_Login";
             this.Text = "Quem quer ser milionário";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -124,7 +124,7 @@
         private System.Windows.Forms.Button button_Logar;
         private System.Windows.Forms.TextBox textBox_PassWord;
         private System.Windows.Forms.TextBox textBox_UserName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_criar;
     }
 }
 

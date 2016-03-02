@@ -116,6 +116,9 @@
     <EmbeddedResource Include="Form_MudarBG.resx">
       <DependentUpon>Form_MudarBG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_SignUp.resx">
+      <DependentUpon>Form_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -155,6 +158,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\botão_login.jpg" />
+    <None Include="Resources\IMG_sign_up_.gif" />
     <None Include="Resources\quiz_answer.jpg" />
     <None Include="Resources\quiz_question.jpg" />
     <None Include="Resources\buttonBG109x27.png" />

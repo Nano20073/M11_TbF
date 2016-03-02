@@ -143,5 +143,9 @@
         private System.Windows.Forms.Label label_utilizador;
         private System.Windows.Forms.Button button_logout;
         private System.Windows.Forms.Label label1;
+
+        public Form_Menu_Principal()
+        {
+        }
     }
 }
