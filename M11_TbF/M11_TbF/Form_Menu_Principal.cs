@@ -15,9 +15,9 @@ namespace M11_TbF
         Utilizador User;
         string Username_Atual;
         private Image defaultBackground;
-
         public Form_Menu_Principal(string Username)
         {
+            
             Username_Atual = Username;
             InitializeComponent();
         }
@@ -51,7 +51,7 @@ namespace M11_TbF
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form_Opcoes F3 = new Form_Opcoes(this);
+            Form_Opcoes F3 = new Form_Opcoes(Username_Atual);
             F3.ShowDialog();
         }
 
@@ -63,18 +63,8 @@ namespace M11_TbF
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Estatisticas F4 = new Form_Estatisticas(label_utilizador.Text);
+            Form_Estatisticas F4 = new Form_Estatisticas(label_utilizador.Text, this);
             F4.Show();
-        }
-
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-            this.button2.BackgroundImage = (System.Drawing.Image)(Properties.Resources.IMG1);
-        }
-
-        private void button2_MouseLeave(object sender, EventArgs e)
-        {
-            this.button2.BackgroundImage = defaultBackground;
         }
     }
 }

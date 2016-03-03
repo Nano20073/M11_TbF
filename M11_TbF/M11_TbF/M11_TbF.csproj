@@ -58,6 +58,12 @@
     <Compile Include="Form_Menu_Principal.Designer.cs">
       <DependentUpon>Form_Menu_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_MudarNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MudarNome.Designer.cs">
+      <DependentUpon>Form_MudarNome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Opcoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu_Principal.resx">
       <DependentUpon>Form_Menu_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MudarNome.resx">
+      <DependentUpon>Form_MudarNome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Opcoes.resx">
       <DependentUpon>Form_Opcoes.cs</DependentUpon>

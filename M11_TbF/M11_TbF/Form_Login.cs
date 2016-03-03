@@ -60,16 +60,6 @@ namespace M11_TbF
            // textBox1.TextAlign = HorizontalAlignment.Center;
         }
 
-        private void button_Logar_MouseEnter(object sender, EventArgs e)
-        {
-            this.button_Logar.BackgroundImage = (System.Drawing.Image)(Properties.Resources.botão_login);
-        }
-
-        private void button_Logar_MouseLeave(object sender, EventArgs e)
-        {
-            this.button_Logar.BackgroundImage = defaultBackground;
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();

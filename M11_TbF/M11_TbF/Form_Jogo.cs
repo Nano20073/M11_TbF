@@ -51,6 +51,7 @@ namespace M11_TbF
                 }
                 else
                 {
+                    MessageBox.Show("Acertou");
                     label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                     Per.Pergunta_Set();
                     label_pergunta.Text = Per.Pergunta_Get();
@@ -82,6 +83,7 @@ namespace M11_TbF
                 }
                 else
                 {
+                    MessageBox.Show("Acertou");
                     label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                     Per.Pergunta_Set();
                     label_pergunta.Text = Per.Pergunta_Get();
@@ -113,6 +115,7 @@ namespace M11_TbF
                 }
                 else
                 {
+                    MessageBox.Show("Acertou");
                     label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                     Per.Pergunta_Set();
                     label_pergunta.Text = Per.Pergunta_Get();
@@ -144,6 +147,7 @@ namespace M11_TbF
                 }
                 else
                 {
+                    MessageBox.Show("Acertou");
                     label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                     Per.Pergunta_Set();
                     label_pergunta.Text = Per.Pergunta_Get();

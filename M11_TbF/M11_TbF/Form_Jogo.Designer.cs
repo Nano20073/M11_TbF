@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Jogo));
             this.label_nivel = new System.Windows.Forms.Label();
             this.label_pergunta = new System.Windows.Forms.Label();
             this.button_R1 = new System.Windows.Forms.Button();
@@ -54,7 +53,7 @@
             this.label_pergunta.BackColor = System.Drawing.Color.Transparent;
             this.label_pergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label_pergunta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_pergunta.Image = global::M11_TbF.Properties.Resources.quiz_question;
+            this.label_pergunta.Image = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.label_pergunta.Location = new System.Drawing.Point(127, 71);
             this.label_pergunta.Name = "label_pergunta";
             this.label_pergunta.Size = new System.Drawing.Size(349, 79);
@@ -64,7 +63,7 @@
             // 
             // button_R1
             // 
-            this.button_R1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_R1.BackgroundImage")));
+            this.button_R1.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.button_R1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_R1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button_R1.Location = new System.Drawing.Point(142, 177);
@@ -77,7 +76,7 @@
             // 
             // button_R2
             // 
-            this.button_R2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_R2.BackgroundImage")));
+            this.button_R2.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.button_R2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_R2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button_R2.Location = new System.Drawing.Point(142, 239);
@@ -90,7 +89,7 @@
             // 
             // button_R3
             // 
-            this.button_R3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_R3.BackgroundImage")));
+            this.button_R3.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.button_R3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_R3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button_R3.Location = new System.Drawing.Point(325, 177);
@@ -103,7 +102,7 @@
             // 
             // button_R4
             // 
-            this.button_R4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_R4.BackgroundImage")));
+            this.button_R4.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.button_R4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_R4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button_R4.Location = new System.Drawing.Point(325, 239);

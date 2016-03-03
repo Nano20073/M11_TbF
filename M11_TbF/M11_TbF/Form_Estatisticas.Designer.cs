@@ -31,101 +31,52 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button_sair = new System.Windows.Forms.Button();
             this.label_utilizador = new System.Windows.Forms.Label();
+            this.label_NivelMaximo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(23, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.Size = new System.Drawing.Size(149, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nivel Máximo Atigindo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(23, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.Size = new System.Drawing.Size(146, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nivel Mínimo Atigindo:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(23, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Numero de jogos:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(143, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(142, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(142, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Total Ganho:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(142, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "ID do Jogador";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(142, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
             // 
             // button_sair
             // 
             this.button_sair.BackgroundImage = global::M11_TbF.Properties.Resources.botão_voltar;
-            this.button_sair.Location = new System.Drawing.Point(105, 235);
+            this.button_sair.Location = new System.Drawing.Point(114, 187);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(48, 34);
             this.button_sair.TabIndex = 10;
@@ -134,31 +85,51 @@
             // 
             // label_utilizador
             // 
-            this.label_utilizador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label_utilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_utilizador.AutoSize = true;
+            this.label_utilizador.BackColor = System.Drawing.Color.Transparent;
             this.label_utilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_utilizador.Location = new System.Drawing.Point(26, 9);
+            this.label_utilizador.ForeColor = System.Drawing.Color.Transparent;
+            this.label_utilizador.Location = new System.Drawing.Point(178, 9);
             this.label_utilizador.Name = "label_utilizador";
-            this.label_utilizador.Size = new System.Drawing.Size(75, 25);
+            this.label_utilizador.Size = new System.Drawing.Size(28, 17);
             this.label_utilizador.TabIndex = 11;
             this.label_utilizador.Text = "----";
             this.label_utilizador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_NivelMaximo
+            // 
+            this.label_NivelMaximo.AutoSize = true;
+            this.label_NivelMaximo.BackColor = System.Drawing.Color.Transparent;
+            this.label_NivelMaximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_NivelMaximo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_NivelMaximo.Location = new System.Drawing.Point(178, 43);
+            this.label_NivelMaximo.Name = "label_NivelMaximo";
+            this.label_NivelMaximo.Size = new System.Drawing.Size(13, 17);
+            this.label_NivelMaximo.TabIndex = 12;
+            this.label_NivelMaximo.Text = "-";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(23, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 17);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Username usado:";
             // 
             // Form_Estatisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.ClientSize = new System.Drawing.Size(286, 281);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label_NivelMaximo);
             this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -175,14 +146,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label_utilizador;
+        private System.Windows.Forms.Label label_NivelMaximo;
+        private System.Windows.Forms.Label label4;
     }
 }

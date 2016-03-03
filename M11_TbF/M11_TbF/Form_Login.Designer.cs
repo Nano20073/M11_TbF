@@ -72,8 +72,6 @@
             this.button_Logar.Text = "Login";
             this.button_Logar.UseVisualStyleBackColor = true;
             this.button_Logar.Click += new System.EventHandler(this.button_Logar_Click);
-            this.button_Logar.MouseEnter += new System.EventHandler(this.button_Logar_MouseEnter);
-            this.button_Logar.MouseLeave += new System.EventHandler(this.button_Logar_MouseLeave);
             // 
             // textBox_PassWord
             // 

@@ -38,52 +38,57 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 35);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(10, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.label1.Text = "Novo Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 74);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(12, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
+            this.label2.Text = "Nova Password:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 35);
+            this.textBox1.Location = new System.Drawing.Point(124, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 74);
+            this.textBox2.Location = new System.Drawing.Point(124, 54);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
             // 
             // button_criar
             // 
-            this.button_criar.Location = new System.Drawing.Point(82, 140);
+            this.button_criar.Location = new System.Drawing.Point(230, 12);
             this.button_criar.Name = "button_criar";
-            this.button_criar.Size = new System.Drawing.Size(75, 23);
+            this.button_criar.Size = new System.Drawing.Size(75, 62);
             this.button_criar.TabIndex = 4;
             this.button_criar.Text = "Criar";
             this.button_criar.UseVisualStyleBackColor = true;
             this.button_criar.Click += new System.EventHandler(this.button_criar_Click);
-            this.button_criar.MouseEnter += new System.EventHandler(this.button_criar_MouseEnter);
-            this.button_criar.MouseLeave += new System.EventHandler(this.button_criar_MouseLeave);
             // 
             // Form_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
+            this.ClientSize = new System.Drawing.Size(318, 88);
             this.Controls.Add(this.button_criar);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);

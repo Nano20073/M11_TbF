@@ -13,9 +13,11 @@ namespace M11_TbF
     public partial class Form_Estatisticas : Form
     {
         string Username_Atual;
+        Form Owner;
 
-        public Form_Estatisticas(string Username)
+        public Form_Estatisticas(string Username, Form f)
         {
+            Owner = f;
             Username_Atual = Username;
             InitializeComponent();
         }
@@ -23,13 +25,13 @@ namespace M11_TbF
         private void Form4_Load(object sender, EventArgs e)
         {
             label_utilizador.Text = Username_Atual;
+            //label_NivelMaximo.Text
         }
 
         private void button_sair_Click(object sender, EventArgs e)
         {
-            /*this.Hide();
-            Form2 F2 = new Form2();
-            F2.Show();*/
+            this.Close();
+            Owner.Show();
         }
     }
 }

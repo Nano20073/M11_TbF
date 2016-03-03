@@ -22,21 +22,11 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void button_criar_MouseEnter(object sender, EventArgs e)
-        {
-            this.button_criar.BackgroundImage = (System.Drawing.Image)(Properties.Resources.IMG1);
-        }
-
-        private void button_criar_MouseLeave(object sender, EventArgs e)
-        {
-            this.button_criar.BackgroundImage = defaultBackground;
-        }
-
         private void button_criar_Click(object sender, EventArgs e)
         {
             User.Criar_Utilizador(textBox1.Text, textBox2.Text);
-
-            this.Hide();
+            MessageBox.Show("A conta foi criada. Reinicie o Jogo para fazer login.");
+            this.Close();
             Form_Login FL = new Form_Login();
             FL.Show();
         }
