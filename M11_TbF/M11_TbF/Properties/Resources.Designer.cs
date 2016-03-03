@@ -73,16 +73,6 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap botão_login {
-            get {
-                object obj = ResourceManager.GetObject("botão_login", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap botão_voltar {
             get {
                 object obj = ResourceManager.GetObject("botão_voltar", resourceCulture);
@@ -93,9 +83,9 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buttonBG {
+        internal static System.Drawing.Bitmap FormBG {
             get {
-                object obj = ResourceManager.GetObject("buttonBG", resourceCulture);
+                object obj = ResourceManager.GetObject("FormBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,109 +93,9 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buttonBG109x27 {
+        internal static System.Drawing.Bitmap GameBG {
             get {
-                object obj = ResourceManager.GetObject("buttonBG109x27", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap buttonBG109x271 {
-            get {
-                object obj = ResourceManager.GetObject("buttonBG109x271", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_sign_up_ {
-            get {
-                object obj = ResourceManager.GetObject("IMG_sign_up_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG1 {
-            get {
-                object obj = ResourceManager.GetObject("IMG1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG2 {
-            get {
-                object obj = ResourceManager.GetObject("IMG2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG3 {
-            get {
-                object obj = ResourceManager.GetObject("IMG3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG4 {
-            get {
-                object obj = ResourceManager.GetObject("IMG4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG5 {
-            get {
-                object obj = ResourceManager.GetObject("IMG5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG51 {
-            get {
-                object obj = ResourceManager.GetObject("IMG51", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG6 {
-            get {
-                object obj = ResourceManager.GetObject("IMG6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG61 {
-            get {
-                object obj = ResourceManager.GetObject("IMG61", resourceCulture);
+                object obj = ResourceManager.GetObject("GameBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,16 +116,6 @@ namespace M11_TbF.Properties {
         internal static System.Drawing.Bitmap IMG63 {
             get {
                 object obj = ResourceManager.GetObject("IMG63", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG64 {
-            get {
-                object obj = ResourceManager.GetObject("IMG64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
