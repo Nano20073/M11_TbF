@@ -12,6 +12,7 @@ namespace M11_TbF
 {
     public partial class Form_Jogo : Form
     {
+        Utilizador User;
         Pergunta Per;
         Form Owner;
         public Form_Jogo(Form f)
@@ -22,7 +23,7 @@ namespace M11_TbF
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            
+            User = new Utilizador();
             Per = new Pergunta();
             label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
             Per.Pergunta_Set();

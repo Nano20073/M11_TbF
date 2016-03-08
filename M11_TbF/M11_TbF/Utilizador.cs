@@ -54,7 +54,11 @@ namespace M11_TbF
                 //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
-
+        //
+        //
+        //
+        //
+        //
         public void Utilizador_login(string Username, string Password)
         {
             // Connection string for ADO.NET via OleDB
@@ -112,7 +116,11 @@ namespace M11_TbF
                 //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
-
+        //
+        //
+        //
+        //
+        //
         public void Alterar_Nome_de_Utilizador(string Username, string Novo_Username)
         {
             // Connection string for ADO.NET via OleDB
@@ -129,22 +137,17 @@ namespace M11_TbF
                 cn.Open();
 
                 // Run the query and create a record set
-                OleDbDataReader dr = cmd.ExecuteReader();
+
 
                 //MessageBox.Show("\n{0}: Fetch the actual data: ");
-                while (dr.Read())
-                {
-                    if (dr.GetValue(0).ToString() == Username)
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "UPDATE Utilizadores SET Nome = @Nome WHERE Nome = @Nome;";
-                        cmd.Parameters.AddWithValue("@Nome",Novo_Username);
-                        cmd.Connection = cn;
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                //MessageBox.Show("Total Row Count: {1}" + row.ToString());
-                dr.Close();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Utilizadores SET Nome = @Nome WHERE Nome = @Old_Nome;";
+                cmd.Parameters.AddWithValue("@Nome", Novo_Username);
+                cmd.Parameters.AddWithValue("@Old_Nome", Username);
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
             }
 
 
@@ -164,7 +167,55 @@ namespace M11_TbF
                 //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
+        //
+        //
+        //
+        //
+        //
+        public void Adicionar_Estatisticas(int nivel_maximo)
+            {
+            // Connection string for ADO.NET via OleDB
+            OleDbConnection cn =
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
+            // Prepare SQL query
+            string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            try
+            {
+                cn.Open();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE @Nivel_Maximo > Nivel_Maximo;";
+                cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo);
+
+                cmd.Parameters.AddWithValue("@Old_Nome", );
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
+            }
+
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        //
+        //
+        //
+        //
+        //
         public string Utilizador_login_get()
         {
             return Username_login;
