@@ -108,8 +108,7 @@ namespace M11_TbF
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            OleDbCommand cmd = new OleDbCommand();
 
             try
             {
@@ -150,8 +149,7 @@ namespace M11_TbF
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.Nivel_Maximo FROM Utilizadores; ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            OleDbCommand cmd = new OleDbCommand();
 
             try
             {
@@ -187,11 +185,11 @@ namespace M11_TbF
         //
         //
         //
-        /*public string get_nivel_maximo(string Username)
+        public string get_nivel_maximo(string Username)
         {
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.Nivel_Maximo FROM Utilizadores WHERE (((Utilizadores.Nome)=" + Nivel_da_Pergunta.ToString() + "));";
+            string query = "SELECT Utilizadores.Nome, Utilizadores.Nivel_Maximo FROM Utilizadores;";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -200,15 +198,12 @@ namespace M11_TbF
                 cn.Open();
 
                 OleDbDataReader dr = cmd.ExecuteReader();
-
                 while (dr.Read())
                 {
-                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
-                    {
-                        
-                    }
-
+                    if(dr.GetValue(0).ToString() == Username) { return dr.GetValue(1).ToString(); }
                 }
+                
+                dr.Close();
             }
             catch (OleDbException ex)
             {
@@ -224,7 +219,8 @@ namespace M11_TbF
             {
                 cn.Close();
             }
-        }*/
+            return "";
+        }
         //
         //
         //

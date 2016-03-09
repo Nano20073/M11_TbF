@@ -12,6 +12,7 @@ namespace M11_TbF
 {
     public partial class Form_Estatisticas : Form
     {
+        Utilizador User;
         string Username_Atual;
         Form Owner;
 
@@ -24,6 +25,8 @@ namespace M11_TbF
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            User = new Utilizador();
+            label_NivelMaximo.Text = User.get_nivel_maximo(Username_Atual);
             label_utilizador.Text = Username_Atual;
         }
 
