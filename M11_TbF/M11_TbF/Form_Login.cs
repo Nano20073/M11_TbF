@@ -35,7 +35,7 @@ namespace M11_TbF
             else
             {
                 this.Hide();
-                Form_Menu_Principal F2 = new Form_Menu_Principal(Username);
+                Form_Menu_Principal F2 = new Form_Menu_Principal(Username, Password);
                 
                 F2.Show();
             }

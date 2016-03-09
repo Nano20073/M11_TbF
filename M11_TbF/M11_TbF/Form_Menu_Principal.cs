@@ -14,10 +14,11 @@ namespace M11_TbF
     {
         Utilizador User;
         string Username_Atual;
+        string pass;
         private Image defaultBackground;
-        public Form_Menu_Principal(string Username)
+        public Form_Menu_Principal(string Username, string password)
         {
-            
+            pass = password;
             Username_Atual = Username;
             InitializeComponent();
         }
@@ -51,7 +52,7 @@ namespace M11_TbF
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form_Opcoes F3 = new Form_Opcoes(Username_Atual);
+            Form_Opcoes F3 = new Form_Opcoes(Username_Atual, pass);
             F3.ShowDialog();
         }
 

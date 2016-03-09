@@ -13,9 +13,11 @@ namespace M11_TbF
     public partial class Form_Opcoes : Form
     {
         string Username_Atual;
-        public Form_Opcoes(string Username)
+        string password;
+        public Form_Opcoes(string Username, string pass)
         {
             Username_Atual = Username;
+            password = pass;
             InitializeComponent();
         }
 
@@ -26,10 +28,8 @@ namespace M11_TbF
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            /*this.Hide();            
-            Form7 F7 = new Form7();
-            F7.Show();*/
+            Form_MudarPassword F7 = new Form_MudarPassword(Username_Atual);
+            F7.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
