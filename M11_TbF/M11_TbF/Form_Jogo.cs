@@ -44,7 +44,7 @@ namespace M11_TbF
         {
             if (Per.Nivel_Get().ToString() == "6")
             {
-                User.Adicionar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
                 MessageBox.Show("Tu Ganhaste!");
                 Owner.Show();
                 this.Close();
@@ -64,7 +64,7 @@ namespace M11_TbF
 
         public void Errou_a_Pergunta()
         {
-            User.Adicionar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+            User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             MessageBox.Show("Perdeu");
             Owner.Show();
             this.Close();
