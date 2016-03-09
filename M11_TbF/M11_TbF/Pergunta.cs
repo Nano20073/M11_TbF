@@ -55,13 +55,8 @@ namespace M11_TbF
                 NPergunta = rand.Next(21, 26 - exclude.Count);
             }
 
-
-
-
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            // Prepare SQL query
             string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Pergunta, Perguntas.Resposta1, Perguntas.Resposta2, Perguntas.Resposta3, Perguntas.Resposta4, Perguntas.Resposta_Correta, Perguntas.Nivel FROM Perguntas WHERE (((Perguntas.Nivel)=" + Nivel_da_Pergunta.ToString() + "));";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
@@ -102,13 +97,15 @@ namespace M11_TbF
                 cn.Close();
             }
         }
-
+        //
+        //
+        //
+        //
+        //
         public bool Resposta_Verificar(string Resposta)
         {
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            // Prepare SQL query
             string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Pergunta, Perguntas.Resposta1, Perguntas.Resposta2, Perguntas.Resposta3, Perguntas.Resposta4, Perguntas.Resposta_Correta, Perguntas.Nivel FROM Perguntas WHERE (((Perguntas.Nivel)=" + Nivel_da_Pergunta.ToString() + "));";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
@@ -154,10 +151,14 @@ namespace M11_TbF
 
             return false;
         }
-
-        public string Nivel_Get()
+        //
+        //
+        //
+        //
+        //
+        public int Nivel_Get()
         {
-            return Nivel_da_Pergunta.ToString();
+            return Nivel_da_Pergunta;
         }
 
         public string Pergunta_Get()

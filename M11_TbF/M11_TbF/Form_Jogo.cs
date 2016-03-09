@@ -15,9 +15,11 @@ namespace M11_TbF
         Utilizador User;
         Pergunta Per;
         Form Owner;
-        public Form_Jogo(Form f)
+        string Username_Atual;
+        public Form_Jogo(Form f, string Username)
         {
             Owner = f;
+            Username_Atual = Username;
             InitializeComponent();
         }
 
@@ -38,35 +40,45 @@ namespace M11_TbF
             
         }
 
+        public void Acertou_a_Pergunta()
+        {
+            if (Per.Nivel_Get().ToString() == "6")
+            {
+                User.Adicionar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                MessageBox.Show("Tu Ganhaste!");
+                Owner.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Acertou");
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                label_r1.Text = Per.Resposta1_Get();
+                label_r2.Text = Per.Resposta2_Get();
+                label_r3.Text = Per.Resposta3_Get();
+                label_r4.Text = Per.Resposta4_Get();
+            }
+        }
+
+        public void Errou_a_Pergunta()
+        {
+            User.Adicionar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+            MessageBox.Show("Perdeu");
+            Owner.Show();
+            this.Close();
+        }
+
         private void label_r1_Click(object sender, EventArgs e)
         {
             if (Per.Resposta_Verificar(label_r1.Text) == true)
             {
-                if (Per.Nivel_Get().ToString() == "6")
-                {
-                    MessageBox.Show("Tu Ganhaste!");
-
-                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
-                    Owner.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Acertou");
-                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                    Per.Pergunta_Set();
-                    label_pergunta.Text = Per.Pergunta_Get();
-                    label_r1.Text = Per.Resposta1_Get();
-                    label_r2.Text = Per.Resposta2_Get();
-                    label_r3.Text = Per.Resposta3_Get();
-                    label_r4.Text = Per.Resposta4_Get();
-                }
+                Acertou_a_Pergunta();
             }
             else
             {
-                MessageBox.Show("Perdeu");
-                Owner.Show();
-                this.Close();
+                Errou_a_Pergunta();
             }
         }
 
@@ -74,31 +86,11 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(label_r2.Text) == true)
             {
-                if (Per.Nivel_Get().ToString() == "6")
-                {
-                    MessageBox.Show("Tu Ganhaste!");
-
-                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
-                    Owner.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Acertou");
-                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                    Per.Pergunta_Set();
-                    label_pergunta.Text = Per.Pergunta_Get();
-                    label_r1.Text = Per.Resposta1_Get();
-                    label_r2.Text = Per.Resposta2_Get();
-                    label_r3.Text = Per.Resposta3_Get();
-                    label_r4.Text = Per.Resposta4_Get();
-                }
+                Acertou_a_Pergunta();
             }
             else
             {
-                MessageBox.Show("Perdeu");
-                Owner.Show();
-                this.Close();
+                Errou_a_Pergunta();
             }
         }
 
@@ -107,31 +99,11 @@ namespace M11_TbF
 
             if (Per.Resposta_Verificar(label_r3.Text) == true)
             {
-                if (Per.Nivel_Get().ToString() == "6")
-                {
-                    MessageBox.Show("Tu Ganhaste!");
-
-                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
-                    Owner.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Acertou");
-                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                    Per.Pergunta_Set();
-                    label_pergunta.Text = Per.Pergunta_Get();
-                    label_r1.Text = Per.Resposta1_Get();
-                    label_r2.Text = Per.Resposta2_Get();
-                    label_r3.Text = Per.Resposta3_Get();
-                    label_r4.Text = Per.Resposta4_Get();
-                }
+                Acertou_a_Pergunta();
             }
             else
             {
-                MessageBox.Show("Perdeu");
-                Owner.Show();
-                this.Close();
+                Errou_a_Pergunta();
             }
         }
 
@@ -139,31 +111,11 @@ namespace M11_TbF
         {
             if (Per.Resposta_Verificar(label_r4.Text) == true)
             {
-                if (Per.Nivel_Get().ToString() == "6")
-                {
-                    MessageBox.Show("Tu Ganhaste!");
-
-                    // Form_Menu_Principal FMP = new Form_Menu_Principal();
-                    Owner.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Acertou");
-                    label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                    Per.Pergunta_Set();
-                    label_pergunta.Text = Per.Pergunta_Get();
-                    label_r1.Text = Per.Resposta1_Get();
-                    label_r2.Text = Per.Resposta2_Get();
-                    label_r3.Text = Per.Resposta3_Get();
-                    label_r4.Text = Per.Resposta4_Get();
-                }
+                Acertou_a_Pergunta();
             }
             else
             {
-                MessageBox.Show("Perdeu");
-                Owner.Show();
-                this.Close();
+                Errou_a_Pergunta();
             }
         }
     }

@@ -13,11 +13,11 @@ namespace M11_TbF
     {
         private string Username_login="";
 
+
+
         public void Criar_Utilizador(string Username, string Password)
         {
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
-                //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
             
             OleDbCommand cmd = new OleDbCommand();
@@ -32,10 +32,6 @@ namespace M11_TbF
             {
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                //MessageBox.Show("{Successfully connected to database. Data source name:" + cn.DataSource);
-                //MessageBox.Show("SQL query:\n {0}" + query);
-
-                //MessageBox.Show("\n{0}: Fetch the actual data: ");
 
             }
             catch (OleDbException ex)
@@ -51,7 +47,6 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-                //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
         //
@@ -61,41 +56,28 @@ namespace M11_TbF
         //
         public void Utilizador_login(string Username, string Password)
         {
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
-                //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            // Prepare SQL query
             string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
             {
                 cn.Open();
-                //MessageBox.Show("{Successfully connected to database. Data source name:" + cn.DataSource);
-                //MessageBox.Show("SQL query:\n {0}" + query);
-
-                // Run the query and create a record set
                 OleDbDataReader dr = cmd.ExecuteReader();
-
-                //MessageBox.Show("\n{0}: Fetch the actual data: ");
                 while (dr.Read())
                 {
 
-                    //MessageBox.Show(dr.GetValue(0).ToString() + " " + dr.GetValue(1).ToString());
                     if (dr.GetValue(0).ToString() == Username)
                     {
                         if (dr.GetValue(1).ToString() == Password)
                         {
                             Username_login = Username;
-                            //MessageBox.Show("conetou-se");
-                            //abrir form2
                             
                         }
                     }
                 }
-                //MessageBox.Show("Total Row Count: {1}" + row.ToString());
                 dr.Close();
             }
 
@@ -113,7 +95,6 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-                //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
         //
@@ -123,23 +104,15 @@ namespace M11_TbF
         //
         public void Alterar_Nome_de_Utilizador(string Username, string Novo_Username)
         {
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
-                //  new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\\M11_TbF_DB.accdb;Jet OLEDB:Database");
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            // Prepare SQL query
             string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
             {
                 cn.Open();
-
-                // Run the query and create a record set
-
-
-                //MessageBox.Show("\n{0}: Fetch the actual data: ");
 
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Nome = @Nome WHERE Nome = @Old_Nome;";
@@ -164,7 +137,6 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-                //MessageBox.Show("{0}: Cleanup. Done.");
             }
         }
         //
@@ -172,14 +144,12 @@ namespace M11_TbF
         //
         //
         //
-        public void Adicionar_Estatisticas(int nivel_maximo)
+        public void Adicionar_Estatisticas(int nivel_maximo, string Username_atual)
             {
-            // Connection string for ADO.NET via OleDB
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            // Prepare SQL query
-            string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
+            string query = "SELECT Utilizadores.Nome, Utilizadores.Nivel_Maximo FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -187,10 +157,8 @@ namespace M11_TbF
                 cn.Open();
 
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE @Nivel_Maximo > Nivel_Maximo;";
+                cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE @Nivel_Maximo < @Nivel_Maximo;";
                 cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo);
-
-                cmd.Parameters.AddWithValue("@Old_Nome", );
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
 

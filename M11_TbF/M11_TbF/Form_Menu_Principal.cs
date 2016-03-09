@@ -45,7 +45,7 @@ namespace M11_TbF
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Jogo F5 = new Form_Jogo(this);
+            Form_Jogo F5 = new Form_Jogo(this, Username_Atual);
             F5.Show();
         }
 

@@ -25,7 +25,6 @@ namespace M11_TbF
         private void Form4_Load(object sender, EventArgs e)
         {
             label_utilizador.Text = Username_Atual;
-            //label_NivelMaximo.Text
         }
 
         private void button_sair_Click(object sender, EventArgs e)
