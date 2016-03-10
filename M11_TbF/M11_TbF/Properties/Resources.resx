@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="quiz_question1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quiz_question.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quiz_question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quiz_question.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,34 +127,82 @@
   <data name="backgroundDefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundDefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botão_voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botão_voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="quiz_answer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quiz_answer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG62" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG62.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="options_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\options_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="options_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\options_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="options_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\options_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG63" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG63.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FormBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GameBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FormBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FormBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botão_voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botão_voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quiz_question1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quiz_question.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG62.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quiz_answer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quiz_answer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="options_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\options_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="options_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\options_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG63.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Money.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nivel9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nivel9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -34,6 +34,8 @@
             this.label_r2 = new System.Windows.Forms.Label();
             this.label_r3 = new System.Windows.Forms.Label();
             this.label_r4 = new System.Windows.Forms.Label();
+            this.pictureBox_MoneyTree = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.SuspendLayout();
             // 
             // label_nivel
@@ -112,13 +114,24 @@
             this.label_r4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_r4.Click += new System.EventHandler(this.label_r4_Click);
             // 
+            // pictureBox_MoneyTree
+            // 
+            this.pictureBox_MoneyTree.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_MoneyTree.BackgroundImage = global::M11_TbF.Properties.Resources.nivel1;
+            this.pictureBox_MoneyTree.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox_MoneyTree.Name = "pictureBox_MoneyTree";
+            this.pictureBox_MoneyTree.Size = new System.Drawing.Size(144, 198);
+            this.pictureBox_MoneyTree.TabIndex = 15;
+            this.pictureBox_MoneyTree.TabStop = false;
+            // 
             // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.GameBG;
-            this.ClientSize = new System.Drawing.Size(704, 381);
+            this.ClientSize = new System.Drawing.Size(704, 382);
+            this.Controls.Add(this.pictureBox_MoneyTree);
             this.Controls.Add(this.label_r4);
             this.Controls.Add(this.label_r3);
             this.Controls.Add(this.label_r2);
@@ -131,6 +144,7 @@
             this.Name = "Form_Jogo";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +157,6 @@
         private System.Windows.Forms.Label label_r2;
         private System.Windows.Forms.Label label_r3;
         private System.Windows.Forms.Label label_r4;
+        private System.Windows.Forms.PictureBox pictureBox_MoneyTree;
     }
 }

@@ -15,6 +15,7 @@ namespace M11_TbF
         Utilizador User;
         Pergunta Per;
         Form Owner;
+        int MoneyTree = 1;
         string Username_Atual;
         public Form_Jogo(Form f, string Username)
         {
@@ -51,6 +52,7 @@ namespace M11_TbF
             }
             else
             {
+                MoneyTree++;
                 MessageBox.Show("Acertou");
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                 Per.Pergunta_Set();
@@ -59,6 +61,7 @@ namespace M11_TbF
                 label_r2.Text = Per.Resposta2_Get();
                 label_r3.Text = Per.Resposta3_Get();
                 label_r4.Text = Per.Resposta4_Get();
+                //pictureBox_MoneyTree.BackgroundImage = M11_TbF.Properties.Resources."nivel" + MoneyTree.ToString();
             }
         }
 

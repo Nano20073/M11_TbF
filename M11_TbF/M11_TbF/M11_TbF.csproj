@@ -165,6 +165,22 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\nivel15.jpg" />
+    <None Include="Resources\nivel14.jpg" />
+    <None Include="Resources\nivel13.jpg" />
+    <None Include="Resources\nivel12.jpg" />
+    <None Include="Resources\nivel11.jpg" />
+    <None Include="Resources\nivel10.jpg" />
+    <None Include="Resources\nivel9.jpg" />
+    <None Include="Resources\nivel8.jpg" />
+    <None Include="Resources\nivel7.jpg" />
+    <None Include="Resources\nivel6.jpg" />
+    <None Include="Resources\nivel5.jpg" />
+    <None Include="Resources\nivel4.jpg" />
+    <None Include="Resources\nivel3.jpg" />
+    <None Include="Resources\nivel2.jpg" />
+    <None Include="Resources\nivel1.jpg" />
+    <None Include="Resources\Money.jpg" />
     <None Include="Resources\FormBG.jpg" />
     <None Include="Resources\GameBG.png" />
     <None Include="Resources\who-wants-to-be-a-millionaire-template-ljkneqqk.jpg" />
