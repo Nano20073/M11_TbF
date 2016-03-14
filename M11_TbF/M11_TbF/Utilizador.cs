@@ -246,7 +246,7 @@ namespace M11_TbF
             {
                 cn.Open();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Utilizadores SET PassWord = @password WHERE Nome = @Username;";
+                cmd.CommandText = "UPDATE Utilizadores SET [PassWord] = @password WHERE [Nome] = @Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@password", Nova_Password);
                 cmd.Connection = cn;

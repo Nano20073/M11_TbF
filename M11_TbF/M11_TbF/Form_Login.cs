@@ -57,6 +57,16 @@ namespace M11_TbF
             FS.Show();
         }
 
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             User = new Utilizador();

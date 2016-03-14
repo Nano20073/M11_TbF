@@ -35,6 +35,7 @@
             this.label_utilizador = new System.Windows.Forms.Label();
             this.button_logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_minimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(77, 68);
+            this.button1.Location = new System.Drawing.Point(67, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 27);
             this.button1.TabIndex = 0;
@@ -56,7 +57,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkGreen;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(77, 3);
+            this.button2.Location = new System.Drawing.Point(67, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 29);
             this.button2.TabIndex = 1;
@@ -83,11 +84,11 @@
             this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(77, 38);
+            this.button4.Location = new System.Drawing.Point(610, -1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 24);
+            this.button4.Size = new System.Drawing.Size(27, 24);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Sair";
+            this.button4.Text = "x";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -123,24 +124,36 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(230, 250);
+            this.panel1.Location = new System.Drawing.Point(233, 273);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 103);
+            this.panel1.Size = new System.Drawing.Size(286, 81);
             this.panel1.TabIndex = 6;
+            // 
+            // button_minimizar
+            // 
+            this.button_minimizar.Location = new System.Drawing.Point(586, 0);
+            this.button_minimizar.Name = "button_minimizar";
+            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.TabIndex = 17;
+            this.button_minimizar.Text = "_";
+            this.button_minimizar.UseVisualStyleBackColor = true;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
             // Form_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.FormBG;
-            this.ClientSize = new System.Drawing.Size(704, 365);
+            this.ClientSize = new System.Drawing.Size(704, 366);
+            this.Controls.Add(this.button_minimizar);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_logout);
             this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(720, 404);
             this.MinimumSize = new System.Drawing.Size(720, 404);
@@ -166,5 +179,6 @@
         }
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button_minimizar;
     }
 }

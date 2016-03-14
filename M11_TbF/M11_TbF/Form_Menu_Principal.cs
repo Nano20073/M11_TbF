@@ -67,5 +67,10 @@ namespace M11_TbF
             Form_Estatisticas F4 = new Form_Estatisticas(label_utilizador.Text, this);
             F4.Show();
         }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -36,6 +36,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_NTemCnt = new System.Windows.Forms.Label();
             this.label_criar_conta = new System.Windows.Forms.Label();
+            this.button_sair = new System.Windows.Forms.Button();
+            this.button_minimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,18 +137,47 @@
             this.label_criar_conta.Text = "Increva-se aqui";
             this.label_criar_conta.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button_sair
+            // 
+            this.button_sair.BackColor = System.Drawing.Color.Red;
+            this.button_sair.Location = new System.Drawing.Point(676, 0);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(28, 22);
+            this.button_sair.TabIndex = 8;
+            this.button_sair.Text = "x";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
+            // 
+            // button_minimizar
+            // 
+            this.button_minimizar.Location = new System.Drawing.Point(652, 0);
+            this.button_minimizar.Name = "button_minimizar";
+            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.TabIndex = 9;
+            this.button_minimizar.Text = "_";
+            this.button_minimizar.UseVisualStyleBackColor = true;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.FormBG;
-            this.ClientSize = new System.Drawing.Size(704, 365);
+            this.ClientSize = new System.Drawing.Size(704, 366);
+            this.ControlBox = false;
+            this.Controls.Add(this.button_minimizar);
+            this.Controls.Add(this.button_sair);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(720, 404);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(720, 404);
             this.Name = "Form_Login";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Quem quer ser milionário";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -164,6 +195,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_criar_conta;
         private System.Windows.Forms.Label label_NTemCnt;
+        private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Button button_minimizar;
     }
 }
 

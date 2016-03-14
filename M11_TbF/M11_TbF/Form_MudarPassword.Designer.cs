@@ -94,6 +94,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_MudarPassword";
             this.Text = "Form_MudarPassword";
             this.Load += new System.EventHandler(this.Form_MudarPassword_Load);

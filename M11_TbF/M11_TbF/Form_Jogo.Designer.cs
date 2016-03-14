@@ -35,6 +35,8 @@
             this.label_r3 = new System.Windows.Forms.Label();
             this.label_r4 = new System.Windows.Forms.Label();
             this.pictureBox_MoneyTree = new System.Windows.Forms.PictureBox();
+            this.button_minimizar = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +126,27 @@
             this.pictureBox_MoneyTree.TabIndex = 15;
             this.pictureBox_MoneyTree.TabStop = false;
             // 
+            // button_minimizar
+            // 
+            this.button_minimizar.Location = new System.Drawing.Point(641, -1);
+            this.button_minimizar.Name = "button_minimizar";
+            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.TabIndex = 16;
+            this.button_minimizar.Text = "_";
+            this.button_minimizar.UseVisualStyleBackColor = true;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
+            // 
+            // button_sair
+            // 
+            this.button_sair.BackColor = System.Drawing.Color.Red;
+            this.button_sair.Location = new System.Drawing.Point(664, 0);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(28, 22);
+            this.button_sair.TabIndex = 17;
+            this.button_sair.Text = "x";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
+            // 
             // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +154,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.GameBG;
             this.ClientSize = new System.Drawing.Size(704, 382);
+            this.Controls.Add(this.button_sair);
+            this.Controls.Add(this.button_minimizar);
             this.Controls.Add(this.pictureBox_MoneyTree);
             this.Controls.Add(this.label_r4);
             this.Controls.Add(this.label_r3);
@@ -138,6 +163,7 @@
             this.Controls.Add(this.label_r1);
             this.Controls.Add(this.label_nivel);
             this.Controls.Add(this.label_pergunta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(720, 420);
             this.MinimumSize = new System.Drawing.Size(720, 420);
@@ -158,5 +184,7 @@
         private System.Windows.Forms.Label label_r3;
         private System.Windows.Forms.Label label_r4;
         private System.Windows.Forms.PictureBox pictureBox_MoneyTree;
+        private System.Windows.Forms.Button button_minimizar;
+        private System.Windows.Forms.Button button_sair;
     }
 }
