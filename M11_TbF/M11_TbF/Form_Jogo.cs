@@ -61,7 +61,7 @@ namespace M11_TbF
                 label_r2.Text = Per.Resposta2_Get();
                 label_r3.Text = Per.Resposta3_Get();
                 label_r4.Text = Per.Resposta4_Get();
-                //pictureBox_MoneyTree.BackgroundImage = M11_TbF.Properties.Resources."nivel" + MoneyTree.ToString();
+                pictureBox_MoneyTree.BackgroundImage = Image.FromFile(@"..\..\Resources\nivel" + MoneyTree.ToString() + ".jpg");
             }
         }
 
