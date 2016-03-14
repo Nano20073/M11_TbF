@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label_nivel = new System.Windows.Forms.Label();
             this.label_pergunta = new System.Windows.Forms.Label();
             this.label_r1 = new System.Windows.Forms.Label();
@@ -37,6 +38,9 @@
             this.pictureBox_MoneyTree = new System.Windows.Forms.PictureBox();
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
+            this.label_tempo = new System.Windows.Forms.Label();
+            this.timer_tempo = new System.Windows.Forms.Timer(this.components);
+            this.timer_background = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,13 +151,35 @@
             this.button_sair.UseVisualStyleBackColor = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
+            // label_tempo
+            // 
+            this.label_tempo.AutoSize = true;
+            this.label_tempo.BackColor = System.Drawing.Color.Transparent;
+            this.label_tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_tempo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_tempo.Location = new System.Drawing.Point(150, 5);
+            this.label_tempo.Name = "label_tempo";
+            this.label_tempo.Size = new System.Drawing.Size(126, 17);
+            this.label_tempo.TabIndex = 18;
+            this.label_tempo.Text = "Tempo Restante - ";
+            // 
+            // timer_tempo
+            // 
+            this.timer_tempo.Interval = 1000;
+            this.timer_tempo.Tick += new System.EventHandler(this.timer_tempo_Tick);
+            // 
+            // timer_background
+            // 
+            this.timer_background.Tick += new System.EventHandler(this.timer_background_Tick);
+            // 
             // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.GameBG;
-            this.ClientSize = new System.Drawing.Size(704, 382);
+            this.ClientSize = new System.Drawing.Size(720, 420);
+            this.Controls.Add(this.label_tempo);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_minimizar);
             this.Controls.Add(this.pictureBox_MoneyTree);
@@ -186,5 +212,8 @@
         private System.Windows.Forms.PictureBox pictureBox_MoneyTree;
         private System.Windows.Forms.Button button_minimizar;
         private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Label label_tempo;
+        private System.Windows.Forms.Timer timer_tempo;
+        private System.Windows.Forms.Timer timer_background;
     }
 }
