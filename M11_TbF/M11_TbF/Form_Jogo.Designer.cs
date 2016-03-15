@@ -41,7 +41,9 @@
             this.label_tempo = new System.Windows.Forms.Label();
             this.timer_tempo = new System.Windows.Forms.Timer(this.components);
             this.timer_background = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_nivel
@@ -132,7 +134,7 @@
             // 
             // button_minimizar
             // 
-            this.button_minimizar.Location = new System.Drawing.Point(641, -1);
+            this.button_minimizar.Location = new System.Drawing.Point(666, -1);
             this.button_minimizar.Name = "button_minimizar";
             this.button_minimizar.Size = new System.Drawing.Size(27, 23);
             this.button_minimizar.TabIndex = 16;
@@ -143,7 +145,7 @@
             // button_sair
             // 
             this.button_sair.BackColor = System.Drawing.Color.Red;
-            this.button_sair.Location = new System.Drawing.Point(664, 0);
+            this.button_sair.Location = new System.Drawing.Point(690, 0);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(28, 22);
             this.button_sair.TabIndex = 17;
@@ -157,7 +159,7 @@
             this.label_tempo.BackColor = System.Drawing.Color.Transparent;
             this.label_tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_tempo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_tempo.Location = new System.Drawing.Point(150, 5);
+            this.label_tempo.Location = new System.Drawing.Point(161, 5);
             this.label_tempo.Name = "label_tempo";
             this.label_tempo.Size = new System.Drawing.Size(126, 17);
             this.label_tempo.TabIndex = 18;
@@ -172,6 +174,22 @@
             // 
             this.timer_background.Tick += new System.EventHandler(this.timer_background_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button_minimizar);
+            this.panel2.Controls.Add(this.label_tempo);
+            this.panel2.Controls.Add(this.button_sair);
+            this.panel2.Controls.Add(this.pictureBox_MoneyTree);
+            this.panel2.Controls.Add(this.label_nivel);
+            this.panel2.Location = new System.Drawing.Point(1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(721, 197);
+            this.panel2.TabIndex = 19;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
             // Form_Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,15 +197,11 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.GameBG;
             this.ClientSize = new System.Drawing.Size(720, 420);
-            this.Controls.Add(this.label_tempo);
-            this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.button_minimizar);
-            this.Controls.Add(this.pictureBox_MoneyTree);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label_r4);
             this.Controls.Add(this.label_r3);
             this.Controls.Add(this.label_r2);
             this.Controls.Add(this.label_r1);
-            this.Controls.Add(this.label_nivel);
             this.Controls.Add(this.label_pergunta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -197,8 +211,9 @@
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,5 +230,6 @@
         private System.Windows.Forms.Label label_tempo;
         private System.Windows.Forms.Timer timer_tempo;
         private System.Windows.Forms.Timer timer_background;
+        private System.Windows.Forms.Panel panel2;
     }
 }

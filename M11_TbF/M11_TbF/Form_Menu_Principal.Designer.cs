@@ -36,7 +36,9 @@
             this.button_logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_minimizar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -72,7 +74,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(540, -1);
+            this.button3.Location = new System.Drawing.Point(619, -2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(27, 25);
             this.button3.TabIndex = 2;
@@ -84,7 +86,7 @@
             this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(610, -1);
+            this.button4.Location = new System.Drawing.Point(691, -2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(27, 24);
             this.button4.TabIndex = 3;
@@ -98,7 +100,7 @@
             this.label_utilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label_utilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_utilizador.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_utilizador.Location = new System.Drawing.Point(468, -1);
+            this.label_utilizador.Location = new System.Drawing.Point(547, -2);
             this.label_utilizador.Name = "label_utilizador";
             this.label_utilizador.Size = new System.Drawing.Size(75, 25);
             this.label_utilizador.TabIndex = 4;
@@ -113,7 +115,7 @@
             this.button_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_logout.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button_logout.Location = new System.Drawing.Point(563, -1);
+            this.button_logout.Location = new System.Drawing.Point(643, -3);
             this.button_logout.Name = "button_logout";
             this.button_logout.Size = new System.Drawing.Size(27, 25);
             this.button_logout.TabIndex = 5;
@@ -133,7 +135,7 @@
             // 
             // button_minimizar
             // 
-            this.button_minimizar.Location = new System.Drawing.Point(586, 0);
+            this.button_minimizar.Location = new System.Drawing.Point(667, -2);
             this.button_minimizar.Name = "button_minimizar";
             this.button_minimizar.Size = new System.Drawing.Size(27, 23);
             this.button_minimizar.TabIndex = 17;
@@ -141,18 +143,30 @@
             this.button_minimizar.UseVisualStyleBackColor = true;
             this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button_minimizar);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.label_utilizador);
+            this.panel2.Controls.Add(this.button_logout);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(721, 39);
+            this.panel2.TabIndex = 18;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
             // Form_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.FormBG;
-            this.ClientSize = new System.Drawing.Size(704, 366);
-            this.Controls.Add(this.button_minimizar);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(720, 404);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button_logout);
-            this.Controls.Add(this.label_utilizador);
-            this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(720, 404);
@@ -161,6 +175,7 @@
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -180,5 +195,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_minimizar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
