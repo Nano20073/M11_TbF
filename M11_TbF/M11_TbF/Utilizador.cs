@@ -159,7 +159,7 @@ namespace M11_TbF
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE Nome = @Nome AND @Nivel_Maximo > Nivel_Maximo;";
                 cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo);
-                cmd.Parameters.AddWithValue("@NNome", Username_atual);
+                cmd.Parameters.AddWithValue("@Nome", Username_atual);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
 
@@ -246,9 +246,9 @@ namespace M11_TbF
             {
                 cn.Open();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Utilizadores SET [PassWord] = @password WHERE [Nome] = @Username;";
+                cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@password", Nova_Password);
+                cmd.Parameters.AddWithValue("@Password", Nova_Password);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
 
@@ -270,7 +270,103 @@ namespace M11_TbF
                 cn.Close();
             }
         }
+        //
+        //
+        //
+        //
+        //
+        public int GetTotalGanho(int Valor_a_Adicionar, string Username)
+        {
+            int Valor_Maximo;
+            OleDbConnection cn =
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
+            //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
+            int Valor_Total_Anterior;
+            
+
+            string query = "SELECT Utilizadores.Nome, Utilizadores.Total_Ganho FROM Utilizadores WHERE Utilizadores.Nome ='" + Username + "';";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            try
+            {
+                cn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+
+                while (dr.Read())
+                {
+                    Valor_Total_Anterior = int.Parse(dr.GetValue(1).ToString());
+                    Valor_Maximo = Valor_Total_Anterior + Valor_a_Adicionar;
+                    return Valor_Maximo;
+                }
+                 
+                dr.Close();
+                
+            }
+
+
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return 0;
+        }
+        //
+        //
+        //
+        //
+        //
+        public void AdicionarTotalGanho(int Valor_a_Adicionar, string Username)
+        {
+            
+            OleDbConnection cn =
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+
+
+            try { 
+                //////////////// Adiciona ao valor antigo o dinheiro ganho \\\\\\\\\\\\\\\\\\\\
+
+
+
+                OleDbCommand cmmd = new OleDbCommand();
+
+                cn.Open();
+                cmmd.CommandType = CommandType.Text;
+                cmmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = @Total_Ganho WHERE Nome = @Nome;";
+                cmmd.Parameters.AddWithValue("@Nome", Username);
+                cmmd.Parameters.AddWithValue("@Total_Ganho", GetTotalGanho(Valor_a_Adicionar, Username));
+                cmmd.Connection = cn;
+                cmmd.ExecuteNonQuery();
+
+            }
+
+
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
 
     }
 }
