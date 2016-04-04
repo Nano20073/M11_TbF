@@ -33,6 +33,8 @@ namespace M11_TbF
         {
             User = new Utilizador();
             Per = new Pergunta();
+
+
             label_tempo.Text = "Tempo Restante - " + tempo.ToString();
             label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
             Per.Pergunta_Set();
@@ -50,6 +52,13 @@ namespace M11_TbF
 
         public void Acertou_a_Pergunta()
         {
+            if(label_r1.Text == Per.Resposta_Correta_Get())
+            {
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG1G" + ".png");
+            }
+
+
+
             if (Per.Nivel_Get().ToString() == "6")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
@@ -191,6 +200,11 @@ namespace M11_TbF
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

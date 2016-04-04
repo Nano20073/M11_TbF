@@ -165,6 +165,10 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\GameBG4G.png" />
+    <None Include="Resources\GameBG3G.png" />
+    <None Include="Resources\GameBG2G.png" />
+    <None Include="Resources\GameBG1G.png" />
     <None Include="Resources\nivel15.jpg" />
     <None Include="Resources\nivel14.jpg" />
     <None Include="Resources\nivel13.jpg" />
