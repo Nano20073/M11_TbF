@@ -137,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_SignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_SignUp";
             this.Load += new System.EventHandler(this.Form_SignUp_Load);
             this.panel2.ResumeLayout(false);

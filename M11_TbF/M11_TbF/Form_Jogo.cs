@@ -15,13 +15,18 @@ namespace M11_TbF
         private bool _dragging = false;
         private Point _offset;
         private Point _start_point = new Point(0, 0);
+
         Utilizador User;
         Pergunta Per;
         Form Owner;
+
         int MoneyTree = 1;
         int tempo = 15;
-        float background_time = 0;
+        int background_time = 0;
+        int background = 0;
+
         string Username_Atual;
+
         public Form_Jogo(Form f, string Username)
         {
             Owner = f;
@@ -60,13 +65,7 @@ namespace M11_TbF
 
         public void Acertou_a_Pergunta()
         {
-            if(label_r1.Text == Per.Resposta_Correta_Get())
-            {
-                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG1G" + ".png");
-            }
-
-
-
+            
             if (Per.Nivel_Get().ToString() == "6")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
@@ -80,17 +79,8 @@ namespace M11_TbF
                 timer_tempo.Stop();
                 tempo = 15;
                 MoneyTree++;
-                MessageBox.Show("Acertou");
-                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
-                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
-                Per.Pergunta_Set();
-                label_pergunta.Text = Per.Pergunta_Get();
-                label_r1.Text = Per.Resposta1_Get();
-                label_r2.Text = Per.Resposta2_Get();
-                label_r3.Text = Per.Resposta3_Get();
-                label_r4.Text = Per.Resposta4_Get();
-                pictureBox_MoneyTree.BackgroundImage = Image.FromFile(@"..\..\Resources\nivel" + MoneyTree.ToString() + ".jpg");
-                timer_tempo.Start();
+                timer_background_acertou.Start();
+                
             }
         }
 
@@ -98,6 +88,7 @@ namespace M11_TbF
 
         public void Errou_a_Pergunta()
         {
+            timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
 
@@ -186,16 +177,64 @@ namespace M11_TbF
             }
         }
 
-        private void timer_background_Tick(object sender, EventArgs e)
+        private void timer_background_acertou_Tick(object sender, EventArgs e)
         {
-            if (background_time == 1)
+            background_time++;
+            if (background_time == 3)
             {
+                timer_background_acertou.Stop();
+                background_time = 0;
+                
 
+                label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
+                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
+                Per.Pergunta_Set();
+                label_pergunta.Text = Per.Pergunta_Get();
+                label_r1.Text = Per.Resposta1_Get();
+                label_r2.Text = Per.Resposta2_Get();
+                label_r3.Text = Per.Resposta3_Get();
+                label_r4.Text = Per.Resposta4_Get();
+                pictureBox_MoneyTree.BackgroundImage = Image.FromFile(@"..\..\Resources\nivel" + MoneyTree.ToString() + ".jpg");
+                timer_tempo.Start();
             }
             else
             {
-                background_time = background_time + 0.25f;
+                if (background == 0)
+                {
+                    if (label_r1.Text == Per.Resposta_Correta_Get())
+                    {
+                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG1G" + ".png");
+                    }
+
+                    if (label_r2.Text == Per.Resposta_Correta_Get())
+                    {
+                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG3G" + ".png");
+                    }
+
+                    if (label_r3.Text == Per.Resposta_Correta_Get())
+                    {
+                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG2G" + ".png");
+                    }
+
+                    if (label_r4.Text == Per.Resposta_Correta_Get())
+                    {
+                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG4G" + ".png");
+                    }
+
+                    background++;
+
+                }
+                else
+                {
+                    background--;
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG" + ".png");
+                }
             }
+        }
+
+        private void timer_background_errou_Tick(object sender, EventArgs e)
+        {
+
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -218,9 +257,6 @@ namespace M11_TbF
             _dragging = false;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -75,6 +75,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form_Opcoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opções";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);

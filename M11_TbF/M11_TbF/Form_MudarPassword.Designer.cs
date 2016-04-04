@@ -96,6 +96,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_MudarPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_MudarPassword";
             this.Load += new System.EventHandler(this.Form_MudarPassword_Load);
             this.ResumeLayout(false);

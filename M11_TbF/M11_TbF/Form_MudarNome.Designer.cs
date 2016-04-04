@@ -96,6 +96,7 @@
             this.Controls.Add(this.label_NovoUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_MudarNome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_MudarNome";
             this.Load += new System.EventHandler(this.Form_MudarNome_Load);
             this.ResumeLayout(false);

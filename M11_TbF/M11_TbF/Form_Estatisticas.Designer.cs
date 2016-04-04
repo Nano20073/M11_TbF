@@ -134,6 +134,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form_Estatisticas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estatísticas";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);

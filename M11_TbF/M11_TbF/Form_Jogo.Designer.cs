@@ -40,8 +40,9 @@
             this.button_sair = new System.Windows.Forms.Button();
             this.label_tempo = new System.Windows.Forms.Label();
             this.timer_tempo = new System.Windows.Forms.Timer(this.components);
-            this.timer_background = new System.Windows.Forms.Timer(this.components);
+            this.timer_background_acertou = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer_background_errou = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -170,9 +171,10 @@
             this.timer_tempo.Interval = 1000;
             this.timer_tempo.Tick += new System.EventHandler(this.timer_tempo_Tick);
             // 
-            // timer_background
+            // timer_background_acertou
             // 
-            this.timer_background.Tick += new System.EventHandler(this.timer_background_Tick);
+            this.timer_background_acertou.Interval = 500;
+            this.timer_background_acertou.Tick += new System.EventHandler(this.timer_background_acertou_Tick);
             // 
             // panel2
             // 
@@ -186,10 +188,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(721, 197);
             this.panel2.TabIndex = 19;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // timer_background_errou
+            // 
+            this.timer_background_errou.Interval = 500;
+            this.timer_background_errou.Tick += new System.EventHandler(this.timer_background_errou_Tick);
             // 
             // Form_Jogo
             // 
@@ -230,7 +236,8 @@
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label_tempo;
         private System.Windows.Forms.Timer timer_tempo;
-        private System.Windows.Forms.Timer timer_background;
+        private System.Windows.Forms.Timer timer_background_acertou;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer_background_errou;
     }
 }

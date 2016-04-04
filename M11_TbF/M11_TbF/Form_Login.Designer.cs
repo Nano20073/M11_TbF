@@ -190,6 +190,7 @@
             this.Name = "Form_Login";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quem quer ser milionário";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
