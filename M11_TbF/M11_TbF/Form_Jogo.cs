@@ -50,6 +50,14 @@ namespace M11_TbF
 
         }
 
+        public void AdicionarTotalGanho()
+        {
+            if (Per.Nivel_Get().ToString() == "2")
+            {
+                User.AdicionarTotalGanho(200, Username_Atual);
+            }
+        }
+
         public void Acertou_a_Pergunta()
         {
             if(label_r1.Text == Per.Resposta_Correta_Get())
@@ -62,6 +70,7 @@ namespace M11_TbF
             if (Per.Nivel_Get().ToString() == "6")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                AdicionarTotalGanho();
                 MessageBox.Show("Tu Ganhaste!");
                 Owner.Show();
                 this.Close();
@@ -85,13 +94,19 @@ namespace M11_TbF
             }
         }
 
+        
+
         public void Errou_a_Pergunta()
         {
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+            AdicionarTotalGanho();
+
             MessageBox.Show("Perdeu");
             Owner.Show();
             this.Close();
         }
+
+        
 
         private void label_r1_Click(object sender, EventArgs e)
         {
@@ -158,6 +173,7 @@ namespace M11_TbF
             {
                 timer_tempo.Stop();
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                AdicionarTotalGanho();
                 MessageBox.Show("Acabou o tempo. Perdeu.");
                 Owner.Show();
                 this.Close();
