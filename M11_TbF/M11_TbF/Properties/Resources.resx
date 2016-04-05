@@ -217,4 +217,40 @@
   <data name="GameBG4G" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameBG4G.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GameBG_R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameBG_R9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameBG_R9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

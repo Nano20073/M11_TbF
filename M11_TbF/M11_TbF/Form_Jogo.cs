@@ -91,13 +91,12 @@ namespace M11_TbF
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
-
-            MessageBox.Show("Perdeu");
-            Owner.Show();
-            this.Close();
+            timer_background_errou.Start();
+            //MessageBox.Show("Perdeu");
+            
         }
 
-        
+
 
         private void label_r1_Click(object sender, EventArgs e)
         {
@@ -108,6 +107,39 @@ namespace M11_TbF
             else
             {
                 Errou_a_Pergunta();
+
+                background_time++;
+                if (background_time == 3)
+                {
+
+                    timer_background_acertou.Stop();
+                    background_time = 0;
+
+                    Owner.Show();
+                    this.Close();
+
+                }
+                else
+                {
+                    if (background == 0)
+                    {
+
+                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R2" + ".png");
+                        }
+
+                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R1" + ".png");
+                        }
+
+                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R3" + ".png");
+                        }
+                    }
+                }
             }
         }
 
@@ -120,6 +152,41 @@ namespace M11_TbF
             else
             {
                 Errou_a_Pergunta();
+
+                background_time++;
+                if (background_time == 3)
+                {
+
+                    timer_background_acertou.Stop();
+                    background_time = 0;
+
+                    Owner.Show();
+                    this.Close();
+
+                }
+                else
+                {
+                    if (background == 0)
+                    {
+
+
+                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R7" + ".png");
+                        }
+
+                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R8" + ".png");
+                        }
+
+                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R9" + ".png");
+                        }
+
+                    }
+                }
             }
         }
 
@@ -133,6 +200,42 @@ namespace M11_TbF
             else
             {
                 Errou_a_Pergunta();
+
+                background_time++;
+                if (background_time == 3)
+                {
+
+                    timer_background_acertou.Stop();
+                    background_time = 0;
+
+                    Owner.Show();
+                    this.Close();
+
+                }
+                else
+                {
+                    if (background == 0)
+                    {
+
+
+
+
+                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R4" + ".png");
+                        }
+
+                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R5" + ".png");
+                        }
+
+                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R6" + ".png");
+                        }
+                    }
+                }
             }
         }
 
@@ -145,6 +248,39 @@ namespace M11_TbF
             else
             {
                 Errou_a_Pergunta();
+
+                background_time++;
+                if (background_time == 3)
+                {
+
+                    timer_background_acertou.Stop();
+                    background_time = 0;
+
+                    Owner.Show();
+                    this.Close();
+
+                }
+                else
+                {
+                    if (background == 0)
+                    {
+
+                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R11" + ".png");
+                        }
+
+                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R10" + ".png");
+                        }
+
+                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                        {
+                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R12" + ".png");
+                        }
+                    }
+                }
             }
         }
 
@@ -234,7 +370,31 @@ namespace M11_TbF
 
         private void timer_background_errou_Tick(object sender, EventArgs e)
         {
+            background_time++;
+            if (background_time == 3)
+            {
 
+                timer_background_acertou.Stop();
+                background_time = 0;
+
+                Owner.Show();
+                this.Close();
+
+            }
+            else
+            {
+                if (background == 0)
+                { 
+
+                    background++;
+
+                }
+                else
+                {
+                    background--;
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG" + ".png");
+                }
+            }
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

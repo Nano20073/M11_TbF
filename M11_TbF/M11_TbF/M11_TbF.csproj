@@ -165,6 +165,18 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\GameBG_R12.png" />
+    <None Include="Resources\GameBG_R11.png" />
+    <None Include="Resources\GameBG_R10.png" />
+    <None Include="Resources\GameBG_R9.png" />
+    <None Include="Resources\GameBG_R8.png" />
+    <None Include="Resources\GameBG_R7.png" />
+    <None Include="Resources\GameBG_R6.png" />
+    <None Include="Resources\GameBG_R5.png" />
+    <None Include="Resources\GameBG_R4.png" />
+    <None Include="Resources\GameBG_R3.png" />
+    <None Include="Resources\GameBG_R2.png" />
+    <None Include="Resources\GameBG_R1.png" />
     <None Include="Resources\GameBG4G.png" />
     <None Include="Resources\GameBG3G.png" />
     <None Include="Resources\GameBG2G.png" />
