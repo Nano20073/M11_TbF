@@ -27,17 +27,28 @@ namespace M11_TbF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == textBox2.Text)
+            if (textBox1.Text == textBox2.Text && textBox1.Text != "")
             {
-                User.Alterar_Password(Username, textBox1.Text);
+                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar a sua password? \n Se clicar sim a aplicação irá fechar ", "Password", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    User.Alterar_Password(Username, textBox1.Text);
+                    Application.Exit();
+                    
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    
+                }
+                
             }
 
             else
             {
                 MessageBox.Show("Password não é igual á 1ª tentativa");
-                this.Hide();
+                /*this.Hide();
                 Form_MudarPassword FM = new Form_MudarPassword();
-                FM.Show();
+                FM.Show();*/
 
             }
         }

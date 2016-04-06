@@ -25,12 +25,24 @@ namespace M11_TbF
         {
             if (textBox_NovoUtilizador.Text == textBox_ConfirmarNovoUsername.Text)
             {
-                User.Alterar_Nome_de_Utilizador(Utilizador_Antigo, textBox_NovoUtilizador.Text);
+                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    User.Alterar_Nome_de_Utilizador(Utilizador_Antigo, textBox_NovoUtilizador.Text);
+                    Application.Exit();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+                
             }
         }
 
         private void Form_MudarNome_Load(object sender, EventArgs e)
-        { }
+        {
+            User = new Utilizador();
+        }
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 

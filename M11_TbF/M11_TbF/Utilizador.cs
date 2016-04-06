@@ -246,9 +246,10 @@ namespace M11_TbF
             {
                 cn.Open();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
-                cmd.Parameters.AddWithValue("@Username", username);
+                //cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
+                cmd.CommandText = "UPDATE Utilizadores SET Utilizadores.[PassWord] = @Password WHERE (((Utilizadores.[Nome])=[@Username]));";
                 cmd.Parameters.AddWithValue("@Password", Nova_Password);
+                cmd.Parameters.AddWithValue("@Username", username);               
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
 
@@ -366,7 +367,49 @@ namespace M11_TbF
             {
                 cn.Close();
             }
+            
         }
+        //
+        //
+        //
+        //
+        //
+        public void Reset(string username)
+        {
+            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
+            //string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
+            OleDbCommand cmd = new OleDbCommand();
+
+            try
+            {
+                cn.Open();
+                cmd.CommandType = CommandType.Text;
+                //cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
+                cmd.CommandText = "UPDATE Utilizadores SET Utilizadores.[Total_Ganho], Utilizadores.[Nivel_Maximo] = @Nivel_Maximo WHERE (((Utilizadores.[Nome])=[@Username]));";
+                cmd.Parameters.AddWithValue("@Total_Ganho",0);
+                cmd.Parameters.AddWithValue("@Nivel_Maximo", 0);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
+            }
+
+
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

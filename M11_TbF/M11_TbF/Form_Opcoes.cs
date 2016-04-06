@@ -37,5 +37,10 @@ namespace M11_TbF
             Form_MudarNome FMN = new Form_MudarNome(Username_Atual);
             FMN.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

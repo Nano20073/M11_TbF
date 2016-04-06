@@ -163,7 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="M11_TbF_DB.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\GameBG_R12.png" />
     <None Include="Resources\GameBG_R11.png" />
