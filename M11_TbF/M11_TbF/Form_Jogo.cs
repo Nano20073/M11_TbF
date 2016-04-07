@@ -57,10 +57,36 @@ namespace M11_TbF
 
         public void AdicionarTotalGanho()
         {
+            if (Per.Nivel_Get().ToString() == "1")
+            {
+                User.AdicionarTotalGanho(0, Username_Atual);
+            }
+
             if (Per.Nivel_Get().ToString() == "2")
             {
-                User.AdicionarTotalGanho(200, Username_Atual);
+                User.AdicionarTotalGanho(0, Username_Atual);
             }
+
+            if (Per.Nivel_Get().ToString() == "3")
+            {
+                User.AdicionarTotalGanho(0, Username_Atual);
+            }
+
+            if (Per.Nivel_Get().ToString() == "4")
+            {
+                User.AdicionarTotalGanho(3000, Username_Atual);
+            }
+
+            if (Per.Nivel_Get().ToString() == "5")
+            {
+                User.AdicionarTotalGanho(5000, Username_Atual);
+            }
+
+            if (Per.Nivel_Get().ToString() == "6")
+            {
+                User.AdicionarTotalGanho(7500, Username_Atual);
+            }
+
         }
 
         public void Acertou_a_Pergunta()

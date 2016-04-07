@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button_sair = new System.Windows.Forms.Button();
             this.label_utilizador = new System.Windows.Forms.Label();
             this.label_NivelMaximo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label_TotaldeDinheiroGanho = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,30 +48,6 @@
             this.label1.Size = new System.Drawing.Size(149, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nivel Máximo Atigindo:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(23, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nivel Mínimo Atigindo:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(23, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Numero de jogos:";
             // 
             // button_sair
             // 
@@ -120,18 +96,42 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Username usado:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(26, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Dinheiro total ganho: ";
+            // 
+            // label_TotaldeDinheiroGanho
+            // 
+            this.label_TotaldeDinheiroGanho.AutoSize = true;
+            this.label_TotaldeDinheiroGanho.BackColor = System.Drawing.Color.Transparent;
+            this.label_TotaldeDinheiroGanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_TotaldeDinheiroGanho.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_TotaldeDinheiroGanho.Location = new System.Drawing.Point(178, 68);
+            this.label_TotaldeDinheiroGanho.Name = "label_TotaldeDinheiroGanho";
+            this.label_TotaldeDinheiroGanho.Size = new System.Drawing.Size(13, 17);
+            this.label_TotaldeDinheiroGanho.TabIndex = 15;
+            this.label_TotaldeDinheiroGanho.Text = "-";
+            // 
             // Form_Estatisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.backgroundDefault;
             this.ClientSize = new System.Drawing.Size(286, 281);
+            this.Controls.Add(this.label_TotaldeDinheiroGanho);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_NivelMaximo);
             this.Controls.Add(this.label_utilizador);
             this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form_Estatisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -145,11 +145,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label_utilizador;
         private System.Windows.Forms.Label label_NivelMaximo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_TotaldeDinheiroGanho;
     }
 }

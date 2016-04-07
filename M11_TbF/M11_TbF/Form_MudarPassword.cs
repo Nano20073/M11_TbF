@@ -45,10 +45,7 @@ namespace M11_TbF
 
             else
             {
-                MessageBox.Show("Password não é igual á 1ª tentativa");
-                /*this.Hide();
-                Form_MudarPassword FM = new Form_MudarPassword();
-                FM.Show();*/
+                MessageBox.Show("As passwords não coinncidem.");
 
             }
         }

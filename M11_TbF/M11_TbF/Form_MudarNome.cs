@@ -37,6 +37,10 @@ namespace M11_TbF
                 }
                 
             }
+            else
+            {
+                MessageBox.Show("Os Usernames não coincidem.");
+            }
         }
 
         private void Form_MudarNome_Load(object sender, EventArgs e)

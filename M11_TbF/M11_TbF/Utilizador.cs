@@ -23,10 +23,11 @@ namespace M11_TbF
             OleDbCommand cmd = new OleDbCommand();
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Utilizadores ([Nome],[PassWord],[Nivel_Maximo]) values (?,?,?)";
+            cmd.CommandText = "insert into Utilizadores ([Nome],[PassWord],[Nivel_Maximo],[Total_Ganho]) values (?,?,?,?)";
             cmd.Parameters.AddWithValue("@Nome", Username);
             cmd.Parameters.AddWithValue("@PassWord", Password);
             cmd.Parameters.AddWithValue("@Nivel_Maximo", 0);
+            cmd.Parameters.AddWithValue("@Total_Ganho", 0);
             cmd.Connection = cn;
 
             try
@@ -276,7 +277,55 @@ namespace M11_TbF
         //
         //
         //
-        public int GetTotalGanho(int Valor_a_Adicionar, string Username)
+        public int GetTotalGanho(string Username)
+        {
+            OleDbConnection cn =
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+
+            //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
+            
+
+            string query = "SELECT Utilizadores.Nome, Utilizadores.Total_Ganho FROM Utilizadores WHERE Utilizadores.Nome ='" + Username + "';";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            try
+            {
+                cn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+
+                while (dr.Read())
+                {
+                    return int.Parse(dr.GetValue(1).ToString());
+                }
+                 
+                dr.Close();
+                
+            }
+
+
+            catch (OleDbException ex)
+            {
+                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                     ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return 0;
+        }
+        //
+        //
+        //
+        //
+        //
+        public int GetTotalGanhoCONTA(int Valor_a_Adicionar, string Username)
         {
             int Valor_Maximo;
             OleDbConnection cn =
@@ -284,7 +333,7 @@ namespace M11_TbF
 
             //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
             int Valor_Total_Anterior;
-            
+
 
             string query = "SELECT Utilizadores.Nome, Utilizadores.Total_Ganho FROM Utilizadores WHERE Utilizadores.Nome ='" + Username + "';";
             OleDbCommand cmd = new OleDbCommand(query, cn);
@@ -301,9 +350,9 @@ namespace M11_TbF
                     Valor_Maximo = Valor_Total_Anterior + Valor_a_Adicionar;
                     return Valor_Maximo;
                 }
-                 
+
                 dr.Close();
-                
+
             }
 
 
@@ -344,9 +393,9 @@ namespace M11_TbF
 
                 cn.Open();
                 cmmd.CommandType = CommandType.Text;
-                cmmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = @Total_Ganho WHERE Nome = @Nome;";
-                cmmd.Parameters.AddWithValue("@Nome", Username);
-                cmmd.Parameters.AddWithValue("@Total_Ganho", GetTotalGanho(Valor_a_Adicionar, Username));
+                cmmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = @Total_Ganho WHERE Nome=@Username;";
+                cmmd.Parameters.AddWithValue("@Total_Ganho", GetTotalGanhoCONTA(Valor_a_Adicionar, Username));
+                cmmd.Parameters.AddWithValue("@Username", Username);
                 cmmd.Connection = cn;
                 cmmd.ExecuteNonQuery();
 
@@ -386,9 +435,7 @@ namespace M11_TbF
                 cn.Open();
                 cmd.CommandType = CommandType.Text;
                 //cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
-                cmd.CommandText = "UPDATE Utilizadores SET Utilizadores.[Total_Ganho], Utilizadores.[Nivel_Maximo] = @Nivel_Maximo WHERE (((Utilizadores.[Nome])=[@Username]));";
-                cmd.Parameters.AddWithValue("@Total_Ganho",0);
-                cmd.Parameters.AddWithValue("@Nivel_Maximo", 0);
+                cmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = 0, Nivel_Maximo = 0 WHERE Nome=@Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();

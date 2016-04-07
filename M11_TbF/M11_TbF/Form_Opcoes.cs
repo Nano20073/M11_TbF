@@ -12,6 +12,8 @@ namespace M11_TbF
 {
     public partial class Form_Opcoes : Form
     {
+        Utilizador User;
+
         string Username_Atual;
         string password;
         public Form_Opcoes(string Username, string pass)
@@ -23,6 +25,7 @@ namespace M11_TbF
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            User = new Utilizador();
         }
 
 
@@ -40,7 +43,17 @@ namespace M11_TbF
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer fazer reset? \n Se clicar sim a aplicação irá fechar ", "Reset", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                User.Reset(Username_Atual);
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
 
+            }
+            
         }
     }
 }

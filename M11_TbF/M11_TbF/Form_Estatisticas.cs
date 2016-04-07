@@ -28,6 +28,7 @@ namespace M11_TbF
             User = new Utilizador();
             label_NivelMaximo.Text = User.get_nivel_maximo(Username_Atual);
             label_utilizador.Text = Username_Atual;
+            label_TotaldeDinheiroGanho.Text = User.GetTotalGanho(Username_Atual).ToString() + " $";
         }
 
         private void button_sair_Click(object sender, EventArgs e)
