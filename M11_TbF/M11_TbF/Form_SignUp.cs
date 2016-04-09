@@ -27,11 +27,19 @@ namespace M11_TbF
 
         private void button_criar_Click(object sender, EventArgs e)
         {
-            User.Criar_Utilizador(textBox1.Text, textBox2.Text);
-            MessageBox.Show("A conta foi criada. Reinicie o Jogo para fazer login.");
-            this.Close();
-            Form_Login FL = new Form_Login();
-            FL.Show();
+            if (textBox_Password.Text == textBox_ConfPassword.Text)
+            {
+                User.Criar_Utilizador(textBox_Username.Text, textBox_Password.Text);
+                MessageBox.Show("A conta foi criada. Reinicie o Jogo para fazer login.");
+                this.Close();
+                Form_Login FL = new Form_Login();
+                FL.Show();
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void button_minimizar_Click(object sender, EventArgs e)
@@ -74,6 +82,13 @@ namespace M11_TbF
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
+        }
+
+        private void label_entrar_login_Click(object sender, EventArgs e)
+        {
+            Form_Login FL = new Form_Login();
+            FL.Show();
+            this.Close();
         }
 
         private void Form_SignUp_Load(object sender, EventArgs e)

@@ -62,7 +62,7 @@ namespace M11_TbF
 
         private void button_sair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

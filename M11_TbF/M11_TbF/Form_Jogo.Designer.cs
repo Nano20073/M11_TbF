@@ -215,6 +215,7 @@
             this.MaximumSize = new System.Drawing.Size(720, 420);
             this.MinimumSize = new System.Drawing.Size(720, 420);
             this.Name = "Form_Jogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).EndInit();
