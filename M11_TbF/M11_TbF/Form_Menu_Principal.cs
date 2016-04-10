@@ -82,15 +82,21 @@ namespace M11_TbF
 
         private void button_Opcoes_Click(object sender, EventArgs e)
         {
-            Form_Opcoes F3 = new Form_Opcoes(Username_Atual, pass);
-            F3.ShowDialog();
+            this.Hide();
+            Form_Opcoes F3 = new Form_Opcoes(Username_Atual, pass, this);
+            F3.Show();
         }
 
         private void label_logout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Form_Login F1 = new Form_Login();
             F1.Show();
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

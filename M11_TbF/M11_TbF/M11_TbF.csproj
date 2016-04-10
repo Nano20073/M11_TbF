@@ -165,6 +165,8 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\FormBG.ico" />
+    <None Include="Resources\FormIcon.ico" />
     <None Include="Resources\GameBG_R12.png" />
     <None Include="Resources\GameBG_R11.png" />
     <None Include="Resources\GameBG_R10.png" />

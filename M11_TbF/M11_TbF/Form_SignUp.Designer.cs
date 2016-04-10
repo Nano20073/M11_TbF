@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_criar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_minimizar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button_minimizar = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
             this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
@@ -94,30 +94,6 @@
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
-            // button_minimizar
-            // 
-            this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_minimizar.Location = new System.Drawing.Point(125, 5);
-            this.button_minimizar.Name = "button_minimizar";
-            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
-            this.button_minimizar.TabIndex = 17;
-            this.button_minimizar.Text = "_";
-            this.button_minimizar.UseVisualStyleBackColor = true;
-            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(149, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 24);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "x";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -125,11 +101,11 @@
             this.panel3.Controls.Add(this.label_entrar_login);
             this.panel3.Controls.Add(this.textBox_ConfPassword);
             this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.button_minimizar);
+            this.panel3.Controls.Add(this.button_sair);
             this.panel3.Controls.Add(this.label_JTemCnt);
             this.panel3.Controls.Add(this.textBox_Password);
-            this.panel3.Controls.Add(this.button_minimizar);
             this.panel3.Controls.Add(this.textBox_Username);
-            this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button_criar);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
@@ -187,6 +163,35 @@
             this.label3.Size = new System.Drawing.Size(138, 17);
             this.label3.TabIndex = 26;
             this.label3.Text = "Confirmar Password:";
+            // 
+            // button_minimizar
+            // 
+            this.button_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimizar.ForeColor = System.Drawing.Color.White;
+            this.button_minimizar.Location = new System.Drawing.Point(133, 0);
+            this.button_minimizar.Name = "button_minimizar";
+            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.button_minimizar.TabIndex = 17;
+            this.button_minimizar.Text = "_";
+            this.button_minimizar.UseVisualStyleBackColor = false;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
+            // 
+            // button_sair
+            // 
+            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button_sair.ForeColor = System.Drawing.Color.White;
+            this.button_sair.Location = new System.Drawing.Point(156, 0);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(24, 24);
+            this.button_sair.TabIndex = 3;
+            this.button_sair.Text = "x";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // label_JTemCnt
             // 
@@ -250,8 +255,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_criar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button_minimizar;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.TextBox textBox_Username;
@@ -260,5 +263,7 @@
         private System.Windows.Forms.TextBox textBox_ConfPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_SIGN_UP;
+        private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Button button_minimizar;
     }
 }

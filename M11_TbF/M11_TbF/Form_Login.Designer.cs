@@ -134,11 +134,13 @@
             // 
             // button_sair
             // 
-            this.button_sair.BackColor = System.Drawing.Color.Red;
+            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_sair.Location = new System.Drawing.Point(140, 4);
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sair.ForeColor = System.Drawing.Color.White;
+            this.button_sair.Location = new System.Drawing.Point(156, 0);
             this.button_sair.Name = "button_sair";
-            this.button_sair.Size = new System.Drawing.Size(28, 22);
+            this.button_sair.Size = new System.Drawing.Size(24, 24);
             this.button_sair.TabIndex = 8;
             this.button_sair.Text = "x";
             this.button_sair.UseVisualStyleBackColor = false;
@@ -146,13 +148,16 @@
             // 
             // button_minimizar
             // 
+            this.button_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_minimizar.Location = new System.Drawing.Point(111, 4);
+            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimizar.ForeColor = System.Drawing.Color.White;
+            this.button_minimizar.Location = new System.Drawing.Point(133, 0);
             this.button_minimizar.Name = "button_minimizar";
-            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
             this.button_minimizar.TabIndex = 9;
             this.button_minimizar.Text = "_";
-            this.button_minimizar.UseVisualStyleBackColor = true;
+            this.button_minimizar.UseVisualStyleBackColor = false;
             this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
             // panel2
@@ -207,13 +212,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 404);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 404);
             this.Name = "Form_Login";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quem quer ser milionário";
             this.TopMost = true;

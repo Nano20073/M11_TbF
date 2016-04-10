@@ -14,10 +14,14 @@ namespace M11_TbF
     public partial class Form_MudarNome : Form
     {
         Utilizador User;
-        string Utilizador_Antigo;
-        public Form_MudarNome(string Utilizador)
+        Form Owner;
+        string pass;
+        string Username_Atual;
+        public Form_MudarNome(string Utilizador, string password, Form f)
         {
-            Utilizador_Antigo = Utilizador;
+            pass = password;
+            Owner = f;
+            Username_Atual = Utilizador;
             InitializeComponent();
         }
 
@@ -28,7 +32,7 @@ namespace M11_TbF
                 DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    User.Alterar_Nome_de_Utilizador(Utilizador_Antigo, textBox_NovoUtilizador.Text);
+                    User.Alterar_Nome_de_Utilizador(Username_Atual, textBox_NovoUtilizador.Text);
                     Application.Exit();
                 }
                 else if (dialogResult == DialogResult.No)
@@ -63,5 +67,22 @@ namespace M11_TbF
                     SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
                 }
             }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label_OPCOES_Click(object sender, EventArgs e)
+        {
+            Form_Opcoes FMN = new Form_Opcoes(Username_Atual, pass, Owner);
+            this.Close();
+            FMN.Show();
+        }
+    }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menu_Principal));
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
             this.label_utilizador = new System.Windows.Forms.Label();
             this.button_minimizar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,17 +42,20 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button4
+            // button_sair
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(146, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 24);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "x";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button_sair.ForeColor = System.Drawing.Color.White;
+            this.button_sair.Location = new System.Drawing.Point(156, 0);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(24, 24);
+            this.button_sair.TabIndex = 3;
+            this.button_sair.Text = "x";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // label_utilizador
             // 
@@ -69,9 +72,11 @@
             // 
             // button_minimizar
             // 
-            this.button_minimizar.Location = new System.Drawing.Point(122, 3);
+            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimizar.ForeColor = System.Drawing.Color.White;
+            this.button_minimizar.Location = new System.Drawing.Point(133, 0);
             this.button_minimizar.Name = "button_minimizar";
-            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
             this.button_minimizar.TabIndex = 17;
             this.button_minimizar.Text = "_";
             this.button_minimizar.UseVisualStyleBackColor = true;
@@ -80,9 +85,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(721, 39);
+            this.panel2.Size = new System.Drawing.Size(899, 27);
             this.panel2.TabIndex = 18;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -98,7 +103,7 @@
             this.panel3.Controls.Add(this.label_linha);
             this.panel3.Controls.Add(this.label_utilizador);
             this.panel3.Controls.Add(this.button_minimizar);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.button_sair);
             this.panel3.Location = new System.Drawing.Point(720, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(182, 403);
@@ -191,7 +196,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label_utilizador;
 
         public Form_Menu_Principal()

@@ -13,8 +13,10 @@ namespace M11_TbF
     public partial class Form_MudarPassword : Form
     {
         Utilizador User;
+        Form Owner;
+        private string pass;
         private string Username;
-        public Form_MudarPassword(string username)
+        public Form_MudarPassword(string username, string password, Form f)
         {
             Username = username;
             InitializeComponent();
