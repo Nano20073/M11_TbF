@@ -13,12 +13,8 @@ namespace M11_TbF
     public partial class Form_SignUp : Form
     {
         private bool _dragging = false;
-        private Point _offset;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
-        string Username, Password;
-
-        private Image defaultBackground;
 
         public Form_SignUp()
         {
@@ -37,7 +33,7 @@ namespace M11_TbF
             }
             else
             {
-
+                MessageBox.Show("As passwords não coincidem.");
             }
             
         }
@@ -49,19 +45,7 @@ namespace M11_TbF
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Quer mesmo cancelar a inscrição da conta?",
-                      "Mood Test", MessageBoxButtons.YesNo);
-            switch (dr)
-            {
-                case DialogResult.Yes:
-                    Form_Login FL = new Form_Login();
-                    FL.Show();
-                    this.Hide();
-                     break;
-                case DialogResult.No:
-                     break;
-            }
-            
+            Application.Exit();           
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

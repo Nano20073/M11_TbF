@@ -13,7 +13,6 @@ namespace M11_TbF
     public partial class Form_MudarPassword : Form
     {
         Utilizador User;
-        private string Password;
         private string Username;
         public Form_MudarPassword(string username)
         {

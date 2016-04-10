@@ -52,9 +52,9 @@
             this.label_UserName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_UserName.Location = new System.Drawing.Point(12, 78);
             this.label_UserName.Name = "label_UserName";
-            this.label_UserName.Size = new System.Drawing.Size(79, 17);
+            this.label_UserName.Size = new System.Drawing.Size(77, 17);
             this.label_UserName.TabIndex = 0;
-            this.label_UserName.Text = "UserName:";
+            this.label_UserName.Text = "Username:";
             // 
             // label_PassWord
             // 
@@ -64,9 +64,9 @@
             this.label_PassWord.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_PassWord.Location = new System.Drawing.Point(12, 145);
             this.label_PassWord.Name = "label_PassWord";
-            this.label_PassWord.Size = new System.Drawing.Size(77, 17);
+            this.label_PassWord.Size = new System.Drawing.Size(73, 17);
             this.label_PassWord.TabIndex = 2;
-            this.label_PassWord.Text = "PassWord:";
+            this.label_PassWord.Text = "Password:";
             // 
             // button_Logar
             // 

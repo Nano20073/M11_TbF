@@ -36,13 +36,13 @@
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
-            this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +138,18 @@
             this.panel3.Size = new System.Drawing.Size(182, 403);
             this.panel3.TabIndex = 21;
             // 
+            // label_SIGN_UP
+            // 
+            this.label_SIGN_UP.AutoSize = true;
+            this.label_SIGN_UP.BackColor = System.Drawing.Color.Transparent;
+            this.label_SIGN_UP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label_SIGN_UP.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_SIGN_UP.Location = new System.Drawing.Point(12, 46);
+            this.label_SIGN_UP.Name = "label_SIGN_UP";
+            this.label_SIGN_UP.Size = new System.Drawing.Size(77, 20);
+            this.label_SIGN_UP.TabIndex = 28;
+            this.label_SIGN_UP.Text = "SIGN UP";
+            // 
             // label_entrar_login
             // 
             this.label_entrar_login.AutoSize = true;
@@ -210,18 +222,6 @@
             this.textBox_Username.Name = "textBox_Username";
             this.textBox_Username.Size = new System.Drawing.Size(153, 23);
             this.textBox_Username.TabIndex = 23;
-            // 
-            // label_SIGN_UP
-            // 
-            this.label_SIGN_UP.AutoSize = true;
-            this.label_SIGN_UP.BackColor = System.Drawing.Color.Transparent;
-            this.label_SIGN_UP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label_SIGN_UP.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_SIGN_UP.Location = new System.Drawing.Point(12, 46);
-            this.label_SIGN_UP.Name = "label_SIGN_UP";
-            this.label_SIGN_UP.Size = new System.Drawing.Size(77, 20);
-            this.label_SIGN_UP.TabIndex = 28;
-            this.label_SIGN_UP.Text = "SIGN UP";
             // 
             // Form_SignUp
             // 

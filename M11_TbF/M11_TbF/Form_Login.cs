@@ -14,11 +14,9 @@ namespace M11_TbF
     public partial class Form_Login : Form
     {
         private bool _dragging = false;
-        private Point _offset;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
         string Username, Password;
-        private Image defaultBackground;
 
         public Form_Login()
         {
