@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button_voltar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button_MudarUsername = new System.Windows.Forms.Button();
             this.button_Reset = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_voltar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,20 @@
             this.panel3.Size = new System.Drawing.Size(182, 403);
             this.panel3.TabIndex = 20;
             // 
+            // button_voltar
+            // 
+            this.button_voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_voltar.ForeColor = System.Drawing.Color.White;
+            this.button_voltar.Location = new System.Drawing.Point(104, 340);
+            this.button_voltar.Name = "button_voltar";
+            this.button_voltar.Size = new System.Drawing.Size(48, 34);
+            this.button_voltar.TabIndex = 27;
+            this.button_voltar.Text = "<-";
+            this.button_voltar.UseVisualStyleBackColor = false;
+            this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
@@ -72,9 +86,9 @@
             this.button_MudarUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_MudarUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_MudarUsername.ForeColor = System.Drawing.Color.White;
-            this.button_MudarUsername.Location = new System.Drawing.Point(16, 116);
+            this.button_MudarUsername.Location = new System.Drawing.Point(15, 116);
             this.button_MudarUsername.Name = "button_MudarUsername";
-            this.button_MudarUsername.Size = new System.Drawing.Size(152, 40);
+            this.button_MudarUsername.Size = new System.Drawing.Size(153, 40);
             this.button_MudarUsername.TabIndex = 21;
             this.button_MudarUsername.Text = "Mudar Username";
             this.button_MudarUsername.UseVisualStyleBackColor = false;
@@ -163,20 +177,6 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
-            // 
-            // button_voltar
-            // 
-            this.button_voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_voltar.ForeColor = System.Drawing.Color.White;
-            this.button_voltar.Location = new System.Drawing.Point(104, 340);
-            this.button_voltar.Name = "button_voltar";
-            this.button_voltar.Size = new System.Drawing.Size(48, 34);
-            this.button_voltar.TabIndex = 27;
-            this.button_voltar.Text = "<-";
-            this.button_voltar.UseVisualStyleBackColor = false;
-            this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // Form_Opcoes
             // 

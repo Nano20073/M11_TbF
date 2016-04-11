@@ -18,6 +18,7 @@ namespace M11_TbF
         private string Username;
         public Form_MudarPassword(string username, string password, Form f)
         {
+            Owner = f;
             Username = username;
             InitializeComponent();
         }
@@ -54,6 +55,44 @@ namespace M11_TbF
         private void Form_MudarPassword_Load(object sender, EventArgs e)
         {
             User = new Utilizador();
+        }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button_MudarUsername_Click(object sender, EventArgs e)
+        {
+            Form_MudarNome FMN = new Form_MudarNome(Username, pass, Owner);
+            this.Close();
+            FMN.Show();
+        }
+
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer fazer reset? \n Se clicar sim a aplicação irá fechar ", "Reset", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                User.Reset(Username);
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void label_OPCOES_Click(object sender, EventArgs e)
+        {
+            Form_Opcoes FMN = new Form_Opcoes(Username, pass, Owner);
+            this.Close();
+            FMN.Show();
         }
     }
 }

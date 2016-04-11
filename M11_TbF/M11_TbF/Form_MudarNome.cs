@@ -84,5 +84,26 @@ namespace M11_TbF
             this.Close();
             FMN.Show();
         }
+
+        private void button_MudarPassword_Click(object sender, EventArgs e)
+        {
+            Form_MudarPassword FMP = new Form_MudarPassword(Username_Atual, pass, Owner);
+            this.Close();
+            FMP.Show();
+        }
+
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer fazer reset? \n Se clicar sim a aplicação irá fechar ", "Reset", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                User.Reset(Username_Atual);
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
     }
     }

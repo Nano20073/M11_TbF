@@ -82,8 +82,9 @@ namespace M11_TbF
 
         private void button_MudarPassword_Click(object sender, EventArgs e)
         {
-            Form_MudarPassword F7 = new Form_MudarPassword(Username_Atual, password, Owner);
-            F7.ShowDialog();
+            Form_MudarPassword FMP = new Form_MudarPassword(Username_Atual, password, Owner);
+            this.Close();
+            FMP.Show();
         }
 
         private void button_voltar_Click(object sender, EventArgs e)

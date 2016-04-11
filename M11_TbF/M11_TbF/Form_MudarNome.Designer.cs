@@ -91,6 +91,7 @@
             // button_Alterar
             // 
             this.button_Alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_Alterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Alterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Alterar.ForeColor = System.Drawing.Color.White;
             this.button_Alterar.Location = new System.Drawing.Point(14, 343);
@@ -133,12 +134,13 @@
             // 
             this.button_MudarUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_MudarUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_MudarUsername.FlatAppearance.BorderSize = 2;
             this.button_MudarUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_MudarUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_MudarUsername.ForeColor = System.Drawing.Color.Aqua;
-            this.button_MudarUsername.Location = new System.Drawing.Point(16, 116);
+            this.button_MudarUsername.Location = new System.Drawing.Point(15, 116);
             this.button_MudarUsername.Name = "button_MudarUsername";
-            this.button_MudarUsername.Size = new System.Drawing.Size(152, 40);
+            this.button_MudarUsername.Size = new System.Drawing.Size(153, 40);
             this.button_MudarUsername.TabIndex = 21;
             this.button_MudarUsername.Text = "Mudar Username";
             this.button_MudarUsername.UseVisualStyleBackColor = false;
@@ -151,12 +153,13 @@
             this.button_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Reset.ForeColor = System.Drawing.Color.White;
-            this.button_Reset.Location = new System.Drawing.Point(16, 70);
+            this.button_Reset.Location = new System.Drawing.Point(15, 70);
             this.button_Reset.Name = "button_Reset";
-            this.button_Reset.Size = new System.Drawing.Size(152, 40);
+            this.button_Reset.Size = new System.Drawing.Size(153, 40);
             this.button_Reset.TabIndex = 20;
             this.button_Reset.Text = "Reset";
             this.button_Reset.UseVisualStyleBackColor = false;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
             // 
             // button_MudarPassword
             // 
@@ -166,12 +169,13 @@
             this.button_MudarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_MudarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_MudarPassword.ForeColor = System.Drawing.Color.White;
-            this.button_MudarPassword.Location = new System.Drawing.Point(16, 162);
+            this.button_MudarPassword.Location = new System.Drawing.Point(15, 162);
             this.button_MudarPassword.Name = "button_MudarPassword";
-            this.button_MudarPassword.Size = new System.Drawing.Size(152, 40);
+            this.button_MudarPassword.Size = new System.Drawing.Size(153, 40);
             this.button_MudarPassword.TabIndex = 22;
             this.button_MudarPassword.Text = "Mudar a Password";
             this.button_MudarPassword.UseVisualStyleBackColor = false;
+            this.button_MudarPassword.Click += new System.EventHandler(this.button_MudarPassword_Click);
             // 
             // label_OPCOES
             // 

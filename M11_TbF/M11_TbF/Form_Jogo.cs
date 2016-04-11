@@ -38,7 +38,7 @@ namespace M11_TbF
             User = new Utilizador();
             Per = new Pergunta();
 
-
+            label_utilizador.Text = Username_Atual;
             label_tempo.Text = "Tempo Restante - " + tempo.ToString();
             label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
             Per.Pergunta_Set();
@@ -463,25 +463,62 @@ namespace M11_TbF
 
             if(label_r1.Text == Per.Resposta_Correta_Get())
             {
-                int NPergunta = 0;
-                var rand = new System.Random();
-                NPergunta = rand.Next(21, 26);
+                label_r2.Enabled = false;
+                label_r3.Enabled = false;
             }
 
             if (label_r2.Text == Per.Resposta_Correta_Get())
             {
-
+                label_r1.Enabled = false;
+                label_r4.Enabled = false;
             }
 
             if (label_r3.Text == Per.Resposta_Correta_Get())
             {
-
+                label_r2.Enabled = false;
+                label_r4.Enabled = false;
             }
 
             if (label_r4.Text == Per.Resposta_Correta_Get())
             {
+                label_r1.Enabled = false;
+                label_r3.Enabled = false;
+            }
+        }
+
+        private void button_Telefone_Click(object sender, EventArgs e)
+        {
+            button_Telefone.Enabled = false;
+            button_Telefone.BackgroundImage = Image.FromFile(@"..\..\Resources\Telefone_off.png");
+            int resposta;
+            var rand = new System.Random();
+            resposta = rand.Next(1, 5);
+
+            if (resposta == 1)
+            {
 
             }
+
+            if (resposta == 2)
+            {
+
+            }
+
+            if (resposta == 3)
+            {
+
+            }
+
+            if (resposta == 4)
+            {
+
+            }
+        }
+
+        private void label_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Owner.Show();           
         }
     }
 }

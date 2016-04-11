@@ -133,9 +133,11 @@
             // button_minimizar
             // 
             this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_minimizar.Location = new System.Drawing.Point(125, 5);
+            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimizar.ForeColor = System.Drawing.Color.White;
+            this.button_minimizar.Location = new System.Drawing.Point(133, 0);
             this.button_minimizar.Name = "button_minimizar";
-            this.button_minimizar.Size = new System.Drawing.Size(27, 23);
+            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
             this.button_minimizar.TabIndex = 17;
             this.button_minimizar.Text = "_";
             this.button_minimizar.UseVisualStyleBackColor = true;
@@ -143,12 +145,14 @@
             // 
             // button_sair
             // 
-            this.button_sair.BackColor = System.Drawing.Color.Red;
+            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sair.Location = new System.Drawing.Point(149, 5);
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button_sair.ForeColor = System.Drawing.Color.White;
+            this.button_sair.Location = new System.Drawing.Point(156, 0);
             this.button_sair.Name = "button_sair";
-            this.button_sair.Size = new System.Drawing.Size(27, 24);
+            this.button_sair.Size = new System.Drawing.Size(24, 24);
             this.button_sair.TabIndex = 3;
             this.button_sair.Text = "x";
             this.button_sair.UseVisualStyleBackColor = false;
