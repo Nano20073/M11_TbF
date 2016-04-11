@@ -48,12 +48,11 @@
             this.button_ajuda_a_pessoas = new System.Windows.Forms.Button();
             this.timer_background_errou = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_Ajudas = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label_sair = new System.Windows.Forms.Label();
             this.label_linha = new System.Windows.Forms.Label();
             this.label_utilizador = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_Ajudas = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -179,7 +178,7 @@
             this.label_tempo.BackColor = System.Drawing.Color.Transparent;
             this.label_tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_tempo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_tempo.Location = new System.Drawing.Point(13, 137);
+            this.label_tempo.Location = new System.Drawing.Point(13, 125);
             this.label_tempo.Name = "label_tempo";
             this.label_tempo.Size = new System.Drawing.Size(126, 17);
             this.label_tempo.TabIndex = 18;
@@ -213,7 +212,7 @@
             this.button_Telefone.BackgroundImage = global::M11_TbF.Properties.Resources.Telefone;
             this.button_Telefone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Telefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Telefone.Location = new System.Drawing.Point(65, 220);
+            this.button_Telefone.Location = new System.Drawing.Point(65, 208);
             this.button_Telefone.Name = "button_Telefone";
             this.button_Telefone.Size = new System.Drawing.Size(53, 29);
             this.button_Telefone.TabIndex = 21;
@@ -225,7 +224,7 @@
             this.button_50_50.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_50_50.BackgroundImage")));
             this.button_50_50.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_50_50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_50_50.Location = new System.Drawing.Point(11, 220);
+            this.button_50_50.Location = new System.Drawing.Point(11, 208);
             this.button_50_50.Name = "button_50_50";
             this.button_50_50.Size = new System.Drawing.Size(53, 29);
             this.button_50_50.TabIndex = 20;
@@ -237,7 +236,7 @@
             this.button_ajuda_a_pessoas.BackgroundImage = global::M11_TbF.Properties.Resources.Ajuda_a_publico;
             this.button_ajuda_a_pessoas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_ajuda_a_pessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ajuda_a_pessoas.Location = new System.Drawing.Point(119, 220);
+            this.button_ajuda_a_pessoas.Location = new System.Drawing.Point(119, 208);
             this.button_ajuda_a_pessoas.Name = "button_ajuda_a_pessoas";
             this.button_ajuda_a_pessoas.Size = new System.Drawing.Size(53, 28);
             this.button_ajuda_a_pessoas.TabIndex = 19;
@@ -252,7 +251,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.button_Telefone);
             this.panel3.Controls.Add(this.label_Ajudas);
             this.panel3.Controls.Add(this.button_ajuda_a_pessoas);
@@ -269,6 +267,27 @@
             this.panel3.Size = new System.Drawing.Size(182, 406);
             this.panel3.TabIndex = 20;
             // 
+            // label_Ajudas
+            // 
+            this.label_Ajudas.AutoSize = true;
+            this.label_Ajudas.BackColor = System.Drawing.Color.Transparent;
+            this.label_Ajudas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label_Ajudas.ForeColor = System.Drawing.Color.White;
+            this.label_Ajudas.Location = new System.Drawing.Point(58, 178);
+            this.label_Ajudas.Name = "label_Ajudas";
+            this.label_Ajudas.Size = new System.Drawing.Size(60, 20);
+            this.label_Ajudas.TabIndex = 24;
+            this.label_Ajudas.Text = "Ajudas";
+            this.label_Ajudas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 1);
+            this.label1.TabIndex = 23;
+            // 
             // label_sair
             // 
             this.label_sair.AutoSize = true;
@@ -276,7 +295,7 @@
             this.label_sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label_sair.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_sair.Location = new System.Drawing.Point(13, 92);
+            this.label_sair.Location = new System.Drawing.Point(13, 76);
             this.label_sair.Name = "label_sair";
             this.label_sair.Size = new System.Drawing.Size(25, 13);
             this.label_sair.TabIndex = 20;
@@ -286,7 +305,7 @@
             // label_linha
             // 
             this.label_linha.BackColor = System.Drawing.Color.White;
-            this.label_linha.Location = new System.Drawing.Point(11, 119);
+            this.label_linha.Location = new System.Drawing.Point(11, 107);
             this.label_linha.Name = "label_linha";
             this.label_linha.Size = new System.Drawing.Size(160, 1);
             this.label_linha.TabIndex = 22;
@@ -303,40 +322,6 @@
             this.label_utilizador.TabIndex = 4;
             this.label_utilizador.Text = "----";
             this.label_utilizador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 1);
-            this.label1.TabIndex = 23;
-            // 
-            // label_Ajudas
-            // 
-            this.label_Ajudas.AutoSize = true;
-            this.label_Ajudas.BackColor = System.Drawing.Color.Transparent;
-            this.label_Ajudas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label_Ajudas.ForeColor = System.Drawing.Color.White;
-            this.label_Ajudas.Location = new System.Drawing.Point(58, 190);
-            this.label_Ajudas.Name = "label_Ajudas";
-            this.label_Ajudas.Size = new System.Drawing.Size(60, 20);
-            this.label_Ajudas.TabIndex = 24;
-            this.label_Ajudas.Text = "Ajudas";
-            this.label_Ajudas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(12, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "IN GAME";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form_Jogo
             // 
@@ -391,7 +376,6 @@
         private System.Windows.Forms.Label label_sair;
         private System.Windows.Forms.Label label_linha;
         private System.Windows.Forms.Label label_utilizador;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_Ajudas;
         private System.Windows.Forms.Label label1;
     }
