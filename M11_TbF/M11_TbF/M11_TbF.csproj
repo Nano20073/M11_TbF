@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Ajuda_Telefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ajuda_Telefone.Designer.cs">
+      <DependentUpon>Form_Ajuda_Telefone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,18 +63,6 @@
     </Compile>
     <Compile Include="Form_Menu_Principal.Designer.cs">
       <DependentUpon>Form_Menu_Principal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_MudarNome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_MudarNome.Designer.cs">
-      <DependentUpon>Form_MudarNome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_MudarPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_MudarPassword.Designer.cs">
-      <DependentUpon>Form_MudarPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Opcoes.cs">
       <SubType>Form</SubType>
@@ -108,17 +102,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilizador.cs" />
+    <EmbeddedResource Include="Form_Ajuda_Telefone.resx">
+      <DependentUpon>Form_Ajuda_Telefone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu_Principal.resx">
       <DependentUpon>Form_Menu_Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_MudarNome.resx">
-      <DependentUpon>Form_MudarNome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_MudarPassword.resx">
-      <DependentUpon>Form_MudarPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Opcoes.resx">
       <DependentUpon>Form_Opcoes.cs</DependentUpon>
@@ -165,6 +156,7 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Dog.jpg" />
     <None Include="Resources\Telefone_off.png" />
     <None Include="Resources\Telefone.png" />
     <None Include="Resources\FormBG.ico" />

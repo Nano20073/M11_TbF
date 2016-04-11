@@ -496,23 +496,28 @@ namespace M11_TbF
 
             if (resposta == 1)
             {
-
+                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r1.Text);
+                FAjdTel.ShowDialog();
             }
 
             if (resposta == 2)
             {
-
+                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r2.Text);
+                FAjdTel.ShowDialog();
             }
 
             if (resposta == 3)
             {
-
+                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r3.Text);
+                FAjdTel.ShowDialog();
             }
 
             if (resposta == 4)
             {
-
+                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r4.Text);
+                FAjdTel.ShowDialog();
             }
+            
         }
 
         private void label_sair_Click(object sender, EventArgs e)
