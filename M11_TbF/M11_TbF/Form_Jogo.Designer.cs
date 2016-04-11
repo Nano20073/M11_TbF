@@ -264,9 +264,9 @@
             this.panel3.Controls.Add(this.label_tempo);
             this.panel3.Controls.Add(this.button_sair);
             this.panel3.Controls.Add(this.label_utilizador);
-            this.panel3.Location = new System.Drawing.Point(718, 0);
+            this.panel3.Location = new System.Drawing.Point(719, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 403);
+            this.panel3.Size = new System.Drawing.Size(182, 406);
             this.panel3.TabIndex = 20;
             // 
             // label_sair

@@ -72,6 +72,7 @@
             // 
             // button_minimizar
             // 
+            this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_minimizar.ForeColor = System.Drawing.Color.White;
             this.button_minimizar.Location = new System.Drawing.Point(133, 0);
