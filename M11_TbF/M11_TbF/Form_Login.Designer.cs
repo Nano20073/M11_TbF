@@ -125,7 +125,7 @@
             this.label_criar_conta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_criar_conta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_criar_conta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_criar_conta.Location = new System.Drawing.Point(3, 324);
+            this.label_criar_conta.Location = new System.Drawing.Point(3, 313);
             this.label_criar_conta.Name = "label_criar_conta";
             this.label_criar_conta.Size = new System.Drawing.Size(105, 17);
             this.label_criar_conta.TabIndex = 7;

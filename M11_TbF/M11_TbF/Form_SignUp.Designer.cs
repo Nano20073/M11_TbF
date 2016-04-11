@@ -133,7 +133,7 @@
             this.label_entrar_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_entrar_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_entrar_login.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_entrar_login.Location = new System.Drawing.Point(3, 346);
+            this.label_entrar_login.Location = new System.Drawing.Point(3, 341);
             this.label_entrar_login.Name = "label_entrar_login";
             this.label_entrar_login.Size = new System.Drawing.Size(73, 17);
             this.label_entrar_login.TabIndex = 24;

@@ -90,7 +90,11 @@ namespace M11_TbF
 
         public void Acertou_a_Pergunta()
         {
-            
+            label_r1.Enabled = false;
+            label_r2.Enabled = false;
+            label_r3.Enabled = false;
+            label_r4.Enabled = false;
+
             if (Per.Nivel_Get().ToString() == "6")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
@@ -113,6 +117,11 @@ namespace M11_TbF
 
         public void Errou_a_Pergunta()
         {
+            label_r1.Enabled = false;
+            label_r2.Enabled = false;
+            label_r3.Enabled = false;
+            label_r4.Enabled = false;
+
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
@@ -357,6 +366,11 @@ namespace M11_TbF
                 label_r4.Text = Per.Resposta4_Get();
                 pictureBox_MoneyTree.BackgroundImage = Image.FromFile(@"..\..\Resources\nivel" + MoneyTree.ToString() + ".jpg");
                 timer_tempo.Start();
+
+                label_r1.Enabled = true;
+                label_r2.Enabled = true;
+                label_r3.Enabled = true;
+                label_r4.Enabled = true;
             }
             else
             {
@@ -442,6 +456,32 @@ namespace M11_TbF
             _dragging = false;
         }
 
-        
+        private void button_50_50_Click(object sender, EventArgs e)
+        {
+            button_50_50.Enabled = false;
+            button_50_50.BackgroundImage = Image.FromFile(@"..\..\Resources\50_50_off.png");
+
+            if(label_r1.Text == Per.Resposta_Correta_Get())
+            {
+                int NPergunta = 0;
+                var rand = new System.Random();
+                NPergunta = rand.Next(21, 26);
+            }
+
+            if (label_r2.Text == Per.Resposta_Correta_Get())
+            {
+
+            }
+
+            if (label_r3.Text == Per.Resposta_Correta_Get())
+            {
+
+            }
+
+            if (label_r4.Text == Per.Resposta_Correta_Get())
+            {
+
+            }
+        }
     }
 }

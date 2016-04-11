@@ -256,4 +256,22 @@
   <data name="FormBG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormBG.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Telefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Telefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ajuda_a_publico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ajuda_a_publico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50_50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ajuda_a_publico_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ajuda_a_publico_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Telefone_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Telefone_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50_50_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50_50_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Jogo));
             this.label_nivel = new System.Windows.Forms.Label();
             this.label_pergunta = new System.Windows.Forms.Label();
             this.label_r1 = new System.Windows.Forms.Label();
@@ -42,6 +43,9 @@
             this.timer_tempo = new System.Windows.Forms.Timer(this.components);
             this.timer_background_acertou = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_Telefone = new System.Windows.Forms.Button();
+            this.button_50_50 = new System.Windows.Forms.Button();
+            this.button_ajuda_a_pessoas = new System.Windows.Forms.Button();
             this.timer_background_errou = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
             this.panel2.SuspendLayout();
@@ -179,6 +183,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button_Telefone);
+            this.panel2.Controls.Add(this.button_50_50);
+            this.panel2.Controls.Add(this.button_ajuda_a_pessoas);
             this.panel2.Controls.Add(this.button_minimizar);
             this.panel2.Controls.Add(this.label_tempo);
             this.panel2.Controls.Add(this.button_sair);
@@ -191,6 +198,40 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // button_Telefone
+            // 
+            this.button_Telefone.BackgroundImage = global::M11_TbF.Properties.Resources.Telefone;
+            this.button_Telefone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Telefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Telefone.Location = new System.Drawing.Point(175, 104);
+            this.button_Telefone.Name = "button_Telefone";
+            this.button_Telefone.Size = new System.Drawing.Size(53, 29);
+            this.button_Telefone.TabIndex = 21;
+            this.button_Telefone.UseVisualStyleBackColor = true;
+            // 
+            // button_50_50
+            // 
+            this.button_50_50.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_50_50.BackgroundImage")));
+            this.button_50_50.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_50_50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_50_50.Location = new System.Drawing.Point(175, 35);
+            this.button_50_50.Name = "button_50_50";
+            this.button_50_50.Size = new System.Drawing.Size(53, 29);
+            this.button_50_50.TabIndex = 20;
+            this.button_50_50.UseVisualStyleBackColor = true;
+            this.button_50_50.Click += new System.EventHandler(this.button_50_50_Click);
+            // 
+            // button_ajuda_a_pessoas
+            // 
+            this.button_ajuda_a_pessoas.BackgroundImage = global::M11_TbF.Properties.Resources.Ajuda_a_publico;
+            this.button_ajuda_a_pessoas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_ajuda_a_pessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ajuda_a_pessoas.Location = new System.Drawing.Point(175, 70);
+            this.button_ajuda_a_pessoas.Name = "button_ajuda_a_pessoas";
+            this.button_ajuda_a_pessoas.Size = new System.Drawing.Size(53, 28);
+            this.button_ajuda_a_pessoas.TabIndex = 19;
+            this.button_ajuda_a_pessoas.UseVisualStyleBackColor = true;
             // 
             // timer_background_errou
             // 
@@ -240,5 +281,8 @@
         private System.Windows.Forms.Timer timer_background_acertou;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer_background_errou;
+        private System.Windows.Forms.Button button_ajuda_a_pessoas;
+        private System.Windows.Forms.Button button_50_50;
+        private System.Windows.Forms.Button button_Telefone;
     }
 }

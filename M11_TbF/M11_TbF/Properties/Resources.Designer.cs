@@ -63,6 +63,46 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _50_50 {
+            get {
+                object obj = ResourceManager.GetObject("_50_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _50_50_off {
+            get {
+                object obj = ResourceManager.GetObject("_50_50_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ajuda_a_publico {
+            get {
+                object obj = ResourceManager.GetObject("Ajuda_a_publico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ajuda_a_publico_off {
+            get {
+                object obj = ResourceManager.GetObject("Ajuda_a_publico_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backgroundDefault {
             get {
                 object obj = ResourceManager.GetObject("backgroundDefault", resourceCulture);
@@ -516,6 +556,26 @@ namespace M11_TbF.Properties {
         internal static System.Drawing.Bitmap quiz_question1 {
             get {
                 object obj = ResourceManager.GetObject("quiz_question1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Telefone {
+            get {
+                object obj = ResourceManager.GetObject("Telefone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Telefone_off {
+            get {
+                object obj = ResourceManager.GetObject("Telefone_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

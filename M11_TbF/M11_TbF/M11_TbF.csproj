@@ -165,6 +165,8 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Telefone_off.png" />
+    <None Include="Resources\Telefone.png" />
     <None Include="Resources\FormBG.ico" />
     <None Include="Resources\FormIcon.ico" />
     <None Include="Resources\GameBG_R12.png" />
@@ -204,6 +206,11 @@
     <None Include="Resources\who-wants-to-be-a-millionaire-template-ljkneqqk.jpg" />
     <None Include="Resources\options_icon.png" />
     <None Include="Resources\backgroundDefault.jpg" />
+    <None Include="Resources\50 50.png" />
+    <None Include="Resources\Ajuda_a_publico.png" />
+    <None Include="Resources\50_50.png" />
+    <None Include="Resources\50_50_off.png" />
+    <None Include="Resources\Ajuda_a_publico_off.png" />
     <Content Include="Resources\botão_login.jpg" />
     <None Include="Resources\IMG_sign_up_.gif" />
     <None Include="Resources\quiz_answer.jpg" />
