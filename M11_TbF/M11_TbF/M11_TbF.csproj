@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Ajuda_Publico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ajuda_Publico.Designer.cs">
+      <DependentUpon>Form_Ajuda_Publico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Ajuda_Telefone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilizador.cs" />
+    <EmbeddedResource Include="Form_Ajuda_Publico.resx">
+      <DependentUpon>Form_Ajuda_Publico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Ajuda_Telefone.resx">
       <DependentUpon>Form_Ajuda_Telefone.cs</DependentUpon>
     </EmbeddedResource>

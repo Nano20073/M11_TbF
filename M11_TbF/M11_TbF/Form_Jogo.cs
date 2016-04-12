@@ -525,5 +525,53 @@ namespace M11_TbF
             this.Close();
             Owner.Show();           
         }
+
+        private void button_ajuda_a_pessoas_Click(object sender, EventArgs e)
+        {
+            button_ajuda_a_pessoas.Enabled = false;
+            button_ajuda_a_pessoas.BackgroundImage = Image.FromFile(@"..\..\Resources\Ajuda_a_publico_off.png");
+            int resposta1, resposta2, resposta3, resposta4;
+            var rand = new System.Random();
+            
+            if (label_r1.Text == Per.Resposta_Correta_Get())
+            {
+                resposta1 = rand.Next(30,71);
+                resposta2 = rand.Next(0, 100 - resposta1);
+                resposta3 = rand.Next(0, 100 - resposta1 - resposta2);
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;
+                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
+                FAjdPub.ShowDialog();
+            }
+
+            if (label_r2.Text == Per.Resposta_Correta_Get())
+            {
+                resposta2 = rand.Next(30, 71);
+                resposta1 = rand.Next(0, 100 - resposta2);                
+                resposta3 = rand.Next(0, 100 - resposta1 - resposta2);
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;
+                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
+                FAjdPub.ShowDialog();
+            }
+
+            if (label_r3.Text == Per.Resposta_Correta_Get())
+            {
+                resposta3 = rand.Next(30, 71);
+                resposta1 = rand.Next(0, 100 - resposta3);
+                resposta2 = rand.Next(0, 100 - resposta3 - resposta1);
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;
+                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
+                FAjdPub.ShowDialog();
+            }
+
+            if (label_r4.Text == Per.Resposta_Correta_Get())
+            {
+                resposta4 = rand.Next(30, 71);
+                resposta1 = rand.Next(0, 100 - resposta4);
+                resposta2 = rand.Next(0, 100 - resposta4 - resposta1);
+                resposta3 = 100 - resposta4 - resposta1 - resposta2;
+                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
+                FAjdPub.ShowDialog();
+            }
+        }
     }
 }

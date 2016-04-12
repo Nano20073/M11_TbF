@@ -241,6 +241,7 @@
             this.button_ajuda_a_pessoas.Size = new System.Drawing.Size(53, 28);
             this.button_ajuda_a_pessoas.TabIndex = 19;
             this.button_ajuda_a_pessoas.UseVisualStyleBackColor = true;
+            this.button_ajuda_a_pessoas.Click += new System.EventHandler(this.button_ajuda_a_pessoas_Click);
             // 
             // timer_background_errou
             // 
