@@ -34,12 +34,6 @@ namespace M11_TbF
             {
                 cn.Open();
                 cmd.ExecuteNonQuery();
-
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {
@@ -61,7 +55,7 @@ namespace M11_TbF
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
+            string query = "SELECT Nome, PassWord FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -81,13 +75,6 @@ namespace M11_TbF
                     }
                 }
                 dr.Close();
-            }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {
@@ -123,12 +110,37 @@ namespace M11_TbF
                 cmd.ExecuteNonQuery();
 
             }
-
-
-            catch (OleDbException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
                      ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        //
+        //
+        //
+        //
+        //
+        public void Alterar_Password(string username, string Nova_Password)
+        {
+            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+
+            OleDbCommand cmd = new OleDbCommand();
+
+            try
+            {
+                cn.Open();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Utilizadores SET [PassWord] = [@Password] WHERE [Nome] = [@Username];";
+                cmd.Parameters.AddWithValue("@Password", Nova_Password);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
@@ -165,12 +177,6 @@ namespace M11_TbF
                 cmd.ExecuteNonQuery();
 
             }
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
@@ -186,11 +192,11 @@ namespace M11_TbF
         //
         //
         //
-        public string get_nivel_maximo(string Username)
+        public int get_nivel_maximo(string Username)
         {
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.Nivel_Maximo FROM Utilizadores;";
+            string query = "SELECT Nome, Nivel_Maximo FROM Utilizadores;";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -201,15 +207,10 @@ namespace M11_TbF
                 OleDbDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    if(dr.GetValue(0).ToString() == Username) { return dr.GetValue(1).ToString(); }
+                    if(dr.GetValue(0).ToString() == Username) { return int.Parse(dr.GetValue(1).ToString()); }
                 }
                 
                 dr.Close();
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {
@@ -220,7 +221,7 @@ namespace M11_TbF
             {
                 cn.Close();
             }
-            return "";
+            return 0;
         }
         //
         //
@@ -236,47 +237,6 @@ namespace M11_TbF
         //
         //
         //
-        public void Alterar_Password(string username, string Nova_Password)
-        {
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
-            //string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
-            OleDbCommand cmd = new OleDbCommand();
-
-            try
-            {
-                cn.Open();
-                cmd.CommandType = CommandType.Text;
-                //cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
-                cmd.CommandText = "UPDATE Utilizadores SET Utilizadores.[PassWord] = @Password WHERE (((Utilizadores.[Nome])=[@Username]));";
-                cmd.Parameters.AddWithValue("@Password", Nova_Password);
-                cmd.Parameters.AddWithValue("@Username", username);               
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-
-            }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
-                     ex.ToString());
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        //
-        //
-        //
-        //
-        //
         public int GetTotalGanho(string Username)
         {
             OleDbConnection cn =
@@ -285,7 +245,7 @@ namespace M11_TbF
             //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
             
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.Total_Ganho FROM Utilizadores WHERE Utilizadores.Nome ='" + Username + "';";
+            string query = "SELECT Nome, Total_Ganho FROM Utilizadores WHERE Nome ='" + Username + "';";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -301,13 +261,6 @@ namespace M11_TbF
                  
                 dr.Close();
                 
-            }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {
@@ -331,11 +284,10 @@ namespace M11_TbF
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
             int Valor_Total_Anterior;
 
 
-            string query = "SELECT Utilizadores.Nome, Utilizadores.Total_Ganho FROM Utilizadores WHERE Utilizadores.Nome ='" + Username + "';";
+            string query = "SELECT Nome, Total_Ganho FROM Utilizadores WHERE Nome ='" + Username + "';";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -353,13 +305,6 @@ namespace M11_TbF
 
                 dr.Close();
 
-            }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {
@@ -385,9 +330,6 @@ namespace M11_TbF
 
 
             try { 
-                //////////////// Adiciona ao valor antigo o dinheiro ganho \\\\\\\\\\\\\\\\\\\\
-
-
 
                 OleDbCommand cmmd = new OleDbCommand();
 
@@ -400,13 +342,6 @@ namespace M11_TbF
                 cmmd.ExecuteNonQuery();
 
             }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
@@ -415,8 +350,7 @@ namespace M11_TbF
             finally
             {
                 cn.Close();
-            }
-            
+            }           
         }
         //
         //
@@ -427,26 +361,17 @@ namespace M11_TbF
         {
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            //string query = "SELECT Utilizadores.Nome, Utilizadores.PassWord FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand();
 
             try
             {
                 cn.Open();
                 cmd.CommandType = CommandType.Text;
-                //cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
                 cmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = 0, Nivel_Maximo = 0 WHERE Nome=@Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
 
-            }
-
-
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
             }
             catch (Exception ex)
             {

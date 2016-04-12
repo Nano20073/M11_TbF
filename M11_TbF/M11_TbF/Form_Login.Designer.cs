@@ -72,6 +72,8 @@
             // 
             this.button_Logar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_Logar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Logar.FlatAppearance.BorderSize = 3;
+            this.button_Logar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Logar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Logar.ForeColor = System.Drawing.Color.White;
             this.button_Logar.Location = new System.Drawing.Point(15, 205);

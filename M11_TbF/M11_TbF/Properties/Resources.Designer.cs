@@ -123,6 +123,106 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_100milhoes {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_100milhoes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_100milhoes_off {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_100milhoes_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_10milhoes {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_10milhoes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_10milhoes_off {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_10milhoes_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_1milhao {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_1milhao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_1milhao_off {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_1milhao_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_Nivel10 {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_Nivel10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_Nivel10_off {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_Nivel10_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_NivelMax {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_NivelMax", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conquistas_NivelMax_off {
+            get {
+                object obj = ResourceManager.GetObject("Conquistas_NivelMax_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dog {
             get {
                 object obj = ResourceManager.GetObject("Dog", resourceCulture);

@@ -138,6 +138,8 @@
             this.button_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Reset.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_Reset.FlatAppearance.BorderSize = 3;
+            this.button_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Reset.ForeColor = System.Drawing.Color.White;
             this.button_Reset.Location = new System.Drawing.Point(14, 657);
@@ -152,6 +154,8 @@
             // 
             this.button_AlterarPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_AlterarPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_AlterarPassword.FlatAppearance.BorderSize = 3;
+            this.button_AlterarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AlterarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_AlterarPassword.ForeColor = System.Drawing.Color.White;
             this.button_AlterarPassword.Location = new System.Drawing.Point(15, 484);
@@ -166,6 +170,8 @@
             // 
             this.button_AlterarUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_AlterarUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_AlterarUsername.FlatAppearance.BorderSize = 3;
+            this.button_AlterarUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AlterarUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_AlterarUsername.ForeColor = System.Drawing.Color.White;
             this.button_AlterarUsername.Location = new System.Drawing.Point(15, 283);

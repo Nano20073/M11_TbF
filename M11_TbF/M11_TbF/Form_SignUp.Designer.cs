@@ -73,6 +73,9 @@
             // button_criar
             // 
             this.button_criar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_criar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_criar.FlatAppearance.BorderSize = 3;
+            this.button_criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_criar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_criar.ForeColor = System.Drawing.Color.White;
             this.button_criar.Location = new System.Drawing.Point(15, 260);

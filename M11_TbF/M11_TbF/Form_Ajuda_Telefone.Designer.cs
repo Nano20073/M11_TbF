@@ -82,14 +82,14 @@
             // 
             // label_RESPOSTA
             // 
-            this.label_RESPOSTA.AutoSize = true;
             this.label_RESPOSTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_RESPOSTA.ForeColor = System.Drawing.Color.White;
-            this.label_RESPOSTA.Location = new System.Drawing.Point(104, 115);
+            this.label_RESPOSTA.Location = new System.Drawing.Point(0, 88);
             this.label_RESPOSTA.Name = "label_RESPOSTA";
-            this.label_RESPOSTA.Size = new System.Drawing.Size(83, 17);
+            this.label_RESPOSTA.Size = new System.Drawing.Size(284, 74);
             this.label_RESPOSTA.TabIndex = 27;
             this.label_RESPOSTA.Text = "RESPOSTA";
+            this.label_RESPOSTA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form_Ajuda_Telefone
             // 

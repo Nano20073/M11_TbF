@@ -34,6 +34,7 @@
             this.button_minimizar = new System.Windows.Forms.Button();
             this.panel_Drag = new System.Windows.Forms.Panel();
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.button_Conquistas = new System.Windows.Forms.Button();
             this.button_Jogar = new System.Windows.Forms.Button();
             this.button_Estatisticas = new System.Windows.Forms.Button();
             this.button_Opcoes = new System.Windows.Forms.Button();
@@ -97,6 +98,7 @@
             // panel_layout
             // 
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.button_Conquistas);
             this.panel_layout.Controls.Add(this.button_Jogar);
             this.panel_layout.Controls.Add(this.button_Estatisticas);
             this.panel_layout.Controls.Add(this.button_Opcoes);
@@ -110,10 +112,28 @@
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 19;
             // 
+            // button_Conquistas
+            // 
+            this.button_Conquistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_Conquistas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Conquistas.FlatAppearance.BorderSize = 3;
+            this.button_Conquistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Conquistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.button_Conquistas.ForeColor = System.Drawing.Color.White;
+            this.button_Conquistas.Location = new System.Drawing.Point(15, 253);
+            this.button_Conquistas.Name = "button_Conquistas";
+            this.button_Conquistas.Size = new System.Drawing.Size(153, 40);
+            this.button_Conquistas.TabIndex = 23;
+            this.button_Conquistas.Text = "Conquistas";
+            this.button_Conquistas.UseVisualStyleBackColor = false;
+            this.button_Conquistas.Click += new System.EventHandler(this.button_Conquistas_Click);
+            // 
             // button_Jogar
             // 
             this.button_Jogar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_Jogar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Jogar.FlatAppearance.BorderSize = 3;
+            this.button_Jogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Jogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Jogar.ForeColor = System.Drawing.Color.White;
             this.button_Jogar.Location = new System.Drawing.Point(16, 129);
@@ -128,6 +148,8 @@
             // 
             this.button_Estatisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_Estatisticas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Estatisticas.FlatAppearance.BorderSize = 3;
+            this.button_Estatisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Estatisticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Estatisticas.ForeColor = System.Drawing.Color.White;
             this.button_Estatisticas.Location = new System.Drawing.Point(16, 191);
@@ -142,9 +164,11 @@
             // 
             this.button_Opcoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button_Opcoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Opcoes.FlatAppearance.BorderSize = 3;
+            this.button_Opcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Opcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_Opcoes.ForeColor = System.Drawing.Color.White;
-            this.button_Opcoes.Location = new System.Drawing.Point(16, 253);
+            this.button_Opcoes.Location = new System.Drawing.Point(16, 315);
             this.button_Opcoes.Name = "button_Opcoes";
             this.button_Opcoes.Size = new System.Drawing.Size(153, 40);
             this.button_Opcoes.TabIndex = 20;
@@ -211,5 +235,6 @@
         private System.Windows.Forms.Button button_Estatisticas;
         private System.Windows.Forms.Button button_Opcoes;
         private System.Windows.Forms.Button button_Jogar;
+        private System.Windows.Forms.Button button_Conquistas;
     }
 }

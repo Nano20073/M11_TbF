@@ -35,29 +35,36 @@ namespace M11_TbF
         private void button_logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Login F1 = new Form_Login();
-            F1.Show();
+            Form_Login FLOGIN = new Form_Login();
+            FLOGIN.Show();
         }
 
         private void button_Jogar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Jogo F5 = new Form_Jogo(this, Username_Atual);
-            F5.Show();
+            Form_Jogo FJOGO = new Form_Jogo(this, Username_Atual);
+            FJOGO.Show();
         }
 
         private void button_Estatisticas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Estatisticas F4 = new Form_Estatisticas(label_utilizador.Text, this);
-            F4.Show();
+            Form_Estatisticas FEst = new Form_Estatisticas(label_utilizador.Text, this);
+            FEst.Show();
+        }
+
+        private void button_Conquistas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_Conquistas FC = new Form_Conquistas(label_utilizador.Text, this);
+            FC.Show();
         }
 
         private void button_Opcoes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Opcoes F3 = new Form_Opcoes(Username_Atual, pass, this);
-            F3.Show();
+            Form_Opcoes FOPCOES = new Form_Opcoes(Username_Atual, pass, this);
+            FOPCOES.Show();
         }
 
         private void panel_Drag_MouseDown(object sender, MouseEventArgs e)

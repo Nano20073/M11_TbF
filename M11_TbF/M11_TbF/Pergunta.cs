@@ -47,7 +47,7 @@ namespace M11_TbF
 
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Pergunta, Perguntas.Resposta1, Perguntas.Resposta2, Perguntas.Resposta3, Perguntas.Resposta4, Perguntas.Resposta_Correta, Perguntas.Nivel FROM Perguntas WHERE (((Perguntas.Nivel)=" + Nivel_da_Pergunta.ToString() + "));";
+            string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -71,11 +71,6 @@ namespace M11_TbF
 
                 }
             }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                     ex.ToString());
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
@@ -95,7 +90,7 @@ namespace M11_TbF
         {
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Perguntas.ID_Pergunta, Perguntas.Pergunta, Perguntas.Resposta1, Perguntas.Resposta2, Perguntas.Resposta3, Perguntas.Resposta4, Perguntas.Resposta_Correta, Perguntas.Nivel FROM Perguntas WHERE (((Perguntas.Nivel)=" + Nivel_da_Pergunta.ToString() + "));";
+            string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -122,11 +117,6 @@ namespace M11_TbF
                         
 
                 }
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show("{0}: OleDbException: Unable to connect or retrieve data from data source: {1}.",
-                    ex.ToString());
             }
             catch (Exception ex)
             {
@@ -178,9 +168,7 @@ namespace M11_TbF
         public string Resposta_Correta_Get()
         {
             return Resposta_Correta;
-        }
-
-        
+        }        
     }
-    }
+}
 

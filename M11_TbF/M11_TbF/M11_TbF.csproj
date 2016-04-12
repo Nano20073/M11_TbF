@@ -58,6 +58,12 @@
     <Compile Include="Form_Ajuda_Telefone.Designer.cs">
       <DependentUpon>Form_Ajuda_Telefone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Conquistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Conquistas.Designer.cs">
+      <DependentUpon>Form_Conquistas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <EmbeddedResource Include="Form_Ajuda_Telefone.resx">
       <DependentUpon>Form_Ajuda_Telefone.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Conquistas.resx">
+      <DependentUpon>Form_Conquistas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,16 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Conquistas_NivelMax_off.png" />
+    <None Include="Resources\Conquistas_NivelMax.png" />
+    <None Include="Resources\Conquistas_Nivel10_off.png" />
+    <None Include="Resources\Conquistas_Nivel10.png" />
+    <None Include="Resources\Conquistas_100milhoes_off.png" />
+    <None Include="Resources\Conquistas_100milhoes.png" />
+    <None Include="Resources\Conquistas_10milhoes_off.png" />
+    <None Include="Resources\Conquistas_10milhoes.png" />
+    <None Include="Resources\Conquistas_1milhao_off.png" />
+    <None Include="Resources\Conquistas_1milhao.png" />
     <None Include="Resources\Dog.jpg" />
     <None Include="Resources\Telefone_off.png" />
     <None Include="Resources\Telefone.png" />

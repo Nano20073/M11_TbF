@@ -277,4 +277,34 @@
   <data name="Dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Conquistas_100milhoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_100milhoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_100milhoes_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_100milhoes_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_10milhoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_10milhoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_10milhoes_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_10milhoes_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_1milhao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_1milhao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_1milhao_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_1milhao_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_Nivel10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_Nivel10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_Nivel10_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_Nivel10_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_NivelMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_NivelMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conquistas_NivelMax_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conquistas_NivelMax_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
