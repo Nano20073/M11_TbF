@@ -35,9 +35,10 @@ namespace M11_TbF
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            label_utilizador.Select();
             User = new Utilizador();
             label_utilizador.Text = Username_Atual;
+            
 
         }
 

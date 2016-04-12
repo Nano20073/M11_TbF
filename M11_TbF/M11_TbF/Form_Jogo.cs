@@ -35,6 +35,7 @@ namespace M11_TbF
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            label_utilizador.Select();
             User = new Utilizador();
             Per = new Pergunta();
 
@@ -56,36 +57,22 @@ namespace M11_TbF
 
         public void AdicionarTotalGanho()
         {
-            if (Per.Nivel_Get().ToString() == "1")
-            {
-                User.AdicionarTotalGanho(0, Username_Atual);
-            }
-
-            if (Per.Nivel_Get().ToString() == "2")
-            {
-                User.AdicionarTotalGanho(0, Username_Atual);
-            }
-
-            if (Per.Nivel_Get().ToString() == "3")
-            {
-                User.AdicionarTotalGanho(0, Username_Atual);
-            }
-
-            if (Per.Nivel_Get().ToString() == "4")
-            {
-                User.AdicionarTotalGanho(3000, Username_Atual);
-            }
-
-            if (Per.Nivel_Get().ToString() == "5")
-            {
-                User.AdicionarTotalGanho(5000, Username_Atual);
-            }
-
-            if (Per.Nivel_Get().ToString() == "6")
-            {
-                User.AdicionarTotalGanho(7500, Username_Atual);
-            }
-
+            if (Per.Nivel_Get().ToString() == "1") { User.AdicionarTotalGanho(0, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "2") { User.AdicionarTotalGanho(0, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "3") { User.AdicionarTotalGanho(0, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "4") { User.AdicionarTotalGanho(0, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "5") { User.AdicionarTotalGanho(3000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "6") { User.AdicionarTotalGanho(5000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "7") { User.AdicionarTotalGanho(7500, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "8") { User.AdicionarTotalGanho(10000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "9") { User.AdicionarTotalGanho(15000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "10") { User.AdicionarTotalGanho(25000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "11") { User.AdicionarTotalGanho(50000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "12") { User.AdicionarTotalGanho(75000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "13") { User.AdicionarTotalGanho(150000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "14") { User.AdicionarTotalGanho(250000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "15") { User.AdicionarTotalGanho(500000, Username_Atual); }
+            if (Per.Nivel_Get().ToString() == "16") { User.AdicionarTotalGanho(1000000, Username_Atual); }
         }
 
         public void Acertou_a_Pergunta()
@@ -95,7 +82,7 @@ namespace M11_TbF
             label_r3.Enabled = false;
             label_r4.Enabled = false;
 
-            if (Per.Nivel_Get().ToString() == "6")
+            if (Per.Nivel_Get().ToString() == "16")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
                 AdicionarTotalGanho();
@@ -108,242 +95,7 @@ namespace M11_TbF
                 timer_tempo.Stop();
                 tempo = 15;
                 MoneyTree++;
-                timer_background_acertou.Start();
-                
-            }
-        }
-
-        
-
-        public void Errou_a_Pergunta()
-        {
-            label_r1.Enabled = false;
-            label_r2.Enabled = false;
-            label_r3.Enabled = false;
-            label_r4.Enabled = false;
-
-            timer_tempo.Stop();
-            User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-            AdicionarTotalGanho();
-            timer_background_errou.Start();
-            //MessageBox.Show("Perdeu");
-            
-        }
-
-
-
-        private void label_r1_Click(object sender, EventArgs e)
-        {
-            if (Per.Resposta_Verificar(label_r1.Text) == true)
-            {
-                Acertou_a_Pergunta();
-            }
-            else
-            {
-                Errou_a_Pergunta();
-
-                background_time++;
-                if (background_time == 3)
-                {
-
-                    timer_background_acertou.Stop();
-                    background_time = 0;
-
-                    Owner.Show();
-                    this.Close();
-
-                }
-                else
-                {
-                    if (background == 0)
-                    {
-
-                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R2" + ".png");
-                        }
-
-                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R1" + ".png");
-                        }
-
-                        if (label_r1.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R3" + ".png");
-                        }
-                    }
-                }
-            }
-        }
-
-        private void label_r2_Click(object sender, EventArgs e)
-        {
-            if (Per.Resposta_Verificar(label_r2.Text) == true)
-            {
-                Acertou_a_Pergunta();
-            }
-            else
-            {
-                Errou_a_Pergunta();
-
-                background_time++;
-                if (background_time == 3)
-                {
-
-                    timer_background_acertou.Stop();
-                    background_time = 0;
-
-                    Owner.Show();
-                    this.Close();
-
-                }
-                else
-                {
-                    if (background == 0)
-                    {
-
-
-                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R7" + ".png");
-                        }
-
-                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R8" + ".png");
-                        }
-
-                        if (label_r2.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R9" + ".png");
-                        }
-
-                    }
-                }
-            }
-        }
-
-        private void label_r3_Click(object sender, EventArgs e)
-        {
-
-            if (Per.Resposta_Verificar(label_r3.Text) == true)
-            {
-                Acertou_a_Pergunta();
-            }
-            else
-            {
-                Errou_a_Pergunta();
-
-                background_time++;
-                if (background_time == 3)
-                {
-
-                    timer_background_acertou.Stop();
-                    background_time = 0;
-
-                    Owner.Show();
-                    this.Close();
-
-                }
-                else
-                {
-                    if (background == 0)
-                    {
-
-
-
-
-                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R4" + ".png");
-                        }
-
-                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R5" + ".png");
-                        }
-
-                        if (label_r3.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R6" + ".png");
-                        }
-                    }
-                }
-            }
-        }
-
-        private void label_r4_Click(object sender, EventArgs e)
-        {
-            if (Per.Resposta_Verificar(label_r4.Text) == true)
-            {
-                Acertou_a_Pergunta();
-            }
-            else
-            {
-                Errou_a_Pergunta();
-
-                background_time++;
-                if (background_time == 3)
-                {
-
-                    timer_background_acertou.Stop();
-                    background_time = 0;
-
-                    Owner.Show();
-                    this.Close();
-
-                }
-                else
-                {
-                    if (background == 0)
-                    {
-
-                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R11" + ".png");
-                        }
-
-                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R10" + ".png");
-                        }
-
-                        if (label_r4.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
-                        {
-                            this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R12" + ".png");
-                        }
-                    }
-                }
-            }
-        }
-
-        private void button_minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void timer_tempo_Tick(object sender, EventArgs e)
-        {
-            if (tempo == 0)
-            {
-                timer_tempo.Stop();
-                User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-                AdicionarTotalGanho();
-                MessageBox.Show("Acabou o tempo. Perdeu.");
-                Owner.Show();
-                this.Close();
-
-            }
-            else
-            {
-                tempo--;
-                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
+                timer_background_acertou.Start();               
             }
         }
 
@@ -354,7 +106,7 @@ namespace M11_TbF
             {
                 timer_background_acertou.Stop();
                 background_time = 0;
-                
+
 
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                 label_tempo.Text = "Tempo Restante - " + tempo.ToString();
@@ -365,12 +117,13 @@ namespace M11_TbF
                 label_r3.Text = Per.Resposta3_Get();
                 label_r4.Text = Per.Resposta4_Get();
                 pictureBox_MoneyTree.BackgroundImage = Image.FromFile(@"..\..\Resources\nivel" + MoneyTree.ToString() + ".jpg");
-                timer_tempo.Start();
-
                 label_r1.Enabled = true;
                 label_r2.Enabled = true;
                 label_r3.Enabled = true;
                 label_r4.Enabled = true;
+                timer_tempo.Start();
+
+                
             }
             else
             {
@@ -407,13 +160,30 @@ namespace M11_TbF
             }
         }
 
+
+
+        public void Errou_a_Pergunta()
+        {
+            label_r1.Enabled = false;
+            label_r2.Enabled = false;
+            label_r3.Enabled = false;
+            label_r4.Enabled = false;
+
+            timer_tempo.Stop();
+            User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+            AdicionarTotalGanho();
+            timer_background_errou.Start();
+            //MessageBox.Show("Perdeu");
+            
+        }
+
         private void timer_background_errou_Tick(object sender, EventArgs e)
         {
             background_time++;
             if (background_time == 3)
             {
 
-                timer_background_acertou.Stop();
+                timer_background_errou.Stop();
                 background_time = 0;
 
                 Owner.Show();
@@ -423,7 +193,7 @@ namespace M11_TbF
             else
             {
                 if (background == 0)
-                { 
+                {
 
                     background++;
 
@@ -433,6 +203,141 @@ namespace M11_TbF
                     background--;
                     this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG" + ".png");
                 }
+            }
+        }
+
+
+        private void label_r1_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(label_r1.Text) == true)
+            {
+                Acertou_a_Pergunta();
+            }
+            else
+            {
+                if (label_r1.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R2" + ".png");
+                }
+
+                if (label_r1.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R1" + ".png");
+                }
+
+                if (label_r1.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R3" + ".png");
+                }
+                Errou_a_Pergunta();                                                                                           
+            }
+        }
+
+        private void label_r2_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(label_r2.Text) == true)
+            {
+                Acertou_a_Pergunta();
+            }
+            else
+            {
+                if (label_r2.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R7" + ".png");
+                }
+
+                if (label_r2.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R8" + ".png");
+                }
+
+                if (label_r2.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R9" + ".png");
+                }
+                Errou_a_Pergunta();                                    
+            }
+        }
+
+        private void label_r3_Click(object sender, EventArgs e)
+        {
+
+            if (Per.Resposta_Verificar(label_r3.Text) == true)
+            {
+                Acertou_a_Pergunta();
+            }
+            else
+            {
+                if (label_r3.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R4" + ".png");
+                }
+
+                if (label_r3.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R5" + ".png");
+                }
+
+                if (label_r3.Text != Per.Resposta_Correta_Get() && label_r4.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R6" + ".png");
+                }
+                Errou_a_Pergunta();              
+            }
+        }
+
+        private void label_r4_Click(object sender, EventArgs e)
+        {
+            if (Per.Resposta_Verificar(label_r4.Text) == true)
+            {
+                Acertou_a_Pergunta();
+            }
+            else
+            {
+                if (label_r4.Text != Per.Resposta_Correta_Get() && label_r1.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R11" + ".png");
+                }
+
+                if (label_r4.Text != Per.Resposta_Correta_Get() && label_r2.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R10" + ".png");
+                }
+
+                if (label_r4.Text != Per.Resposta_Correta_Get() && label_r3.Text == Per.Resposta_Correta_Get())
+                {
+                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG_R12" + ".png");
+                }
+                Errou_a_Pergunta();
+            }
+        }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void timer_tempo_Tick(object sender, EventArgs e)
+        {
+            if (tempo == 0)
+            {
+                timer_tempo.Stop();
+                User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                AdicionarTotalGanho();
+                MessageBox.Show("Acabou o tempo. Perdeu.");
+                Owner.Show();
+                this.Close();
+
+            }
+            else
+            {
+                tempo--;
+                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
             }
         }
 
@@ -530,7 +435,7 @@ namespace M11_TbF
         {
             button_ajuda_a_pessoas.Enabled = false;
             button_ajuda_a_pessoas.BackgroundImage = Image.FromFile(@"..\..\Resources\Ajuda_a_publico_off.png");
-            int resposta1, resposta2, resposta3, resposta4;
+            int resposta1=0, resposta2=0, resposta3=0, resposta4=0;
             var rand = new System.Random();
             
             if (label_r1.Text == Per.Resposta_Correta_Get())
@@ -538,9 +443,7 @@ namespace M11_TbF
                 resposta1 = rand.Next(30,71);
                 resposta2 = rand.Next(0, 100 - resposta1);
                 resposta3 = rand.Next(0, 100 - resposta1 - resposta2);
-                resposta4 = 100 - resposta1 - resposta2 - resposta3;
-                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
-                FAjdPub.ShowDialog();
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;                
             }
 
             if (label_r2.Text == Per.Resposta_Correta_Get())
@@ -548,9 +451,7 @@ namespace M11_TbF
                 resposta2 = rand.Next(30, 71);
                 resposta1 = rand.Next(0, 100 - resposta2);                
                 resposta3 = rand.Next(0, 100 - resposta1 - resposta2);
-                resposta4 = 100 - resposta1 - resposta2 - resposta3;
-                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
-                FAjdPub.ShowDialog();
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;                
             }
 
             if (label_r3.Text == Per.Resposta_Correta_Get())
@@ -558,9 +459,7 @@ namespace M11_TbF
                 resposta3 = rand.Next(30, 71);
                 resposta1 = rand.Next(0, 100 - resposta3);
                 resposta2 = rand.Next(0, 100 - resposta3 - resposta1);
-                resposta4 = 100 - resposta1 - resposta2 - resposta3;
-                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
-                FAjdPub.ShowDialog();
+                resposta4 = 100 - resposta1 - resposta2 - resposta3;                
             }
 
             if (label_r4.Text == Per.Resposta_Correta_Get())
@@ -568,10 +467,11 @@ namespace M11_TbF
                 resposta4 = rand.Next(30, 71);
                 resposta1 = rand.Next(0, 100 - resposta4);
                 resposta2 = rand.Next(0, 100 - resposta4 - resposta1);
-                resposta3 = 100 - resposta4 - resposta1 - resposta2;
-                Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
-                FAjdPub.ShowDialog();
+                resposta3 = 100 - resposta4 - resposta1 - resposta2;               
             }
+
+            Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
+            FAjdPub.ShowDialog();
         }
     }
 }

@@ -159,7 +159,7 @@ namespace M11_TbF
                
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE Nome = @Nome AND @Nivel_Maximo > Nivel_Maximo;";
-                cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo);
+                cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo-1);
                 cmd.Parameters.AddWithValue("@Nome", Username_atual);
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
