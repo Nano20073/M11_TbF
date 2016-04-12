@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_criar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_layout = new System.Windows.Forms.Panel();
             this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
-            this.panel3.SuspendLayout();
+            this.panel_layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -94,25 +94,25 @@
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
-            // panel3
+            // panel_layout
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel3.Controls.Add(this.label_SIGN_UP);
-            this.panel3.Controls.Add(this.label_entrar_login);
-            this.panel3.Controls.Add(this.textBox_ConfPassword);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button_minimizar);
-            this.panel3.Controls.Add(this.button_sair);
-            this.panel3.Controls.Add(this.label_JTemCnt);
-            this.panel3.Controls.Add(this.textBox_Password);
-            this.panel3.Controls.Add(this.textBox_Username);
-            this.panel3.Controls.Add(this.button_criar);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(720, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 403);
-            this.panel3.TabIndex = 21;
+            this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.label_SIGN_UP);
+            this.panel_layout.Controls.Add(this.label_entrar_login);
+            this.panel_layout.Controls.Add(this.textBox_ConfPassword);
+            this.panel_layout.Controls.Add(this.label3);
+            this.panel_layout.Controls.Add(this.button_minimizar);
+            this.panel_layout.Controls.Add(this.button_sair);
+            this.panel_layout.Controls.Add(this.label_JTemCnt);
+            this.panel_layout.Controls.Add(this.textBox_Password);
+            this.panel_layout.Controls.Add(this.textBox_Username);
+            this.panel_layout.Controls.Add(this.button_criar);
+            this.panel_layout.Controls.Add(this.label1);
+            this.panel_layout.Controls.Add(this.label2);
+            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Name = "panel_layout";
+            this.panel_layout.Size = new System.Drawing.Size(182, 403);
+            this.panel_layout.TabIndex = 21;
             // 
             // label_SIGN_UP
             // 
@@ -234,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(900, 404);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel_layout);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(900, 404);
@@ -243,8 +243,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_SignUp";
             this.Load += new System.EventHandler(this.Form_SignUp_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_layout.ResumeLayout(false);
+            this.panel_layout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,7 +255,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_criar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_layout;
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.TextBox textBox_Username;
         private System.Windows.Forms.Label label_entrar_login;

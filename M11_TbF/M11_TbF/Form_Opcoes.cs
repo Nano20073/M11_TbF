@@ -29,45 +29,52 @@ namespace M11_TbF
         private void Form3_Load(object sender, EventArgs e)
         {
             label_OPCOES.Select();
-            panel3.VerticalScroll.Value = 0;
-            panel3.HorizontalScroll.Maximum = 0;
-            panel3.VerticalScroll.Maximum = 0;
-            panel3.AutoScroll = false;           
-            panel3.VerticalScroll.Visible = false;
-            panel3.HorizontalScroll.Visible = false;
-            panel3.AutoScroll = true;
+            panel_layout.VerticalScroll.Value = 0;
+            panel_layout.HorizontalScroll.Maximum = 0;
+            panel_layout.VerticalScroll.Maximum = 0;
+            panel_layout.AutoScroll = false;           
+            panel_layout.VerticalScroll.Visible = false;
+            panel_layout.HorizontalScroll.Visible = false;
+            panel_layout.AutoScroll = true;
             
-
             label_utilizador.Text = Username_Atual;
             User = new Utilizador();
         }
 
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        private void button_AlterarUsername_Click(object sender, EventArgs e)
         {
-            _dragging = true;
-            _start_point = new Point(e.X, e.Y);
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
+            if (textBox_NovoUtilizador.Text == textBox_ConfirmarNovoUsername.Text)
             {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    User.Alterar_Nome_de_Utilizador(Username_Atual, textBox_NovoUtilizador.Text);
+                    Application.Exit();
+                }
+                else if (dialogResult == DialogResult.No){}
+            }
+            else
+            {
+                MessageBox.Show("Os Usernames não coincidem.");
             }
         }
 
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        private void button_AlterarPassword_Click(object sender, EventArgs e)
         {
-            _dragging = false;
-        }
-
-        private void label_logout_Click(object sender, EventArgs e)
-        {
-            Owner.Close();
-            this.Close();
-            Form_Login FLOGIN = new Form_Login();
-            FLOGIN.Show();
+            if (textBox_NovaPassword.Text == textBox_ConfirmarNovaPassword.Text && textBox_NovaPassword.Text != "")
+            {
+                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar a sua password? \n Se clicar sim a aplicação irá fechar ", "Password", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    User.Alterar_Password(Username_Atual, textBox_NovaPassword.Text);
+                    Application.Exit();
+                }
+                else if (dialogResult == DialogResult.No){}
+            }
+            else
+            {
+                MessageBox.Show("As passwords não coinncidem.");
+            }
         }
 
         private void button_Reset_Click(object sender, EventArgs e)
@@ -78,10 +85,7 @@ namespace M11_TbF
                 User.Reset(Username_Atual);
                 Application.Exit();
             }
-            else if (dialogResult == DialogResult.No)
-            {
-
-            }
+            else if (dialogResult == DialogResult.No){}
         }
 
         private void button_voltar_Click(object sender, EventArgs e)
@@ -90,14 +94,24 @@ namespace M11_TbF
             Owner.Show();
         }
 
-        private void button_minimizar_Click(object sender, EventArgs e)
+        private void panel_Drag_MouseDown(object sender, MouseEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
         }
 
-        private void button_sair_Click(object sender, EventArgs e)
+        private void panel_Drag_MouseMove(object sender, MouseEventArgs e)
         {
-            Application.Exit();
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
         }
 
         private void panel_MiniSair_MouseUp(object sender, MouseEventArgs e)
@@ -120,54 +134,22 @@ namespace M11_TbF
             _start_point = new Point(e.X, e.Y);
         }
 
-        private void button_AlterarUsername_Click(object sender, EventArgs e)
+        private void button_minimizar_Click(object sender, EventArgs e)
         {
-            if (textBox_NovoUtilizador.Text == textBox_ConfirmarNovoUsername.Text)
-            {
-                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    User.Alterar_Nome_de_Utilizador(Username_Atual, textBox_NovoUtilizador.Text);
-                    Application.Exit();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Os Usernames não coincidem.");
-            }
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button_AlterarPassword_Click(object sender, EventArgs e)
+        private void button_sair_Click(object sender, EventArgs e)
         {
-            if (textBox_NovaPassword.Text == textBox_ConfirmarNovaPassword.Text && textBox_NovaPassword.Text != "")
-            {
-                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar a sua password? \n Se clicar sim a aplicação irá fechar ", "Password", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    User.Alterar_Password(Username_Atual, textBox_NovaPassword.Text);
-                    Application.Exit();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-
-                }
-
-            }
-
-            else
-            {
-                MessageBox.Show("As passwords não coinncidem.");
-            }
+            Application.Exit();
         }
 
-        private void button_MudarPassword_Click(object sender, EventArgs e)
+        private void label_logout_Click(object sender, EventArgs e)
         {
-
+            Owner.Close();
+            this.Close();
+            Form_Login FLOGIN = new Form_Login();
+            FLOGIN.Show();
         }
     }
 }

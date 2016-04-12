@@ -42,20 +42,20 @@
             this.label_tempo = new System.Windows.Forms.Label();
             this.timer_tempo = new System.Windows.Forms.Timer(this.components);
             this.timer_background_acertou = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_Drag = new System.Windows.Forms.Panel();
             this.button_Telefone = new System.Windows.Forms.Button();
             this.button_50_50 = new System.Windows.Forms.Button();
             this.button_ajuda_a_pessoas = new System.Windows.Forms.Button();
             this.timer_background_errou = new System.Windows.Forms.Timer(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_layout = new System.Windows.Forms.Panel();
             this.label_Ajudas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_sair = new System.Windows.Forms.Label();
             this.label_linha = new System.Windows.Forms.Label();
             this.label_utilizador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_Drag.SuspendLayout();
+            this.panel_layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_nivel
@@ -194,18 +194,18 @@
             this.timer_background_acertou.Interval = 500;
             this.timer_background_acertou.Tick += new System.EventHandler(this.timer_background_acertou_Tick);
             // 
-            // panel2
+            // panel_Drag
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.pictureBox_MoneyTree);
-            this.panel2.Controls.Add(this.label_nivel);
-            this.panel2.Location = new System.Drawing.Point(1, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 197);
-            this.panel2.TabIndex = 19;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Drag.Controls.Add(this.pictureBox_MoneyTree);
+            this.panel_Drag.Controls.Add(this.label_nivel);
+            this.panel_Drag.Location = new System.Drawing.Point(1, 0);
+            this.panel_Drag.Name = "panel_Drag";
+            this.panel_Drag.Size = new System.Drawing.Size(899, 197);
+            this.panel_Drag.TabIndex = 19;
+            this.panel_Drag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseDown);
+            this.panel_Drag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseMove);
+            this.panel_Drag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseUp);
             // 
             // button_Telefone
             // 
@@ -248,25 +248,25 @@
             this.timer_background_errou.Interval = 500;
             this.timer_background_errou.Tick += new System.EventHandler(this.timer_background_errou_Tick);
             // 
-            // panel3
+            // panel_layout
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button_Telefone);
-            this.panel3.Controls.Add(this.label_Ajudas);
-            this.panel3.Controls.Add(this.button_ajuda_a_pessoas);
-            this.panel3.Controls.Add(this.button_50_50);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.button_minimizar);
-            this.panel3.Controls.Add(this.label_sair);
-            this.panel3.Controls.Add(this.label_linha);
-            this.panel3.Controls.Add(this.label_tempo);
-            this.panel3.Controls.Add(this.button_sair);
-            this.panel3.Controls.Add(this.label_utilizador);
-            this.panel3.Location = new System.Drawing.Point(719, -1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 406);
-            this.panel3.TabIndex = 20;
+            this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_layout.Controls.Add(this.button_Telefone);
+            this.panel_layout.Controls.Add(this.label_Ajudas);
+            this.panel_layout.Controls.Add(this.button_ajuda_a_pessoas);
+            this.panel_layout.Controls.Add(this.button_50_50);
+            this.panel_layout.Controls.Add(this.label1);
+            this.panel_layout.Controls.Add(this.button_minimizar);
+            this.panel_layout.Controls.Add(this.label_sair);
+            this.panel_layout.Controls.Add(this.label_linha);
+            this.panel_layout.Controls.Add(this.label_tempo);
+            this.panel_layout.Controls.Add(this.button_sair);
+            this.panel_layout.Controls.Add(this.label_utilizador);
+            this.panel_layout.Location = new System.Drawing.Point(719, -1);
+            this.panel_layout.Name = "panel_layout";
+            this.panel_layout.Size = new System.Drawing.Size(182, 406);
+            this.panel_layout.TabIndex = 20;
             // 
             // label_Ajudas
             // 
@@ -331,8 +331,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::M11_TbF.Properties.Resources.GameBG;
             this.ClientSize = new System.Drawing.Size(900, 404);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_layout);
+            this.Controls.Add(this.panel_Drag);
             this.Controls.Add(this.label_r4);
             this.Controls.Add(this.label_r3);
             this.Controls.Add(this.label_r2);
@@ -347,10 +347,10 @@
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_Drag.ResumeLayout(false);
+            this.panel_Drag.PerformLayout();
+            this.panel_layout.ResumeLayout(false);
+            this.panel_layout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,12 +368,12 @@
         private System.Windows.Forms.Label label_tempo;
         private System.Windows.Forms.Timer timer_tempo;
         private System.Windows.Forms.Timer timer_background_acertou;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_Drag;
         private System.Windows.Forms.Timer timer_background_errou;
         private System.Windows.Forms.Button button_ajuda_a_pessoas;
         private System.Windows.Forms.Button button_50_50;
         private System.Windows.Forms.Button button_Telefone;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_layout;
         private System.Windows.Forms.Label label_sair;
         private System.Windows.Forms.Label label_linha;
         private System.Windows.Forms.Label label_utilizador;

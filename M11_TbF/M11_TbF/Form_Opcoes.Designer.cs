@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_layout = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button_Reset = new System.Windows.Forms.Button();
@@ -54,43 +54,43 @@
             this.label_OPCOES = new System.Windows.Forms.Label();
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_Drag = new System.Windows.Forms.Panel();
             this.panel_MiniSair = new System.Windows.Forms.Panel();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel_layout.SuspendLayout();
+            this.panel_Drag.SuspendLayout();
             this.panel_MiniSair.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel3
+            // panel_layout
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button_Reset);
-            this.panel3.Controls.Add(this.button_AlterarPassword);
-            this.panel3.Controls.Add(this.button_AlterarUsername);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox_ConfirmarNovaPassword);
-            this.panel3.Controls.Add(this.textBox_NovaPassword);
-            this.panel3.Controls.Add(this.label_ConfirmarMudarPassword);
-            this.panel3.Controls.Add(this.label_MudarPassword);
-            this.panel3.Controls.Add(this.label_MudarPass);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label_MudarUsername);
-            this.panel3.Controls.Add(this.textBox_ConfirmarNovoUsername);
-            this.panel3.Controls.Add(this.label_ConfirmarNovoUsername);
-            this.panel3.Controls.Add(this.textBox_NovoUtilizador);
-            this.panel3.Controls.Add(this.label_NovoUsername);
-            this.panel3.Controls.Add(this.label_linha);
-            this.panel3.Controls.Add(this.label_logout);
-            this.panel3.Controls.Add(this.button_voltar);
-            this.panel3.Controls.Add(this.label_utilizador);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label_OPCOES);
-            this.panel3.Location = new System.Drawing.Point(720, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 404);
-            this.panel3.TabIndex = 20;
+            this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.label4);
+            this.panel_layout.Controls.Add(this.label3);
+            this.panel_layout.Controls.Add(this.button_Reset);
+            this.panel_layout.Controls.Add(this.button_AlterarPassword);
+            this.panel_layout.Controls.Add(this.button_AlterarUsername);
+            this.panel_layout.Controls.Add(this.label6);
+            this.panel_layout.Controls.Add(this.textBox_ConfirmarNovaPassword);
+            this.panel_layout.Controls.Add(this.textBox_NovaPassword);
+            this.panel_layout.Controls.Add(this.label_ConfirmarMudarPassword);
+            this.panel_layout.Controls.Add(this.label_MudarPassword);
+            this.panel_layout.Controls.Add(this.label_MudarPass);
+            this.panel_layout.Controls.Add(this.label2);
+            this.panel_layout.Controls.Add(this.label_MudarUsername);
+            this.panel_layout.Controls.Add(this.textBox_ConfirmarNovoUsername);
+            this.panel_layout.Controls.Add(this.label_ConfirmarNovoUsername);
+            this.panel_layout.Controls.Add(this.textBox_NovoUtilizador);
+            this.panel_layout.Controls.Add(this.label_NovoUsername);
+            this.panel_layout.Controls.Add(this.label_linha);
+            this.panel_layout.Controls.Add(this.label_logout);
+            this.panel_layout.Controls.Add(this.button_voltar);
+            this.panel_layout.Controls.Add(this.label_utilizador);
+            this.panel_layout.Controls.Add(this.label1);
+            this.panel_layout.Controls.Add(this.label_OPCOES);
+            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Name = "panel_layout";
+            this.panel_layout.Size = new System.Drawing.Size(182, 404);
+            this.panel_layout.TabIndex = 20;
             // 
             // label4
             // 
@@ -388,17 +388,17 @@
             this.button_sair.UseVisualStyleBackColor = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
-            // panel2
+            // panel_Drag
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.panel_MiniSair);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 27);
-            this.panel2.TabIndex = 24;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Drag.Controls.Add(this.panel_MiniSair);
+            this.panel_Drag.Location = new System.Drawing.Point(0, 0);
+            this.panel_Drag.Name = "panel_Drag";
+            this.panel_Drag.Size = new System.Drawing.Size(899, 27);
+            this.panel_Drag.TabIndex = 24;
+            this.panel_Drag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseDown);
+            this.panel_Drag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseMove);
+            this.panel_Drag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseUp);
             // 
             // panel_MiniSair
             // 
@@ -420,8 +420,8 @@
             this.BackgroundImage = global::M11_TbF.Properties.Resources.FormBG;
             this.ClientSize = new System.Drawing.Size(900, 404);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel_Drag);
+            this.Controls.Add(this.panel_layout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(900, 404);
             this.MinimumSize = new System.Drawing.Size(900, 404);
@@ -429,20 +429,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opções";
             this.Load += new System.EventHandler(this.Form3_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel_layout.ResumeLayout(false);
+            this.panel_layout.PerformLayout();
+            this.panel_Drag.ResumeLayout(false);
             this.panel_MiniSair.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_layout;
         private System.Windows.Forms.Button button_Reset;
         private System.Windows.Forms.Button button_minimizar;
         private System.Windows.Forms.Button button_sair;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_Drag;
         private System.Windows.Forms.Label label_OPCOES;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_voltar;

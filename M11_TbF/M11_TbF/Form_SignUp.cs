@@ -21,6 +21,11 @@ namespace M11_TbF
             InitializeComponent();
         }
 
+        private void Form_SignUp_Load(object sender, EventArgs e)
+        {
+            User = new Utilizador();
+        }
+
         private void button_criar_Click(object sender, EventArgs e)
         {
             if (textBox_Password.Text == textBox_ConfPassword.Text)
@@ -35,17 +40,14 @@ namespace M11_TbF
             {
                 MessageBox.Show("As passwords não coincidem.");
             }
-            
+
         }
 
-        private void button_minimizar_Click(object sender, EventArgs e)
+        private void label_entrar_login_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();           
+            Form_Login FL = new Form_Login();
+            FL.Show();
+            this.Close();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -68,16 +70,14 @@ namespace M11_TbF
             _dragging = false;
         }
 
-        private void label_entrar_login_Click(object sender, EventArgs e)
+        private void button_minimizar_Click(object sender, EventArgs e)
         {
-            Form_Login FL = new Form_Login();
-            FL.Show();
-            this.Close();
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Form_SignUp_Load(object sender, EventArgs e)
+        private void button_sair_Click(object sender, EventArgs e)
         {
-            User = new Utilizador();
+            Application.Exit();
         }
     }
 }

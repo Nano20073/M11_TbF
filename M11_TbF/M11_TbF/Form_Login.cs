@@ -24,12 +24,18 @@ namespace M11_TbF
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            User = new Utilizador();
+            textBox_UserName.Select();
+        }
+
         private void button_Logar_Click(object sender, EventArgs e)
         {
-            Username = textBox_UserName.ToString().Substring(36,textBox_UserName.TextLength);
+            Username = textBox_UserName.ToString().Substring(36, textBox_UserName.TextLength);
             Password = textBox_PassWord.ToString().Substring(36, textBox_PassWord.TextLength);
             User.Utilizador_login(Username, Password);
-            if(User.Utilizador_login_get() == "")
+            if (User.Utilizador_login_get() == "")
             {
                 MessageBox.Show("Erro de Login");
             }
@@ -37,16 +43,12 @@ namespace M11_TbF
             {
                 this.Hide();
                 Form_Menu_Principal F2 = new Form_Menu_Principal(Username, Password);
-                
+
                 F2.Show();
             }
         }
 
-        private void textBox_PassWord_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void label_SignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form_SignUp FS = new Form_SignUp();
@@ -63,30 +65,24 @@ namespace M11_TbF
             Application.Exit();
         }
 
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        private void panel_Drag_MouseDown(object sender, MouseEventArgs e)
         {
-            _dragging = true;  
+            _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
 
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
 
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        private void panel_Drag_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
             {
                 Point p = PointToScreen(e.Location);
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            User = new Utilizador();
-            textBox_UserName.Select();
         }
     }
 }

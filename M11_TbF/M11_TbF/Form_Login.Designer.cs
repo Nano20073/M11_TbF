@@ -35,13 +35,13 @@
             this.textBox_PassWord = new System.Windows.Forms.TextBox();
             this.textBox_UserName = new System.Windows.Forms.TextBox();
             this.label_NTemCnt = new System.Windows.Forms.Label();
-            this.label_criar_conta = new System.Windows.Forms.Label();
+            this.label_SignUP = new System.Windows.Forms.Label();
             this.button_sair = new System.Windows.Forms.Button();
             this.button_minimizar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_Drag = new System.Windows.Forms.Panel();
+            this.panel_layout = new System.Windows.Forms.Panel();
             this.label_LOGIN = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
+            this.panel_layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_UserName
@@ -93,7 +93,6 @@
             this.textBox_PassWord.PasswordChar = '*';
             this.textBox_PassWord.Size = new System.Drawing.Size(153, 23);
             this.textBox_PassWord.TabIndex = 4;
-            this.textBox_PassWord.TextChanged += new System.EventHandler(this.textBox_PassWord_TextChanged);
             // 
             // textBox_UserName
             // 
@@ -118,19 +117,19 @@
             this.label_NTemCnt.TabIndex = 8;
             this.label_NTemCnt.Text = "Ainda não tem uma Conta?";
             // 
-            // label_criar_conta
+            // label_SignUP
             // 
-            this.label_criar_conta.AutoSize = true;
-            this.label_criar_conta.BackColor = System.Drawing.Color.Transparent;
-            this.label_criar_conta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_criar_conta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_criar_conta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_criar_conta.Location = new System.Drawing.Point(3, 313);
-            this.label_criar_conta.Name = "label_criar_conta";
-            this.label_criar_conta.Size = new System.Drawing.Size(105, 17);
-            this.label_criar_conta.TabIndex = 7;
-            this.label_criar_conta.Text = "Increva-se aqui";
-            this.label_criar_conta.Click += new System.EventHandler(this.label1_Click);
+            this.label_SignUP.AutoSize = true;
+            this.label_SignUP.BackColor = System.Drawing.Color.Transparent;
+            this.label_SignUP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_SignUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_SignUP.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_SignUP.Location = new System.Drawing.Point(3, 313);
+            this.label_SignUP.Name = "label_SignUP";
+            this.label_SignUP.Size = new System.Drawing.Size(105, 17);
+            this.label_SignUP.TabIndex = 7;
+            this.label_SignUP.Text = "Increva-se aqui";
+            this.label_SignUP.Click += new System.EventHandler(this.label_SignUp_Click);
             // 
             // button_sair
             // 
@@ -160,34 +159,34 @@
             this.button_minimizar.UseVisualStyleBackColor = false;
             this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
-            // panel2
+            // panel_Drag
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 27);
-            this.panel2.TabIndex = 10;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Drag.Location = new System.Drawing.Point(0, 0);
+            this.panel_Drag.Name = "panel_Drag";
+            this.panel_Drag.Size = new System.Drawing.Size(899, 27);
+            this.panel_Drag.TabIndex = 10;
+            this.panel_Drag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseDown);
+            this.panel_Drag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseMove);
+            this.panel_Drag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseUp);
             // 
-            // panel3
+            // panel_layout
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel3.Controls.Add(this.label_LOGIN);
-            this.panel3.Controls.Add(this.label_criar_conta);
-            this.panel3.Controls.Add(this.label_NTemCnt);
-            this.panel3.Controls.Add(this.button_minimizar);
-            this.panel3.Controls.Add(this.button_sair);
-            this.panel3.Controls.Add(this.button_Logar);
-            this.panel3.Controls.Add(this.textBox_PassWord);
-            this.panel3.Controls.Add(this.label_PassWord);
-            this.panel3.Controls.Add(this.label_UserName);
-            this.panel3.Controls.Add(this.textBox_UserName);
-            this.panel3.Location = new System.Drawing.Point(720, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 403);
-            this.panel3.TabIndex = 11;
+            this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.label_LOGIN);
+            this.panel_layout.Controls.Add(this.label_SignUP);
+            this.panel_layout.Controls.Add(this.label_NTemCnt);
+            this.panel_layout.Controls.Add(this.button_minimizar);
+            this.panel_layout.Controls.Add(this.button_sair);
+            this.panel_layout.Controls.Add(this.button_Logar);
+            this.panel_layout.Controls.Add(this.textBox_PassWord);
+            this.panel_layout.Controls.Add(this.label_PassWord);
+            this.panel_layout.Controls.Add(this.label_UserName);
+            this.panel_layout.Controls.Add(this.textBox_UserName);
+            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Name = "panel_layout";
+            this.panel_layout.Size = new System.Drawing.Size(182, 403);
+            this.panel_layout.TabIndex = 11;
             // 
             // label_LOGIN
             // 
@@ -209,8 +208,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(900, 404);
             this.ControlBox = false;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_layout);
+            this.Controls.Add(this.panel_Drag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -222,8 +221,8 @@
             this.Text = "Quem quer ser milionário";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_layout.ResumeLayout(false);
+            this.panel_layout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -235,12 +234,12 @@
         private System.Windows.Forms.Button button_Logar;
         private System.Windows.Forms.TextBox textBox_PassWord;
         private System.Windows.Forms.TextBox textBox_UserName;
-        private System.Windows.Forms.Label label_criar_conta;
+        private System.Windows.Forms.Label label_SignUP;
         private System.Windows.Forms.Label label_NTemCnt;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Button button_minimizar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_Drag;
+        private System.Windows.Forms.Panel panel_layout;
         private System.Windows.Forms.Label label_LOGIN;
     }
 }

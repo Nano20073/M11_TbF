@@ -32,14 +32,14 @@
             this.button_sair = new System.Windows.Forms.Button();
             this.label_utilizador = new System.Windows.Forms.Label();
             this.button_minimizar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_Drag = new System.Windows.Forms.Panel();
+            this.panel_layout = new System.Windows.Forms.Panel();
             this.button_Jogar = new System.Windows.Forms.Button();
             this.button_Estatisticas = new System.Windows.Forms.Button();
             this.button_Opcoes = new System.Windows.Forms.Button();
             this.label_logout = new System.Windows.Forms.Label();
             this.label_linha = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
+            this.panel_layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_sair
@@ -83,32 +83,32 @@
             this.button_minimizar.UseVisualStyleBackColor = true;
             this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
-            // panel2
+            // panel_Drag
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 27);
-            this.panel2.TabIndex = 18;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Drag.Location = new System.Drawing.Point(0, 0);
+            this.panel_Drag.Name = "panel_Drag";
+            this.panel_Drag.Size = new System.Drawing.Size(899, 27);
+            this.panel_Drag.TabIndex = 18;
+            this.panel_Drag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseDown);
+            this.panel_Drag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseMove);
+            this.panel_Drag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseUp);
             // 
-            // panel3
+            // panel_layout
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel3.Controls.Add(this.button_Jogar);
-            this.panel3.Controls.Add(this.button_Estatisticas);
-            this.panel3.Controls.Add(this.button_Opcoes);
-            this.panel3.Controls.Add(this.label_logout);
-            this.panel3.Controls.Add(this.label_linha);
-            this.panel3.Controls.Add(this.label_utilizador);
-            this.panel3.Controls.Add(this.button_minimizar);
-            this.panel3.Controls.Add(this.button_sair);
-            this.panel3.Location = new System.Drawing.Point(720, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(182, 403);
-            this.panel3.TabIndex = 19;
+            this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.button_Jogar);
+            this.panel_layout.Controls.Add(this.button_Estatisticas);
+            this.panel_layout.Controls.Add(this.button_Opcoes);
+            this.panel_layout.Controls.Add(this.label_logout);
+            this.panel_layout.Controls.Add(this.label_linha);
+            this.panel_layout.Controls.Add(this.label_utilizador);
+            this.panel_layout.Controls.Add(this.button_minimizar);
+            this.panel_layout.Controls.Add(this.button_sair);
+            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Name = "panel_layout";
+            this.panel_layout.Size = new System.Drawing.Size(182, 403);
+            this.panel_layout.TabIndex = 19;
             // 
             // button_Jogar
             // 
@@ -180,8 +180,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(900, 404);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_layout);
+            this.Controls.Add(this.panel_Drag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 404);
@@ -190,8 +190,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_layout.ResumeLayout(false);
+            this.panel_layout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -204,8 +204,8 @@
         {
         }
         private System.Windows.Forms.Button button_minimizar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_Drag;
+        private System.Windows.Forms.Panel panel_layout;
         private System.Windows.Forms.Label label_linha;
         private System.Windows.Forms.Label label_logout;
         private System.Windows.Forms.Button button_Estatisticas;

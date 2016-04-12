@@ -25,46 +25,18 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void button_logout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form_Login F1 = new Form_Login();
-            F1.Show();
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             label_utilizador.Select();
             User = new Utilizador();
             label_utilizador.Text = Username_Atual;
-            
-
         }
 
-        private void button_minimizar_Click(object sender, EventArgs e)
+        private void button_logout_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            _dragging = true;
-            _start_point = new Point(e.X, e.Y);
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
-        }
-
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
+            this.Hide();
+            Form_Login F1 = new Form_Login();
+            F1.Show();
         }
 
         private void button_Jogar_Click(object sender, EventArgs e)
@@ -86,6 +58,31 @@ namespace M11_TbF
             this.Hide();
             Form_Opcoes F3 = new Form_Opcoes(Username_Atual, pass, this);
             F3.Show();
+        }
+
+        private void panel_Drag_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel_Drag_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void label_logout_Click(object sender, EventArgs e)

@@ -49,13 +49,9 @@ namespace M11_TbF
             label_r3.Text = Per.Resposta3_Get();
             label_r4.Text = Per.Resposta4_Get();
             timer_tempo.Start();
-
-
-
-
         }
 
-        public void AdicionarTotalGanho()
+        private void AdicionarTotalGanho()
         {
             if (Per.Nivel_Get().ToString() == "1") { User.AdicionarTotalGanho(0, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "2") { User.AdicionarTotalGanho(0, Username_Atual); }
@@ -75,7 +71,26 @@ namespace M11_TbF
             if (Per.Nivel_Get().ToString() == "16") { User.AdicionarTotalGanho(1000000, Username_Atual); }
         }
 
-        public void Acertou_a_Pergunta()
+        private void timer_tempo_Tick(object sender, EventArgs e)
+        {
+            if (tempo == 0)
+            {
+                timer_tempo.Stop();
+                User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
+                AdicionarTotalGanho();
+                MessageBox.Show("Acabou o tempo. Perdeu.");
+                Owner.Show();
+                this.Close();
+
+            }
+            else
+            {
+                tempo--;
+                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
+            }
+        }
+
+        private void Acertou_a_Pergunta()
         {
             label_r1.Enabled = false;
             label_r2.Enabled = false;
@@ -122,8 +137,7 @@ namespace M11_TbF
                 label_r3.Enabled = true;
                 label_r4.Enabled = true;
                 timer_tempo.Start();
-
-                
+       
             }
             else
             {
@@ -150,7 +164,6 @@ namespace M11_TbF
                     }
 
                     background++;
-
                 }
                 else
                 {
@@ -162,7 +175,7 @@ namespace M11_TbF
 
 
 
-        public void Errou_a_Pergunta()
+        private void Errou_a_Pergunta()
         {
             label_r1.Enabled = false;
             label_r2.Enabled = false;
@@ -172,9 +185,7 @@ namespace M11_TbF
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
-            timer_background_errou.Start();
-            //MessageBox.Show("Perdeu");
-            
+            timer_background_errou.Start();   
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)
@@ -182,21 +193,17 @@ namespace M11_TbF
             background_time++;
             if (background_time == 3)
             {
-
                 timer_background_errou.Stop();
                 background_time = 0;
 
                 Owner.Show();
                 this.Close();
-
             }
             else
             {
                 if (background == 0)
                 {
-
                     background++;
-
                 }
                 else
                 {
@@ -312,55 +319,6 @@ namespace M11_TbF
             }
         }
 
-        private void button_minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void timer_tempo_Tick(object sender, EventArgs e)
-        {
-            if (tempo == 0)
-            {
-                timer_tempo.Stop();
-                User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-                AdicionarTotalGanho();
-                MessageBox.Show("Acabou o tempo. Perdeu.");
-                Owner.Show();
-                this.Close();
-
-            }
-            else
-            {
-                tempo--;
-                label_tempo.Text = "Tempo Restante - " + tempo.ToString();
-            }
-        }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            _dragging = true;
-            _start_point = new Point(e.X, e.Y);
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
-        }
-
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
-        }
-
         private void button_50_50_Click(object sender, EventArgs e)
         {
             button_50_50.Enabled = false;
@@ -425,12 +383,6 @@ namespace M11_TbF
             
         }
 
-        private void label_sair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Owner.Show();           
-        }
-
         private void button_ajuda_a_pessoas_Click(object sender, EventArgs e)
         {
             button_ajuda_a_pessoas.Enabled = false;
@@ -472,6 +424,42 @@ namespace M11_TbF
 
             Form_Ajuda_Publico FAjdPub = new Form_Ajuda_Publico(label_r1.Text, label_r2.Text, label_r3.Text, label_r4.Text, resposta1, resposta2, resposta3, resposta4);
             FAjdPub.ShowDialog();
+        }
+
+        private void panel_Drag_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel_Drag_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Owner.Show();
         }
     }
 }

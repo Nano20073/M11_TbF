@@ -40,6 +40,26 @@ namespace M11_TbF
             Owner.Show();
         }
 
+        private void panel_Drag_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel_Drag_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
         private void button_sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -57,27 +77,5 @@ namespace M11_TbF
             Form_Login FLOGIN = new Form_Login();
             FLOGIN.Show();
         }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            _dragging = true;
-            _start_point = new Point(e.X, e.Y);
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
-        }
-
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
-        }
-
-
     }
 }
