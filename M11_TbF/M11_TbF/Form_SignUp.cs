@@ -23,6 +23,7 @@ namespace M11_TbF
 
         private void Form_SignUp_Load(object sender, EventArgs e)
         {
+            textBox_Username.Select();
             User = new Utilizador();
         }
 

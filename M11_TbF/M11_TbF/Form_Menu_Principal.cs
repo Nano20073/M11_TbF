@@ -25,7 +25,7 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form_Menu_Principal_Load(object sender, EventArgs e)
         {
             label_utilizador.Select();
             User = new Utilizador();

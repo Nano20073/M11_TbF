@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.label_lgout = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button_Reset = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             // panel_layout
             // 
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.label_lgout);
             this.panel_layout.Controls.Add(this.label4);
             this.panel_layout.Controls.Add(this.label3);
             this.panel_layout.Controls.Add(this.button_Reset);
@@ -91,6 +93,20 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 404);
             this.panel_layout.TabIndex = 20;
+            // 
+            // label_lgout
+            // 
+            this.label_lgout.AutoSize = true;
+            this.label_lgout.BackColor = System.Drawing.Color.Transparent;
+            this.label_lgout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_lgout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label_lgout.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_lgout.Location = new System.Drawing.Point(13, 76);
+            this.label_lgout.Name = "label_lgout";
+            this.label_lgout.Size = new System.Drawing.Size(40, 13);
+            this.label_lgout.TabIndex = 45;
+            this.label_lgout.Text = "Logout";
+            this.label_lgout.Click += new System.EventHandler(this.label_lgout_Click);
             // 
             // label4
             // 
@@ -300,16 +316,10 @@
             // 
             // label_logout
             // 
-            this.label_logout.AutoSize = true;
-            this.label_logout.BackColor = System.Drawing.Color.Transparent;
-            this.label_logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label_logout.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_logout.Location = new System.Drawing.Point(13, 76);
+            this.label_logout.Location = new System.Drawing.Point(0, 0);
             this.label_logout.Name = "label_logout";
-            this.label_logout.Size = new System.Drawing.Size(40, 13);
-            this.label_logout.TabIndex = 26;
-            this.label_logout.Text = "Logout";
+            this.label_logout.Size = new System.Drawing.Size(100, 23);
+            this.label_logout.TabIndex = 46;
             // 
             // button_voltar
             // 
@@ -428,7 +438,7 @@
             this.Name = "Form_Opcoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opções";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Load += new System.EventHandler(this.Form_Opcoes_Load);
             this.panel_layout.ResumeLayout(false);
             this.panel_layout.PerformLayout();
             this.panel_Drag.ResumeLayout(false);
@@ -466,5 +476,6 @@
         private System.Windows.Forms.Panel panel_MiniSair;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_lgout;
     }
 }

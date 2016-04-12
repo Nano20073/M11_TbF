@@ -24,7 +24,7 @@ namespace M11_TbF
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form_Login_Load(object sender, EventArgs e)
         {
             User = new Utilizador();
             textBox_UserName.Select();

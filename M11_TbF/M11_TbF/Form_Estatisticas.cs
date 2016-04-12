@@ -25,7 +25,7 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void Form4_Load(object sender, EventArgs e)
+        private void Form_Estatisticas_Load(object sender, EventArgs e)
         {
             label_utilizador.Select();
             User = new Utilizador();

@@ -26,7 +26,7 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form_Opcoes_Load(object sender, EventArgs e)
         {
             label_OPCOES.Select();
             panel_layout.VerticalScroll.Value = 0;
@@ -134,6 +134,13 @@ namespace M11_TbF
             _start_point = new Point(e.X, e.Y);
         }
 
+        private void label_lgout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form_Login F1 = new Form_Login();
+            F1.Show();
+        }
+
         private void button_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -142,14 +149,6 @@ namespace M11_TbF
         private void button_sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label_logout_Click(object sender, EventArgs e)
-        {
-            Owner.Close();
-            this.Close();
-            Form_Login FLOGIN = new Form_Login();
-            FLOGIN.Show();
         }
     }
 }

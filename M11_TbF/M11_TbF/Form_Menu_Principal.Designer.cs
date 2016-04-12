@@ -189,7 +189,7 @@
             this.Name = "Form_Menu_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.Form_Menu_Principal_Load);
             this.panel_layout.ResumeLayout(false);
             this.panel_layout.PerformLayout();
             this.ResumeLayout(false);

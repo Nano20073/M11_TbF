@@ -33,7 +33,7 @@ namespace M11_TbF
             InitializeComponent();
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form_Jogo_Load(object sender, EventArgs e)
         {
             label_utilizador.Select();
             User = new Utilizador();

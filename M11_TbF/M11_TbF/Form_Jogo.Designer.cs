@@ -345,7 +345,7 @@
             this.Name = "Form_Jogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
-            this.Load += new System.EventHandler(this.Form5_Load);
+            this.Load += new System.EventHandler(this.Form_Jogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MoneyTree)).EndInit();
             this.panel_Drag.ResumeLayout(false);
             this.panel_Drag.PerformLayout();
