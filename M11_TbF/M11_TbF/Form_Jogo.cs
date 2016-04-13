@@ -99,8 +99,8 @@ namespace M11_TbF
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
                 AdicionarTotalGanho();
-                MessageBox.Show("Tu Ganhaste!");
-                Owner.Show();
+                Form_Game_Win FGW = new Form_Game_Win(this, Owner);
+                FGW.ShowDialog();
                 this.Close();
             }
             else
@@ -184,6 +184,7 @@ namespace M11_TbF
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
             timer_background_errou.Start();
+            this.Hide();
             Form_Game_Over FGO = new Form_Game_Over(this, Owner);
             FGO.ShowDialog();
         }

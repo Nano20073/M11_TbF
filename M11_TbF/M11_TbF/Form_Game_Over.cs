@@ -29,9 +29,9 @@ namespace M11_TbF
 
         private void button_OK_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Jogo.Close();
-            Owner.Show();
+            //this.Close();
+            //Jogo.Close();
+            //Owner.Show();
         }
 
         

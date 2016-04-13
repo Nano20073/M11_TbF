@@ -12,9 +12,26 @@ namespace M11_TbF
 {
     public partial class Form_Game_Win : Form
     {
-        public Form_Game_Win()
+        Form Jogo;
+        Form Owner;
+
+        public Form_Game_Win(Form f, Form f2)
         {
+            Owner = f2;
+            Jogo = f;
             InitializeComponent();
+        }
+
+        private void Form_Game_Win_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_OK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Jogo.Close();
+            Owner.Show();
         }
     }
 }
