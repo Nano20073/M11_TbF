@@ -92,6 +92,7 @@ namespace M11_TbF
 
         private void Acertou_a_Pergunta()
         {
+            timer_tempo.Stop();
             label_r1.Enabled = false;
             label_r2.Enabled = false;
             label_r3.Enabled = false;
@@ -123,11 +124,9 @@ namespace M11_TbF
                 AdicionarTotalGanho();
                 Form_Game_Win FGW = new Form_Game_Win(this, Owner);
                 FGW.ShowDialog();
-                this.Close();
             }
             else
-            {
-                timer_tempo.Stop();
+            {            
                 tempo = 30;
                 MoneyTree++;
                 timer_background_acertou.Start();               

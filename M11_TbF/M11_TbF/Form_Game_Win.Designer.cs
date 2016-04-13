@@ -50,10 +50,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Linux Biolinum G", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(238, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 37);
+            this.label1.Size = new System.Drawing.Size(394, 37);
             this.label1.TabIndex = 28;
             this.label1.Text = "Ganhou 1 milhão de euros";
             // 
@@ -68,6 +68,7 @@
             this.Controls.Add(this.button_OK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Game_Win";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Game_Win";
             this.Load += new System.EventHandler(this.Form_Game_Win_Load);
             this.ResumeLayout(false);

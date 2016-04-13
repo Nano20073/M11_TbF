@@ -15,6 +15,7 @@ namespace M11_TbF
 
         private int Nivel_da_Pergunta = 1;
         private int NPergunta = 0;
+        
 
         private string Pergunta_Atual;
         private string Resposta1;
@@ -27,23 +28,10 @@ namespace M11_TbF
 
         public void Pergunta_Set()
         {
+
             var rand = new System.Random();
 
-            if (Nivel_da_Pergunta == 1) { NPergunta = rand.Next(1, 6); }
-            if (Nivel_da_Pergunta == 2) { NPergunta = rand.Next(6, 11); }
-            if (Nivel_da_Pergunta == 3) { NPergunta = rand.Next(11, 16); }
-            if (Nivel_da_Pergunta == 4) { NPergunta = rand.Next(16, 21); }
-            if (Nivel_da_Pergunta == 5) { NPergunta = rand.Next(21, 26); }
-            if (Nivel_da_Pergunta == 6) { NPergunta = rand.Next(26, 31); }
-            if (Nivel_da_Pergunta == 7) { NPergunta = rand.Next(31, 36); }
-            if (Nivel_da_Pergunta == 8) { NPergunta = rand.Next(36, 41); }
-            if (Nivel_da_Pergunta == 9) { NPergunta = rand.Next(41, 46); }
-            if (Nivel_da_Pergunta == 10) { NPergunta = rand.Next(46, 51); }
-            if (Nivel_da_Pergunta == 11) { NPergunta = rand.Next(51, 56); }
-            if (Nivel_da_Pergunta == 12) { NPergunta = rand.Next(56, 61); }
-            if (Nivel_da_Pergunta == 13) { NPergunta = rand.Next(61, 66); }
-            if (Nivel_da_Pergunta == 14) { NPergunta = rand.Next(66, 71); }
-            if (Nivel_da_Pergunta == 15) { NPergunta = rand.Next(71, 76); }
+            NPergunta = rand.Next(5 * (Nivel_da_Pergunta - 1) + 1, 5 * (Nivel_da_Pergunta - 1) + 6);
 
             OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
