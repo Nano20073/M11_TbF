@@ -307,4 +307,13 @@
   <data name="Conquistas_NivelMax_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Conquistas_NivelMax_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Game_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Game_Win" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time_is_over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\time-is-over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

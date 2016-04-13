@@ -78,10 +78,8 @@ namespace M11_TbF
                 timer_tempo.Stop();
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
                 AdicionarTotalGanho();
-                MessageBox.Show("Acabou o tempo. Perdeu.");
-                Owner.Show();
-                this.Close();
-
+                Form_Time_Out FTO = new Form_Time_Out(this, Owner);
+                FTO.ShowDialog();
             }
             else
             {
@@ -185,7 +183,9 @@ namespace M11_TbF
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
-            timer_background_errou.Start();   
+            timer_background_errou.Start();
+            Form_Game_Over FGO = new Form_Game_Over(this, Owner);
+            FGO.ShowDialog();
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)

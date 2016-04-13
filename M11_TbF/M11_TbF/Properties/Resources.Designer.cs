@@ -253,6 +253,26 @@ namespace M11_TbF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Game_Over {
+            get {
+                object obj = ResourceManager.GetObject("Game_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_Win {
+            get {
+                object obj = ResourceManager.GetObject("Game_Win", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GameBG {
             get {
                 object obj = ResourceManager.GetObject("GameBG", resourceCulture);
@@ -686,6 +706,16 @@ namespace M11_TbF.Properties {
         internal static System.Drawing.Bitmap Telefone_off {
             get {
                 object obj = ResourceManager.GetObject("Telefone_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap time_is_over {
+            get {
+                object obj = ResourceManager.GetObject("time_is_over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

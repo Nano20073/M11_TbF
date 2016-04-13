@@ -64,6 +64,18 @@
     <Compile Include="Form_Conquistas.Designer.cs">
       <DependentUpon>Form_Conquistas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Game_Over.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Game_Over.Designer.cs">
+      <DependentUpon>Form_Game_Over.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Game_Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Game_Win.Designer.cs">
+      <DependentUpon>Form_Game_Win.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     <Compile Include="Form_SignUp.Designer.cs">
       <DependentUpon>Form_SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Time_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Time_Out.Designer.cs">
+      <DependentUpon>Form_Time_Out.cs</DependentUpon>
+    </Compile>
     <Compile Include="M11_TbF_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +141,12 @@
     <EmbeddedResource Include="Form_Conquistas.resx">
       <DependentUpon>Form_Conquistas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Game_Over.resx">
+      <DependentUpon>Form_Game_Over.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Game_Win.resx">
+      <DependentUpon>Form_Game_Win.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SignUp.resx">
       <DependentUpon>Form_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Time_Out.resx">
+      <DependentUpon>Form_Time_Out.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -174,6 +201,9 @@
     <Content Include="M11_TbF_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\time-is-over.png" />
+    <None Include="Resources\Game Win.png" />
+    <None Include="Resources\Game Over.png" />
     <None Include="Resources\Conquistas_NivelMax_off.png" />
     <None Include="Resources\Conquistas_NivelMax.png" />
     <None Include="Resources\Conquistas_Nivel10_off.png" />
