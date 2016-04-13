@@ -18,11 +18,13 @@ namespace M11_TbF
         Utilizador User;
         Pergunta Per;
         Form Owner;
+        Form_Game_Over FGO;
+        Form_Ajuda_Telefone FAjdTel;
+
 
         int MoneyTree = 1;
-        int tempo = 15;
+        int tempo = 30;
         int background_time = 0;
-        int background = 0;
 
         string Username_Atual;
 
@@ -34,7 +36,7 @@ namespace M11_TbF
         }
 
         private void Form_Jogo_Load(object sender, EventArgs e)
-        {
+        {Form_Game_Over FGO = new Form_Game_Over(this, Owner);
             label_utilizador.Select();
             User = new Utilizador();
             Per = new Pergunta();
@@ -95,6 +97,26 @@ namespace M11_TbF
             label_r3.Enabled = false;
             label_r4.Enabled = false;
 
+            if (label_r1.Text == Per.Resposta_Correta_Get())
+            {
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG1G.png");
+            }
+
+            if (label_r2.Text == Per.Resposta_Correta_Get())
+            {
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG3G.png");
+            }
+
+            if (label_r3.Text == Per.Resposta_Correta_Get())
+            {
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG2G.png");
+            }
+
+            if (label_r4.Text == Per.Resposta_Correta_Get())
+            {
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG4G.png");
+            }
+
             if (Per.Nivel_Get().ToString() == "16")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
@@ -106,7 +128,7 @@ namespace M11_TbF
             else
             {
                 timer_tempo.Stop();
-                tempo = 15;
+                tempo = 30;
                 MoneyTree++;
                 timer_background_acertou.Start();               
             }
@@ -115,12 +137,11 @@ namespace M11_TbF
         private void timer_background_acertou_Tick(object sender, EventArgs e)
         {
             background_time++;
-            if (background_time == 3)
+            if (background_time == 2)
             {
                 timer_background_acertou.Stop();
+                this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG.png");
                 background_time = 0;
-
-
                 label_nivel.Text = "Nivel atual: " + Per.Nivel_Get().ToString();
                 label_tempo.Text = "Tempo Restante - " + tempo.ToString();
                 Per.Pergunta_Set();
@@ -134,41 +155,8 @@ namespace M11_TbF
                 label_r2.Enabled = true;
                 label_r3.Enabled = true;
                 label_r4.Enabled = true;
-                timer_tempo.Start();
-       
-            }
-            else
-            {
-                if (background == 0)
-                {
-                    if (label_r1.Text == Per.Resposta_Correta_Get())
-                    {
-                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG1G" + ".png");
-                    }
-
-                    if (label_r2.Text == Per.Resposta_Correta_Get())
-                    {
-                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG3G" + ".png");
-                    }
-
-                    if (label_r3.Text == Per.Resposta_Correta_Get())
-                    {
-                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG2G" + ".png");
-                    }
-
-                    if (label_r4.Text == Per.Resposta_Correta_Get())
-                    {
-                        this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG4G" + ".png");
-                    }
-
-                    background++;
-                }
-                else
-                {
-                    background--;
-                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG" + ".png");
-                }
-            }
+                timer_tempo.Start();      
+            }    
         }
 
 
@@ -183,35 +171,27 @@ namespace M11_TbF
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
-            timer_background_errou.Start();
-            this.Hide();
-            Form_Game_Over FGO = new Form_Game_Over(this, Owner);
-            FGO.ShowDialog();
+            timer_background_errou.Start();          
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)
         {
             background_time++;
+            if (background_time == 1)
+            {
+                FGO = new Form_Game_Over(this, Owner);
+                FGO.ShowDialog();
+            }
+            
             if (background_time == 3)
             {
                 timer_background_errou.Stop();
                 background_time = 0;
 
-                Owner.Show();
+                FGO.Close();
                 this.Close();
-            }
-            else
-            {
-                if (background == 0)
-                {
-                    background++;
-                }
-                else
-                {
-                    background--;
-                    this.BackgroundImage = Image.FromFile(@"..\..\Resources\GameBG" + ".png");
-                }
-            }
+                Owner.Show();              
+            }                                   
         }
 
 
@@ -360,28 +340,25 @@ namespace M11_TbF
 
             if (resposta == 1)
             {
-                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r1.Text);
-                FAjdTel.ShowDialog();
+                FAjdTel = new Form_Ajuda_Telefone(label_r1.Text);                
             }
 
             if (resposta == 2)
             {
-                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r2.Text);
-                FAjdTel.ShowDialog();
+                FAjdTel = new Form_Ajuda_Telefone(label_r2.Text);                
             }
 
             if (resposta == 3)
             {
-                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r3.Text);
-                FAjdTel.ShowDialog();
+                FAjdTel = new Form_Ajuda_Telefone(label_r3.Text);                
             }
 
             if (resposta == 4)
             {
-                Form_Ajuda_Telefone FAjdTel = new Form_Ajuda_Telefone(label_r4.Text);
-                FAjdTel.ShowDialog();
+                FAjdTel = new Form_Ajuda_Telefone(label_r4.Text);                
             }
-            
+
+            FAjdTel.ShowDialog();
         }
 
         private void button_ajuda_a_pessoas_Click(object sender, EventArgs e)
