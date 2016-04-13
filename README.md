@@ -5,3 +5,4 @@
 # 	2 - Timer no jogo - ✓
 # 	3 - Ajudas no Jogo - ✓
 # 	4 - Estatisticas: Dinheiro total ganho - ✓
+#   5 - Forms do Jogo - ✓
