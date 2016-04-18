@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Game_Over));
             this.SuspendLayout();
             // 
             // Form_Game_Over
@@ -37,6 +38,7 @@
             this.BackgroundImage = global::M11_TbF.Properties.Resources.Game_Over;
             this.ClientSize = new System.Drawing.Size(369, 239);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Game_Over";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Game_Over";

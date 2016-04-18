@@ -240,6 +240,7 @@
             this.Controls.Add(this.panel_layout);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 404);
             this.MinimumSize = new System.Drawing.Size(900, 404);
             this.Name = "Form_SignUp";

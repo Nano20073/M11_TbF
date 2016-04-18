@@ -170,17 +170,13 @@ namespace M11_TbF
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
             AdicionarTotalGanho();
-            timer_background_errou.Start();          
+            timer_background_errou.Start();
+            FGO = new Form_Game_Over(this, Owner);
+            FGO.ShowDialog();     
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)
         {
-            background_time++;
-            if (background_time == 1)
-            {
-                FGO = new Form_Game_Over(this, Owner);
-                FGO.ShowDialog();
-            }
             
             if (background_time == 3)
             {
@@ -190,7 +186,8 @@ namespace M11_TbF
                 FGO.Close();
                 this.Close();
                 Owner.Show();              
-            }                                   
+            }
+            background_time++;
         }
 
 

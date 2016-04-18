@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Estatisticas));
             this.button_voltar = new System.Windows.Forms.Button();
             this.label_NivelMaximo = new System.Windows.Forms.Label();
             this.label_TotaldeDinheiroGanho = new System.Windows.Forms.Label();
@@ -179,6 +180,7 @@
             this.Controls.Add(this.panel_layout);
             this.Controls.Add(this.panel_Drag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 404);
             this.MinimumSize = new System.Drawing.Size(900, 404);
             this.Name = "Form_Estatisticas";

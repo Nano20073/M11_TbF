@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ajuda_Publico));
             this.button_OK = new System.Windows.Forms.Button();
             this.label_OPINIÂO = new System.Windows.Forms.Label();
             this.label_Resposta1 = new System.Windows.Forms.Label();
@@ -119,6 +120,7 @@
             this.Controls.Add(this.button_OK);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Ajuda_Publico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Ajuda_Publico";

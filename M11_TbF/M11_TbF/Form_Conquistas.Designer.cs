@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Conquistas));
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.label_Conquistas_NivelMax = new System.Windows.Forms.Label();
+            this.label_Conquistas_Nivel10 = new System.Windows.Forms.Label();
+            this.label_Conquistas_100milhoes = new System.Windows.Forms.Label();
+            this.label_Conquistas_10milhoes = new System.Windows.Forms.Label();
+            this.label_Conquistas_1milhao = new System.Windows.Forms.Label();
+            this.pictureBox_Conquistas_NivelMax = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Conquistas_Nivel10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Conquistas_100milhoes = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Conquistas_10milhoes = new System.Windows.Forms.PictureBox();
             this.pictureBox_Conquistas_1milhao = new System.Windows.Forms.PictureBox();
             this.label_lgout = new System.Windows.Forms.Label();
             this.label_linha = new System.Windows.Forms.Label();
@@ -37,25 +47,16 @@
             this.label_utilizador = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Conquistas = new System.Windows.Forms.Label();
-            this.pictureBox_Conquistas_10milhoes = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Conquistas_100milhoes = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Conquistas_Nivel10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Conquistas_NivelMax = new System.Windows.Forms.PictureBox();
-            this.label_Conquistas_1milhao = new System.Windows.Forms.Label();
-            this.label_Conquistas_10milhoes = new System.Windows.Forms.Label();
-            this.label_Conquistas_100milhoes = new System.Windows.Forms.Label();
-            this.label_Conquistas_Nivel10 = new System.Windows.Forms.Label();
-            this.label_Conquistas_NivelMax = new System.Windows.Forms.Label();
             this.panel_Drag = new System.Windows.Forms.Panel();
             this.panel_MiniSair = new System.Windows.Forms.Panel();
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
             this.panel_layout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_1milhao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_10milhoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_100milhoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_Nivel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_NivelMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_Nivel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_100milhoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_10milhoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_1milhao)).BeginInit();
             this.panel_Drag.SuspendLayout();
             this.panel_MiniSair.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +85,101 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 404);
             this.panel_layout.TabIndex = 21;
+            // 
+            // label_Conquistas_NivelMax
+            // 
+            this.label_Conquistas_NivelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_Conquistas_NivelMax.ForeColor = System.Drawing.Color.White;
+            this.label_Conquistas_NivelMax.Location = new System.Drawing.Point(70, 433);
+            this.label_Conquistas_NivelMax.Name = "label_Conquistas_NivelMax";
+            this.label_Conquistas_NivelMax.Size = new System.Drawing.Size(112, 50);
+            this.label_Conquistas_NivelMax.TabIndex = 55;
+            this.label_Conquistas_NivelMax.Text = "Passe todos os niveis";
+            this.label_Conquistas_NivelMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Conquistas_Nivel10
+            // 
+            this.label_Conquistas_Nivel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_Conquistas_Nivel10.ForeColor = System.Drawing.Color.White;
+            this.label_Conquistas_Nivel10.Location = new System.Drawing.Point(70, 367);
+            this.label_Conquistas_Nivel10.Name = "label_Conquistas_Nivel10";
+            this.label_Conquistas_Nivel10.Size = new System.Drawing.Size(112, 50);
+            this.label_Conquistas_Nivel10.TabIndex = 54;
+            this.label_Conquistas_Nivel10.Text = "Passe do nivel 10";
+            this.label_Conquistas_Nivel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Conquistas_100milhoes
+            // 
+            this.label_Conquistas_100milhoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_Conquistas_100milhoes.ForeColor = System.Drawing.Color.White;
+            this.label_Conquistas_100milhoes.Location = new System.Drawing.Point(70, 301);
+            this.label_Conquistas_100milhoes.Name = "label_Conquistas_100milhoes";
+            this.label_Conquistas_100milhoes.Size = new System.Drawing.Size(112, 50);
+            this.label_Conquistas_100milhoes.TabIndex = 53;
+            this.label_Conquistas_100milhoes.Text = "Ganhe um total de 100 milhoes$";
+            this.label_Conquistas_100milhoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Conquistas_10milhoes
+            // 
+            this.label_Conquistas_10milhoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_Conquistas_10milhoes.ForeColor = System.Drawing.Color.White;
+            this.label_Conquistas_10milhoes.Location = new System.Drawing.Point(70, 235);
+            this.label_Conquistas_10milhoes.Name = "label_Conquistas_10milhoes";
+            this.label_Conquistas_10milhoes.Size = new System.Drawing.Size(112, 50);
+            this.label_Conquistas_10milhoes.TabIndex = 52;
+            this.label_Conquistas_10milhoes.Text = "Ganhe um total de 10 milhoes$";
+            this.label_Conquistas_10milhoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Conquistas_1milhao
+            // 
+            this.label_Conquistas_1milhao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_Conquistas_1milhao.ForeColor = System.Drawing.Color.White;
+            this.label_Conquistas_1milhao.Location = new System.Drawing.Point(70, 169);
+            this.label_Conquistas_1milhao.Name = "label_Conquistas_1milhao";
+            this.label_Conquistas_1milhao.Size = new System.Drawing.Size(112, 50);
+            this.label_Conquistas_1milhao.TabIndex = 51;
+            this.label_Conquistas_1milhao.Text = "Ganhe um total de 1 milhao$";
+            this.label_Conquistas_1milhao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_Conquistas_NivelMax
+            // 
+            this.pictureBox_Conquistas_NivelMax.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_NivelMax_off;
+            this.pictureBox_Conquistas_NivelMax.Location = new System.Drawing.Point(16, 433);
+            this.pictureBox_Conquistas_NivelMax.Name = "pictureBox_Conquistas_NivelMax";
+            this.pictureBox_Conquistas_NivelMax.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_Conquistas_NivelMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Conquistas_NivelMax.TabIndex = 50;
+            this.pictureBox_Conquistas_NivelMax.TabStop = false;
+            // 
+            // pictureBox_Conquistas_Nivel10
+            // 
+            this.pictureBox_Conquistas_Nivel10.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_Nivel10_off;
+            this.pictureBox_Conquistas_Nivel10.Location = new System.Drawing.Point(14, 367);
+            this.pictureBox_Conquistas_Nivel10.Name = "pictureBox_Conquistas_Nivel10";
+            this.pictureBox_Conquistas_Nivel10.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_Conquistas_Nivel10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Conquistas_Nivel10.TabIndex = 49;
+            this.pictureBox_Conquistas_Nivel10.TabStop = false;
+            // 
+            // pictureBox_Conquistas_100milhoes
+            // 
+            this.pictureBox_Conquistas_100milhoes.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_100milhoes_off;
+            this.pictureBox_Conquistas_100milhoes.Location = new System.Drawing.Point(14, 301);
+            this.pictureBox_Conquistas_100milhoes.Name = "pictureBox_Conquistas_100milhoes";
+            this.pictureBox_Conquistas_100milhoes.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_Conquistas_100milhoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Conquistas_100milhoes.TabIndex = 48;
+            this.pictureBox_Conquistas_100milhoes.TabStop = false;
+            // 
+            // pictureBox_Conquistas_10milhoes
+            // 
+            this.pictureBox_Conquistas_10milhoes.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_10milhoes_off;
+            this.pictureBox_Conquistas_10milhoes.Location = new System.Drawing.Point(14, 235);
+            this.pictureBox_Conquistas_10milhoes.Name = "pictureBox_Conquistas_10milhoes";
+            this.pictureBox_Conquistas_10milhoes.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_Conquistas_10milhoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Conquistas_10milhoes.TabIndex = 47;
+            this.pictureBox_Conquistas_10milhoes.TabStop = false;
             // 
             // pictureBox_Conquistas_1milhao
             // 
@@ -172,101 +268,6 @@
             this.label_Conquistas.Text = "CONQUISTAS";
             this.label_Conquistas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox_Conquistas_10milhoes
-            // 
-            this.pictureBox_Conquistas_10milhoes.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_10milhoes_off;
-            this.pictureBox_Conquistas_10milhoes.Location = new System.Drawing.Point(14, 235);
-            this.pictureBox_Conquistas_10milhoes.Name = "pictureBox_Conquistas_10milhoes";
-            this.pictureBox_Conquistas_10milhoes.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_Conquistas_10milhoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Conquistas_10milhoes.TabIndex = 47;
-            this.pictureBox_Conquistas_10milhoes.TabStop = false;
-            // 
-            // pictureBox_Conquistas_100milhoes
-            // 
-            this.pictureBox_Conquistas_100milhoes.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_100milhoes_off;
-            this.pictureBox_Conquistas_100milhoes.Location = new System.Drawing.Point(14, 301);
-            this.pictureBox_Conquistas_100milhoes.Name = "pictureBox_Conquistas_100milhoes";
-            this.pictureBox_Conquistas_100milhoes.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_Conquistas_100milhoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Conquistas_100milhoes.TabIndex = 48;
-            this.pictureBox_Conquistas_100milhoes.TabStop = false;
-            // 
-            // pictureBox_Conquistas_Nivel10
-            // 
-            this.pictureBox_Conquistas_Nivel10.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_Nivel10_off;
-            this.pictureBox_Conquistas_Nivel10.Location = new System.Drawing.Point(14, 367);
-            this.pictureBox_Conquistas_Nivel10.Name = "pictureBox_Conquistas_Nivel10";
-            this.pictureBox_Conquistas_Nivel10.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_Conquistas_Nivel10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Conquistas_Nivel10.TabIndex = 49;
-            this.pictureBox_Conquistas_Nivel10.TabStop = false;
-            // 
-            // pictureBox_Conquistas_NivelMax
-            // 
-            this.pictureBox_Conquistas_NivelMax.BackgroundImage = global::M11_TbF.Properties.Resources.Conquistas_NivelMax_off;
-            this.pictureBox_Conquistas_NivelMax.Location = new System.Drawing.Point(16, 433);
-            this.pictureBox_Conquistas_NivelMax.Name = "pictureBox_Conquistas_NivelMax";
-            this.pictureBox_Conquistas_NivelMax.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox_Conquistas_NivelMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Conquistas_NivelMax.TabIndex = 50;
-            this.pictureBox_Conquistas_NivelMax.TabStop = false;
-            // 
-            // label_Conquistas_1milhao
-            // 
-            this.label_Conquistas_1milhao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_Conquistas_1milhao.ForeColor = System.Drawing.Color.White;
-            this.label_Conquistas_1milhao.Location = new System.Drawing.Point(70, 169);
-            this.label_Conquistas_1milhao.Name = "label_Conquistas_1milhao";
-            this.label_Conquistas_1milhao.Size = new System.Drawing.Size(112, 50);
-            this.label_Conquistas_1milhao.TabIndex = 51;
-            this.label_Conquistas_1milhao.Text = "Ganhe um total de 1 milhao $";
-            this.label_Conquistas_1milhao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_Conquistas_10milhoes
-            // 
-            this.label_Conquistas_10milhoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_Conquistas_10milhoes.ForeColor = System.Drawing.Color.White;
-            this.label_Conquistas_10milhoes.Location = new System.Drawing.Point(70, 235);
-            this.label_Conquistas_10milhoes.Name = "label_Conquistas_10milhoes";
-            this.label_Conquistas_10milhoes.Size = new System.Drawing.Size(112, 50);
-            this.label_Conquistas_10milhoes.TabIndex = 52;
-            this.label_Conquistas_10milhoes.Text = "Ganhe um total de 10 milhao $";
-            this.label_Conquistas_10milhoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_Conquistas_100milhoes
-            // 
-            this.label_Conquistas_100milhoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_Conquistas_100milhoes.ForeColor = System.Drawing.Color.White;
-            this.label_Conquistas_100milhoes.Location = new System.Drawing.Point(70, 301);
-            this.label_Conquistas_100milhoes.Name = "label_Conquistas_100milhoes";
-            this.label_Conquistas_100milhoes.Size = new System.Drawing.Size(112, 50);
-            this.label_Conquistas_100milhoes.TabIndex = 53;
-            this.label_Conquistas_100milhoes.Text = "Ganhe um total de 100 milhao $";
-            this.label_Conquistas_100milhoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_Conquistas_Nivel10
-            // 
-            this.label_Conquistas_Nivel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_Conquistas_Nivel10.ForeColor = System.Drawing.Color.White;
-            this.label_Conquistas_Nivel10.Location = new System.Drawing.Point(70, 367);
-            this.label_Conquistas_Nivel10.Name = "label_Conquistas_Nivel10";
-            this.label_Conquistas_Nivel10.Size = new System.Drawing.Size(112, 50);
-            this.label_Conquistas_Nivel10.TabIndex = 54;
-            this.label_Conquistas_Nivel10.Text = "Passe do nivel 10";
-            this.label_Conquistas_Nivel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_Conquistas_NivelMax
-            // 
-            this.label_Conquistas_NivelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_Conquistas_NivelMax.ForeColor = System.Drawing.Color.White;
-            this.label_Conquistas_NivelMax.Location = new System.Drawing.Point(70, 433);
-            this.label_Conquistas_NivelMax.Name = "label_Conquistas_NivelMax";
-            this.label_Conquistas_NivelMax.Size = new System.Drawing.Size(112, 50);
-            this.label_Conquistas_NivelMax.TabIndex = 55;
-            this.label_Conquistas_NivelMax.Text = "Passe todos os niveis";
-            this.label_Conquistas_NivelMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel_Drag
             // 
             this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
@@ -331,6 +332,7 @@
             this.Controls.Add(this.panel_Drag);
             this.Controls.Add(this.panel_layout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 404);
             this.MinimumSize = new System.Drawing.Size(900, 404);
             this.Name = "Form_Conquistas";
@@ -339,11 +341,11 @@
             this.Load += new System.EventHandler(this.Form_Conquistas_Load);
             this.panel_layout.ResumeLayout(false);
             this.panel_layout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_1milhao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_10milhoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_100milhoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_Nivel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_NivelMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_Nivel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_100milhoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_10milhoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Conquistas_1milhao)).EndInit();
             this.panel_Drag.ResumeLayout(false);
             this.panel_MiniSair.ResumeLayout(false);
             this.ResumeLayout(false);
