@@ -29,19 +29,39 @@ namespace M11_TbF
 
         private void button_criar_Click(object sender, EventArgs e)
         {
-            if (textBox_Password.Text == textBox_ConfPassword.Text)
+            if(textBox_Username.Text.Length >= 3 && textBox_Username.Text.Length <= 10)
             {
-                User.Criar_Utilizador(textBox_Username.Text, textBox_Password.Text);
-                MessageBox.Show("A conta foi criada. Reinicie o Jogo para fazer login.");
-                this.Close();
-                Form_Login FL = new Form_Login();
-                FL.Show();
+                if (textBox_Password.Text.Length >= 3 && textBox_Password.Text.Length <= 10)
+                {
+                    if (textBox_Password.Text == textBox_ConfPassword.Text)
+                    {
+                        if (User.Utilizador_Existe(textBox_Username.Text) == true)
+                        {
+                            MessageBox.Show("Username já está a ser usado.");
+                        }
+                        else
+                        {
+                            User.Criar_Utilizador(textBox_Username.Text, textBox_Password.Text);
+                            MessageBox.Show("A conta foi criada.");
+                            this.Close();
+                            Form_Login FL = new Form_Login();
+                            FL.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("As passwords não coincidem.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("O sua Password não tem os requessitos.");
+                }
             }
             else
             {
-                MessageBox.Show("As passwords não coincidem.");
+                MessageBox.Show("O seu Username não tem os requessitos.");
             }
-
         }
 
         private void label_entrar_login_Click(object sender, EventArgs e)

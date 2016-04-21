@@ -50,6 +50,44 @@ namespace M11_TbF
         //
         //
         //
+        public bool Utilizador_Existe(string Username)
+        {
+            OleDbConnection cn =
+                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+
+            string query = "SELECT Nome FROM Utilizadores; ";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            try
+            {
+                cn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    if (dr.GetValue(0).ToString() == Username)
+                    {
+                        return true;
+                    }
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return false;
+        }
+        //
+        //
+        //
+        //
+        //
         public void Utilizador_login(string Username, string Password)
         {
             OleDbConnection cn =

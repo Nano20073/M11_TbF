@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SignUp));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_criar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label_UsernameHelp = new System.Windows.Forms.Label();
             this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
@@ -43,6 +46,7 @@
             this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel_layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +104,8 @@
             // panel_layout
             // 
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.label4);
+            this.panel_layout.Controls.Add(this.label_UsernameHelp);
             this.panel_layout.Controls.Add(this.label_SIGN_UP);
             this.panel_layout.Controls.Add(this.label_entrar_login);
             this.panel_layout.Controls.Add(this.textBox_ConfPassword);
@@ -116,6 +122,31 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(85, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 17);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "?";
+            // 
+            // label_UsernameHelp
+            // 
+            this.label_UsernameHelp.AutoSize = true;
+            this.label_UsernameHelp.BackColor = System.Drawing.Color.Transparent;
+            this.label_UsernameHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_UsernameHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.label_UsernameHelp.Location = new System.Drawing.Point(85, 77);
+            this.label_UsernameHelp.Name = "label_UsernameHelp";
+            this.label_UsernameHelp.Size = new System.Drawing.Size(16, 17);
+            this.label_UsernameHelp.TabIndex = 29;
+            this.label_UsernameHelp.Text = "?";
+            this.toolTip.SetToolTip(this.label_UsernameHelp, "Username tem de ter um minimo de 3 e um máximo de 4 caracteres.");
             // 
             // label_SIGN_UP
             // 
@@ -269,5 +300,8 @@
         private System.Windows.Forms.Label label_SIGN_UP;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Button button_minimizar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_UsernameHelp;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
