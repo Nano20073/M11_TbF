@@ -55,12 +55,12 @@ namespace M11_TbF
                 }
                 else
                 {
-                    MessageBox.Show("O sua Password não tem os requessitos.");
+                    MessageBox.Show("O sua Password não tem os requesitos.");
                 }
             }
             else
             {
-                MessageBox.Show("O seu Username não tem os requessitos.");
+                MessageBox.Show("O seu Username não tem os requesitos.");
             }
         }
 

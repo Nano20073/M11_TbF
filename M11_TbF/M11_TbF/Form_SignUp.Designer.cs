@@ -134,6 +134,7 @@
             this.label4.Size = new System.Drawing.Size(16, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "?";
+            this.toolTip.SetToolTip(this.label4, "Password tem de ter um minimo de 3 e um máximo de 10 caracteres.");
             // 
             // label_UsernameHelp
             // 
@@ -146,7 +147,7 @@
             this.label_UsernameHelp.Size = new System.Drawing.Size(16, 17);
             this.label_UsernameHelp.TabIndex = 29;
             this.label_UsernameHelp.Text = "?";
-            this.toolTip.SetToolTip(this.label_UsernameHelp, "Username tem de ter um minimo de 3 e um máximo de 4 caracteres.");
+            this.toolTip.SetToolTip(this.label_UsernameHelp, "Username tem de ter um minimo de 3 e um máximo de 10 caracteres.");
             // 
             // label_SIGN_UP
             // 
@@ -261,6 +262,12 @@
             this.textBox_Username.Name = "textBox_Username";
             this.textBox_Username.Size = new System.Drawing.Size(153, 23);
             this.textBox_Username.TabIndex = 23;
+            // 
+            // toolTip
+            // 
+            this.toolTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.toolTip.ForeColor = System.Drawing.Color.White;
+            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Form_SignUp
             // 
