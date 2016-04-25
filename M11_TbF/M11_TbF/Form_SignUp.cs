@@ -27,6 +27,51 @@ namespace M11_TbF
             User = new Utilizador();
         }
 
+        private void textBox_Username_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_Username.Text.Length >= 3 && textBox_Username.Text.Length <= 10 && textBox_Password.Text.Length >= 3 && textBox_Password.Text.Length <= 10)
+            {
+                label_UserPass.ForeColor = Color.Green;
+            }
+            else
+            {
+                label_UserPass.ForeColor = Color.Red;
+            }
+        }
+
+        private void textBox_Password_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox_Username.Text.Length >= 3 && textBox_Username.Text.Length <= 10 && textBox_Password.Text.Length >= 3 && textBox_Password.Text.Length <= 10)
+            {
+                label_UserPass.ForeColor = Color.Green;
+            }
+            else
+            {
+                label_UserPass.ForeColor = Color.Red;
+            }
+
+            if (textBox_Password.Text == textBox_ConfPassword.Text)
+            {
+                label_passcoincide.ForeColor = Color.Green;
+            }
+            else
+            {
+                label_passcoincide.ForeColor = Color.Red;
+            }
+        }
+
+        private void textBox_ConfPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox_Password.Text == textBox_ConfPassword.Text)
+            {
+                label_passcoincide.ForeColor = Color.Green;
+            }
+            else
+            {
+                label_passcoincide.ForeColor = Color.Red;
+            }
+        }
+
         private void button_criar_Click(object sender, EventArgs e)
         {
             if(textBox_Username.Text.Length >= 3 && textBox_Username.Text.Length <= 10)
@@ -55,12 +100,12 @@ namespace M11_TbF
                 }
                 else
                 {
-                    MessageBox.Show("O sua Password não tem os requesitos.");
+                    MessageBox.Show("O seu Username e/ou Password não tem os requesitos.");
                 }
             }
             else
             {
-                MessageBox.Show("O seu Username não tem os requesitos.");
+                MessageBox.Show("O seu Username e/ou Password não tem os requesitos.");
             }
         }
 
@@ -99,6 +144,6 @@ namespace M11_TbF
         private void button_sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        }       
     }
 }

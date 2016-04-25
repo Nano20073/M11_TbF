@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SignUp));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_criar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_layout = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label_UsernameHelp = new System.Windows.Forms.Label();
             this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
@@ -46,8 +43,13 @@
             this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.panel_layout2 = new System.Windows.Forms.Panel();
+            this.label_UserPass = new System.Windows.Forms.Label();
+            this.label_passcoincide = new System.Windows.Forms.Label();
+            this.label_sign = new System.Windows.Forms.Label();
+            this.label_sign2 = new System.Windows.Forms.Label();
             this.panel_layout.SuspendLayout();
+            this.panel_layout2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(12, 78);
+            this.label1.Location = new System.Drawing.Point(12, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -68,7 +70,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(12, 145);
+            this.label2.Location = new System.Drawing.Point(12, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
@@ -82,7 +84,7 @@
             this.button_criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_criar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button_criar.ForeColor = System.Drawing.Color.White;
-            this.button_criar.Location = new System.Drawing.Point(15, 260);
+            this.button_criar.Location = new System.Drawing.Point(15, 314);
             this.button_criar.Name = "button_criar";
             this.button_criar.Size = new System.Drawing.Size(153, 40);
             this.button_criar.TabIndex = 4;
@@ -104,15 +106,16 @@
             // panel_layout
             // 
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel_layout.Controls.Add(this.label4);
-            this.panel_layout.Controls.Add(this.label_UsernameHelp);
+            this.panel_layout.Controls.Add(this.label_sign2);
+            this.panel_layout.Controls.Add(this.label_passcoincide);
+            this.panel_layout.Controls.Add(this.label_sign);
+            this.panel_layout.Controls.Add(this.label_UserPass);
+            this.panel_layout.Controls.Add(this.panel_layout2);
             this.panel_layout.Controls.Add(this.label_SIGN_UP);
-            this.panel_layout.Controls.Add(this.label_entrar_login);
             this.panel_layout.Controls.Add(this.textBox_ConfPassword);
             this.panel_layout.Controls.Add(this.label3);
             this.panel_layout.Controls.Add(this.button_minimizar);
             this.panel_layout.Controls.Add(this.button_sair);
-            this.panel_layout.Controls.Add(this.label_JTemCnt);
             this.panel_layout.Controls.Add(this.textBox_Password);
             this.panel_layout.Controls.Add(this.textBox_Username);
             this.panel_layout.Controls.Add(this.button_criar);
@@ -122,32 +125,6 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(85, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 17);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "?";
-            this.toolTip.SetToolTip(this.label4, "Password tem de ter um minimo de 3 e um máximo de 10 caracteres.");
-            // 
-            // label_UsernameHelp
-            // 
-            this.label_UsernameHelp.AutoSize = true;
-            this.label_UsernameHelp.BackColor = System.Drawing.Color.Transparent;
-            this.label_UsernameHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_UsernameHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.label_UsernameHelp.Location = new System.Drawing.Point(85, 77);
-            this.label_UsernameHelp.Name = "label_UsernameHelp";
-            this.label_UsernameHelp.Size = new System.Drawing.Size(16, 17);
-            this.label_UsernameHelp.TabIndex = 29;
-            this.label_UsernameHelp.Text = "?";
-            this.toolTip.SetToolTip(this.label_UsernameHelp, "Username tem de ter um minimo de 3 e um máximo de 10 caracteres.");
             // 
             // label_SIGN_UP
             // 
@@ -168,7 +145,7 @@
             this.label_entrar_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_entrar_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_entrar_login.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_entrar_login.Location = new System.Drawing.Point(3, 341);
+            this.label_entrar_login.Location = new System.Drawing.Point(12, 18);
             this.label_entrar_login.Name = "label_entrar_login";
             this.label_entrar_login.Size = new System.Drawing.Size(73, 17);
             this.label_entrar_login.TabIndex = 24;
@@ -181,11 +158,12 @@
             this.textBox_ConfPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_ConfPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox_ConfPassword.ForeColor = System.Drawing.Color.White;
-            this.textBox_ConfPassword.Location = new System.Drawing.Point(15, 219);
+            this.textBox_ConfPassword.Location = new System.Drawing.Point(15, 273);
             this.textBox_ConfPassword.Name = "textBox_ConfPassword";
             this.textBox_ConfPassword.PasswordChar = '*';
             this.textBox_ConfPassword.Size = new System.Drawing.Size(153, 23);
             this.textBox_ConfPassword.TabIndex = 27;
+            this.textBox_ConfPassword.TextChanged += new System.EventHandler(this.textBox_ConfPassword_TextChanged);
             // 
             // label3
             // 
@@ -193,7 +171,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(12, 199);
+            this.label3.Location = new System.Drawing.Point(12, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 17);
             this.label3.TabIndex = 26;
@@ -234,7 +212,7 @@
             this.label_JTemCnt.BackColor = System.Drawing.Color.Transparent;
             this.label_JTemCnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label_JTemCnt.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_JTemCnt.Location = new System.Drawing.Point(3, 325);
+            this.label_JTemCnt.Location = new System.Drawing.Point(12, 2);
             this.label_JTemCnt.Name = "label_JTemCnt";
             this.label_JTemCnt.Size = new System.Drawing.Size(128, 17);
             this.label_JTemCnt.TabIndex = 25;
@@ -246,11 +224,12 @@
             this.textBox_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox_Password.ForeColor = System.Drawing.Color.White;
-            this.textBox_Password.Location = new System.Drawing.Point(15, 165);
+            this.textBox_Password.Location = new System.Drawing.Point(15, 219);
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.PasswordChar = '*';
             this.textBox_Password.Size = new System.Drawing.Size(153, 23);
             this.textBox_Password.TabIndex = 22;
+            this.textBox_Password.TextChanged += new System.EventHandler(this.textBox_Password_TextChanged);
             // 
             // textBox_Username
             // 
@@ -258,16 +237,69 @@
             this.textBox_Username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox_Username.ForeColor = System.Drawing.Color.White;
-            this.textBox_Username.Location = new System.Drawing.Point(15, 98);
+            this.textBox_Username.Location = new System.Drawing.Point(15, 152);
             this.textBox_Username.Name = "textBox_Username";
             this.textBox_Username.Size = new System.Drawing.Size(153, 23);
             this.textBox_Username.TabIndex = 23;
+            this.textBox_Username.TextChanged += new System.EventHandler(this.textBox_Username_TextChanged);
             // 
-            // toolTip
+            // panel_layout2
             // 
-            this.toolTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.toolTip.ForeColor = System.Drawing.Color.White;
-            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.panel_layout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout2.Controls.Add(this.label_JTemCnt);
+            this.panel_layout2.Controls.Add(this.label_entrar_login);
+            this.panel_layout2.Location = new System.Drawing.Point(0, 358);
+            this.panel_layout2.Name = "panel_layout2";
+            this.panel_layout2.Size = new System.Drawing.Size(182, 45);
+            this.panel_layout2.TabIndex = 26;
+            // 
+            // label_UserPass
+            // 
+            this.label_UserPass.AutoSize = true;
+            this.label_UserPass.BackColor = System.Drawing.Color.Transparent;
+            this.label_UserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label_UserPass.ForeColor = System.Drawing.Color.Red;
+            this.label_UserPass.Location = new System.Drawing.Point(31, 73);
+            this.label_UserPass.Name = "label_UserPass";
+            this.label_UserPass.Size = new System.Drawing.Size(147, 32);
+            this.label_UserPass.TabIndex = 31;
+            this.label_UserPass.Text = "User e Pass têm de ter \r\nentre 3-10 caracteres";
+            // 
+            // label_passcoincide
+            // 
+            this.label_passcoincide.AutoSize = true;
+            this.label_passcoincide.BackColor = System.Drawing.Color.Transparent;
+            this.label_passcoincide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label_passcoincide.ForeColor = System.Drawing.Color.Red;
+            this.label_passcoincide.Location = new System.Drawing.Point(31, 108);
+            this.label_passcoincide.Name = "label_passcoincide";
+            this.label_passcoincide.Size = new System.Drawing.Size(140, 16);
+            this.label_passcoincide.TabIndex = 32;
+            this.label_passcoincide.Text = "Passwords coincidem";
+            // 
+            // label_sign
+            // 
+            this.label_sign.AutoSize = true;
+            this.label_sign.BackColor = System.Drawing.Color.Transparent;
+            this.label_sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label_sign.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_sign.Location = new System.Drawing.Point(13, 79);
+            this.label_sign.Name = "label_sign";
+            this.label_sign.Size = new System.Drawing.Size(18, 17);
+            this.label_sign.TabIndex = 32;
+            this.label_sign.Text = "☉";
+            // 
+            // label_sign2
+            // 
+            this.label_sign2.AutoSize = true;
+            this.label_sign2.BackColor = System.Drawing.Color.Transparent;
+            this.label_sign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label_sign2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_sign2.Location = new System.Drawing.Point(13, 107);
+            this.label_sign2.Name = "label_sign2";
+            this.label_sign2.Size = new System.Drawing.Size(18, 17);
+            this.label_sign2.TabIndex = 33;
+            this.label_sign2.Text = "☉";
             // 
             // Form_SignUp
             // 
@@ -287,6 +319,8 @@
             this.Load += new System.EventHandler(this.Form_SignUp_Load);
             this.panel_layout.ResumeLayout(false);
             this.panel_layout.PerformLayout();
+            this.panel_layout2.ResumeLayout(false);
+            this.panel_layout2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,8 +341,10 @@
         private System.Windows.Forms.Label label_SIGN_UP;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Button button_minimizar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label_UsernameHelp;
-        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Panel panel_layout2;
+        private System.Windows.Forms.Label label_sign2;
+        private System.Windows.Forms.Label label_passcoincide;
+        private System.Windows.Forms.Label label_sign;
+        private System.Windows.Forms.Label label_UserPass;
     }
 }
