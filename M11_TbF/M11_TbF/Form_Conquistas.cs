@@ -71,32 +71,6 @@ namespace M11_TbF
                     }
                 }
             }
-/*
-            if(User.GetTotalGanho(Username_Atual) >= 1000000)
-            {
-                pictureBox_Conquistas_1milhao.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_1milhao.png");
-            }
-
-            if (User.GetTotalGanho(Username_Atual) >= 10000000)
-            {
-                pictureBox_Conquistas_10milhoes.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_10milhoes.png");
-            }
-
-            if (User.GetTotalGanho(Username_Atual) >= 100000000)
-            {
-                pictureBox_Conquistas_100milhoes.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_100milhoes.png");
-            }
-
-            if (User.get_nivel_maximo(Username_Atual) >= 10)
-            {
-                pictureBox_Conquistas_Nivel10.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_Nivel10.png");
-            }
-
-            if (User.get_nivel_maximo(Username_Atual) == 15)
-            {
-                pictureBox_Conquistas_NivelMax.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_NivelMax.png");
-            }
-            */
         }
 
         private void panel_Drag_MouseDown(object sender, MouseEventArgs e)

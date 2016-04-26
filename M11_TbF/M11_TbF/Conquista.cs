@@ -80,5 +80,31 @@ namespace M11_TbF
                 cn.Close();
             }
         }
+        //
+        //
+        //
+        //
+        //
+        public void Reset_Conquistas(int ID_Utilizador)
+        {
+            try
+            {
+                cn.Open();
+                string OleDBStatement = "Delete from UtilizadorConquista where ID_Utilizador =" + ID_Utilizador;
+                OleDbCommand cmd = new OleDbCommand(OleDBStatement, cn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                     ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

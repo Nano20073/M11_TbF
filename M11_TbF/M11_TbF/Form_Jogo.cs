@@ -249,8 +249,7 @@ namespace M11_TbF
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)
-        {
-            
+        {            
             if (background_time == 3)
             {
                 timer_background_errou.Stop();

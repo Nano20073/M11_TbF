@@ -65,7 +65,7 @@ namespace M11_TbF
         private void button_Opcoes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Opcoes FOPCOES = new Form_Opcoes(Username_Atual, pass, this);
+            Form_Opcoes FOPCOES = new Form_Opcoes(Username_Atual, pass, this, ID_Utilizador);
             FOPCOES.Show();
         }
 

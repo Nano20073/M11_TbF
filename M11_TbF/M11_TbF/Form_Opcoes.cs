@@ -15,11 +15,14 @@ namespace M11_TbF
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
+        Conquista Conq;
         Form Owner;
         string Username_Atual;
         string password;
-        public Form_Opcoes(string Username, string pass, Form f)
+        int ID_Utilizador;
+        public Form_Opcoes(string Username, string pass, Form f, int ID_User)
         {
+            ID_Utilizador = ID_User;
             Username_Atual = Username;
             password = pass;
             Owner = f;
@@ -39,42 +42,59 @@ namespace M11_TbF
             
             label_utilizador.Text = Username_Atual;
             User = new Utilizador();
+            Conq = new Conquista();
         }
 
         private void button_AlterarUsername_Click(object sender, EventArgs e)
         {
-            if (textBox_NovoUtilizador.Text == textBox_ConfirmarNovoUsername.Text)
+            if(textBox_NovoUtilizador.Text.Length >=3 && textBox_NovoUtilizador.Text.Length <= 10)
             {
-                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (textBox_NovoUtilizador.Text == textBox_ConfirmarNovoUsername.Text)
                 {
-                    User.Alterar_Nome_de_Utilizador(Username_Atual, textBox_NovoUtilizador.Text);
-                    Application.Exit();
+                    DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar o seu Username? \n Se clicar sim a aplicação irá fechar ", "username", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        User.Alterar_Nome_de_Utilizador(Username_Atual, textBox_NovoUtilizador.Text);
+                        Application.Exit();
+                    }
+                    else if (dialogResult == DialogResult.No) { }
                 }
-                else if (dialogResult == DialogResult.No){}
+                else
+                {
+                    MessageBox.Show("Os Usernames não coincidem.");
+                }
             }
             else
             {
-                MessageBox.Show("Os Usernames não coincidem.");
+                MessageBox.Show("O seu Username não tem o requesito.");
             }
+            
         }
 
         private void button_AlterarPassword_Click(object sender, EventArgs e)
         {
-            if (textBox_NovaPassword.Text == textBox_ConfirmarNovaPassword.Text && textBox_NovaPassword.Text != "")
+            if (textBox_NovaPassword.Text.Length >= 3 && textBox_NovaPassword.Text.Length <= 10)
             {
-                DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar a sua password? \n Se clicar sim a aplicação irá fechar ", "Password", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (textBox_NovaPassword.Text == textBox_ConfirmarNovaPassword.Text)
                 {
-                    User.Alterar_Password(Username_Atual, textBox_NovaPassword.Text);
-                    Application.Exit();
+                    DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer mudar a sua password? \n Se clicar sim a aplicação irá fechar ", "Password", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        User.Alterar_Password(Username_Atual, textBox_NovaPassword.Text);
+                        Application.Exit();
+                    }
+                    else if (dialogResult == DialogResult.No) { }
                 }
-                else if (dialogResult == DialogResult.No){}
+                else
+                {
+                    MessageBox.Show("As passwords não coinncidem.");
+                }
             }
             else
             {
-                MessageBox.Show("As passwords não coinncidem.");
+                MessageBox.Show("A sua password não tem o requesito.");
             }
+                
         }
 
         private void button_Reset_Click(object sender, EventArgs e)
@@ -83,6 +103,7 @@ namespace M11_TbF
             if (dialogResult == DialogResult.Yes)
             {
                 User.Reset(Username_Atual);
+                Conq.Reset_Conquistas(ID_Utilizador);
                 Application.Exit();
             }
             else if (dialogResult == DialogResult.No){}
