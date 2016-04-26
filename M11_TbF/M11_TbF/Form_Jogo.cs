@@ -15,6 +15,7 @@ namespace M11_TbF
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
 
+        Conquista Conq;
         Utilizador User;
         Pergunta Per;
         Form Owner;
@@ -27,19 +28,22 @@ namespace M11_TbF
         int background_time = 0;
 
         string Username_Atual;
-
-        public Form_Jogo(Form f, string Username)
+        int ID_Utilizador;
+        public Form_Jogo(Form f, string Username, int ID_User)
         {
+            ID_Utilizador = ID_User;
             Owner = f;
             Username_Atual = Username;
             InitializeComponent();
         }
 
         private void Form_Jogo_Load(object sender, EventArgs e)
-        {Form_Game_Over FGO = new Form_Game_Over(this, Owner);
+        {
+            Form_Game_Over FGO = new Form_Game_Over(this, Owner);
             label_utilizador.Select();
             User = new Utilizador();
             Per = new Pergunta();
+            Conq = new Conquista();
 
             label_utilizador.Text = Username_Atual;
             label_tempo.Text = "Tempo Restante - " + tempo.ToString();
@@ -53,8 +57,9 @@ namespace M11_TbF
             timer_tempo.Start();
         }
 
-        private void AdicionarTotalGanho()
+        private void AdicionarTotalGanhoEConquistas()
         {
+            ///////////////////////////////////////Total_Ganho\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
             if (Per.Nivel_Get().ToString() == "1") { User.AdicionarTotalGanho(0, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "2") { User.AdicionarTotalGanho(0, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "3") { User.AdicionarTotalGanho(0, Username_Atual); }
@@ -71,6 +76,74 @@ namespace M11_TbF
             if (Per.Nivel_Get().ToString() == "14") { User.AdicionarTotalGanho(250000, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "15") { User.AdicionarTotalGanho(500000, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "16") { User.AdicionarTotalGanho(1000000, Username_Atual); }
+
+            ///////////////////////////////////////Conquistas\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+            //Conquista 1
+            if (Conq.Verificar_Conquista(ID_Utilizador, 1) == true)
+            {
+
+            }
+            else
+            {
+                if (User.GetTotalGanho(Username_Atual) >= 1000000)
+                {
+                    Conq.Adicionar_Conquista(ID_Utilizador, 1);
+                }
+            }
+
+            //Conquista 2
+            if (Conq.Verificar_Conquista(ID_Utilizador, 2) == true)
+            {
+
+            }
+            else
+            {
+                if (User.GetTotalGanho(Username_Atual) >= 10000000)
+                {
+                    Conq.Adicionar_Conquista(ID_Utilizador, 2);
+                }
+            }
+
+            //Conquista 3
+            if (Conq.Verificar_Conquista(ID_Utilizador, 3) == true)
+            {
+
+            }
+            else
+            {
+                if (User.GetTotalGanho(Username_Atual) >= 100000000)
+                {
+                    Conq.Adicionar_Conquista(ID_Utilizador, 3);
+                }
+            }
+
+            //Conquista 4
+            if (Conq.Verificar_Conquista(ID_Utilizador, 4) == true)
+            {
+
+            }
+            else
+            {
+                if (User.get_nivel_maximo(Username_Atual) >= 10)
+                {
+                    Conq.Adicionar_Conquista(ID_Utilizador, 4);
+                }
+            }
+
+            //Conquista 5
+            if (Conq.Verificar_Conquista(ID_Utilizador, 5) == true)
+            {
+
+            }
+            else
+            {
+                if (User.get_nivel_maximo(Username_Atual) == 15)
+                {
+                    Conq.Adicionar_Conquista(ID_Utilizador, 5);
+                }
+            }
         }
 
         private void timer_tempo_Tick(object sender, EventArgs e)
@@ -79,7 +152,7 @@ namespace M11_TbF
             {
                 timer_tempo.Stop();
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-                AdicionarTotalGanho();
+                AdicionarTotalGanhoEConquistas();
                 Form_Time_Out FTO = new Form_Time_Out(this, Owner);
                 FTO.ShowDialog();
             }
@@ -121,7 +194,7 @@ namespace M11_TbF
             if (Per.Nivel_Get().ToString() == "16")
             {
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-                AdicionarTotalGanho();
+                AdicionarTotalGanhoEConquistas();
                 Form_Game_Win FGW = new Form_Game_Win(this, Owner);
                 FGW.ShowDialog();
             }
@@ -169,7 +242,7 @@ namespace M11_TbF
 
             timer_tempo.Stop();
             User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
-            AdicionarTotalGanho();
+            AdicionarTotalGanhoEConquistas();
             timer_background_errou.Start();
             FGO = new Form_Game_Over(this, Owner);
             FGO.ShowDialog();     

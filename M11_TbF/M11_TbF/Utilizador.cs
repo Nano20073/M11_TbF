@@ -12,7 +12,7 @@ namespace M11_TbF
     class Utilizador
     {
         private string Username_login="";
-
+        private int ID_Utilizador;
 
 
         public void Criar_Utilizador(string Username, string Password)
@@ -93,7 +93,7 @@ namespace M11_TbF
             OleDbConnection cn =
                 new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            string query = "SELECT Nome, PassWord FROM Utilizadores; ";
+            string query = "SELECT ID_Utilizador, Nome, PassWord FROM Utilizadores; ";
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
             try
@@ -103,12 +103,12 @@ namespace M11_TbF
                 while (dr.Read())
                 {
 
-                    if (dr.GetValue(0).ToString() == Username)
+                    if (dr.GetValue(1).ToString() == Username)
                     {
-                        if (dr.GetValue(1).ToString() == Password)
+                        if (dr.GetValue(2).ToString() == Password)
                         {
                             Username_login = Username;
-                            
+                            ID_Utilizador = int.Parse(dr.GetValue(0).ToString());
                         }
                     }
                 }
@@ -269,6 +269,15 @@ namespace M11_TbF
         public string Utilizador_login_get()
         {
             return Username_login;
+        }
+        //
+        //
+        //
+        //
+        //
+        public int ID_Utilizador_get()
+        {
+            return ID_Utilizador;
         }
         //
         //

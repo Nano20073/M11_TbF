@@ -14,12 +14,14 @@ namespace M11_TbF
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
+        Conquista Conq;
         Utilizador User;
         string Username_Atual;
         Form Owner;
-
-        public Form_Conquistas(string Username, Form f)
+        int ID_Utilizador;
+        public Form_Conquistas(string Username, Form f, int ID_User)
         {
+            ID_Utilizador = ID_User;
             Owner = f;
             Username_Atual = Username;
             InitializeComponent();
@@ -38,7 +40,38 @@ namespace M11_TbF
             panel_layout.AutoScroll = true;
 
             User = new Utilizador();
+            Conq = new Conquista();
+            for(int ID_Conquista=1; ID_Conquista <= 5; ID_Conquista++)
+            {
+                if(Conq.Verificar_Conquista(ID_Utilizador, ID_Conquista) == true)
+                {
+                    if (ID_Conquista == 1)
+                    {
+                        pictureBox_Conquistas_1milhao.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_1milhao.png");
+                    }
 
+                    if (ID_Conquista == 2)
+                    {
+                        pictureBox_Conquistas_10milhoes.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_10milhoes.png");
+                    }
+
+                    if (ID_Conquista == 3)
+                    {
+                        pictureBox_Conquistas_100milhoes.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_100milhoes.png");
+                    }
+
+                    if (ID_Conquista == 4)
+                    {
+                        pictureBox_Conquistas_Nivel10.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_Nivel10.png");
+                    }
+
+                    if (ID_Conquista == 5)
+                    {
+                        pictureBox_Conquistas_NivelMax.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_NivelMax.png");
+                    }
+                }
+            }
+/*
             if(User.GetTotalGanho(Username_Atual) >= 1000000)
             {
                 pictureBox_Conquistas_1milhao.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_1milhao.png");
@@ -63,6 +96,7 @@ namespace M11_TbF
             {
                 pictureBox_Conquistas_NivelMax.BackgroundImage = Image.FromFile(@"..\..\Resources\Conquistas_NivelMax.png");
             }
+            */
         }
 
         private void panel_Drag_MouseDown(object sender, MouseEventArgs e)

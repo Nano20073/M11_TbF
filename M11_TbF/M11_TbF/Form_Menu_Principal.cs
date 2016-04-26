@@ -18,8 +18,10 @@ namespace M11_TbF
         Utilizador User;
         string Username_Atual;
         string pass;
-        public Form_Menu_Principal(string Username, string password)
+        int ID_Utilizador;
+        public Form_Menu_Principal(string Username, string password, int ID_User)
         {
+            ID_Utilizador = ID_User;
             pass = password;
             Username_Atual = Username;
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace M11_TbF
         private void button_Jogar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Jogo FJOGO = new Form_Jogo(this, Username_Atual);
+            Form_Jogo FJOGO = new Form_Jogo(this, Username_Atual, ID_Utilizador);
             FJOGO.Show();
         }
 
@@ -56,7 +58,7 @@ namespace M11_TbF
         private void button_Conquistas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Conquistas FC = new Form_Conquistas(label_utilizador.Text, this);
+            Form_Conquistas FC = new Form_Conquistas(label_utilizador.Text, this, ID_Utilizador);
             FC.Show();
         }
 

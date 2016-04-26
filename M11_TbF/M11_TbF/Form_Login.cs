@@ -42,7 +42,7 @@ namespace M11_TbF
             else
             {
                 this.Hide();
-                Form_Menu_Principal F2 = new Form_Menu_Principal(Username, Password);
+                Form_Menu_Principal F2 = new Form_Menu_Principal(Username, Password, User.ID_Utilizador_get());
 
                 F2.Show();
             }
