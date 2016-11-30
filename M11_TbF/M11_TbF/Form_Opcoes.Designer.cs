@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Opcoes));
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.label_ToolTipPassword = new System.Windows.Forms.Label();
+            this.label_ToolTipUsername = new System.Windows.Forms.Label();
             this.label_lgout = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.panel_Drag = new System.Windows.Forms.Panel();
             this.panel_MiniSair = new System.Windows.Forms.Panel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.label_ToolTipUsername = new System.Windows.Forms.Label();
-            this.label_ToolTipPassword = new System.Windows.Forms.Label();
             this.panel_layout.SuspendLayout();
             this.panel_Drag.SuspendLayout();
             this.panel_MiniSair.SuspendLayout();
@@ -100,6 +100,34 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 404);
             this.panel_layout.TabIndex = 20;
+            // 
+            // label_ToolTipPassword
+            // 
+            this.label_ToolTipPassword.AutoSize = true;
+            this.label_ToolTipPassword.BackColor = System.Drawing.Color.Transparent;
+            this.label_ToolTipPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_ToolTipPassword.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label_ToolTipPassword.Location = new System.Drawing.Point(120, 384);
+            this.label_ToolTipPassword.Name = "label_ToolTipPassword";
+            this.label_ToolTipPassword.Size = new System.Drawing.Size(16, 17);
+            this.label_ToolTipPassword.TabIndex = 47;
+            this.label_ToolTipPassword.Text = "?";
+            this.label_ToolTipPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip.SetToolTip(this.label_ToolTipPassword, "Tem de ter entre 3-10 caracteres");
+            // 
+            // label_ToolTipUsername
+            // 
+            this.label_ToolTipUsername.AutoSize = true;
+            this.label_ToolTipUsername.BackColor = System.Drawing.Color.Transparent;
+            this.label_ToolTipUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_ToolTipUsername.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label_ToolTipUsername.Location = new System.Drawing.Point(123, 182);
+            this.label_ToolTipUsername.Name = "label_ToolTipUsername";
+            this.label_ToolTipUsername.Size = new System.Drawing.Size(16, 17);
+            this.label_ToolTipUsername.TabIndex = 26;
+            this.label_ToolTipUsername.Text = "?";
+            this.label_ToolTipUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip.SetToolTip(this.label_ToolTipUsername, "Tem de ter entre 3-10 caracteres");
             // 
             // label_lgout
             // 
@@ -439,34 +467,6 @@
             // toolTip
             // 
             this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // label_ToolTipUsername
-            // 
-            this.label_ToolTipUsername.AutoSize = true;
-            this.label_ToolTipUsername.BackColor = System.Drawing.Color.Transparent;
-            this.label_ToolTipUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_ToolTipUsername.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label_ToolTipUsername.Location = new System.Drawing.Point(123, 182);
-            this.label_ToolTipUsername.Name = "label_ToolTipUsername";
-            this.label_ToolTipUsername.Size = new System.Drawing.Size(16, 17);
-            this.label_ToolTipUsername.TabIndex = 26;
-            this.label_ToolTipUsername.Text = "?";
-            this.label_ToolTipUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.label_ToolTipUsername, "Tem de ter entre 3-10 caracteres");
-            // 
-            // label_ToolTipPassword
-            // 
-            this.label_ToolTipPassword.AutoSize = true;
-            this.label_ToolTipPassword.BackColor = System.Drawing.Color.Transparent;
-            this.label_ToolTipPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_ToolTipPassword.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label_ToolTipPassword.Location = new System.Drawing.Point(120, 384);
-            this.label_ToolTipPassword.Name = "label_ToolTipPassword";
-            this.label_ToolTipPassword.Size = new System.Drawing.Size(16, 17);
-            this.label_ToolTipPassword.TabIndex = 47;
-            this.label_ToolTipPassword.Text = "?";
-            this.label_ToolTipPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.label_ToolTipPassword, "Tem de ter entre 3-10 caracteres");
             // 
             // Form_Opcoes
             // 

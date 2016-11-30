@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace M11_TbF
 {
     class Conquista
     {
-        OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+        MySqlConnection con = new MySqlConnection("Server=fernandosilva.ddns.net; Database=movedb; Uid=Nano; Pwd=naointressa;");
 
-        
 
         public bool Verificar_Conquista(int ID_Utilizador, int ID_Conquista)
         {
             
 
             string query = "SELECT ID_Conquista, ID_Utilizador FROM UtilizadorConquista; ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
-                cn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
+                con.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
 
@@ -47,7 +46,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
             return false;
         }
@@ -58,16 +57,16 @@ namespace M11_TbF
         //
         public void Adicionar_Conquista(int ID_Utilizador, int ID_Conquista)
         {
-            OleDbCommand cmd = new OleDbCommand();
+            MySqlCommand cmd = new MySqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "insert into UtilizadorConquista ([ID_Conquista],[ID_Utilizador]) values (?,?)";
             cmd.Parameters.AddWithValue("@ID_Conquista", ID_Conquista);
             cmd.Parameters.AddWithValue("@ID_Utilizador", ID_Utilizador);
-            cmd.Connection = cn;
+            cmd.Connection = con;
 
             try
             {
-                cn.Open();
+                con.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -77,7 +76,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -89,11 +88,11 @@ namespace M11_TbF
         {
             try
             {
-                cn.Open();
+                con.Open();
                 string OleDBStatement = "Delete from UtilizadorConquista where ID_Utilizador =" + ID_Utilizador;
-                OleDbCommand cmd = new OleDbCommand(OleDBStatement, cn);
+                MySqlCommand cmd = new MySqlCommand(OleDBStatement, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Connection = cn;
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -103,7 +102,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
     }

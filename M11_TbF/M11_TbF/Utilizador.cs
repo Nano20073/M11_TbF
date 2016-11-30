@@ -6,43 +6,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace M11_TbF
 {
     class Utilizador
     {
+        MySqlConnection con = new MySqlConnection("Server=fernandosilva.ddns.net; Database=movedb; Uid=Nano; Pwd=naointressa;");
         private string Username_login="";
         private int ID_Utilizador;
 
 
         public void Criar_Utilizador(string Username, string Password)
         {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
             
-            OleDbCommand cmd = new OleDbCommand();
 
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Utilizadores ([Nome],[PassWord],[Nivel_Maximo],[Total_Ganho]) values (?,?,?,?)";
-            cmd.Parameters.AddWithValue("@Nome", Username);
-            cmd.Parameters.AddWithValue("@PassWord", Password);
-            cmd.Parameters.AddWithValue("@Nivel_Maximo", 0);
-            cmd.Parameters.AddWithValue("@Total_Ganho", 0);
-            cmd.Connection = cn;
+            MySqlCommand comd = new MySqlCommand();
+
+            comd.CommandType = CommandType.Text;
+            comd.CommandText = "insert into Utilizadores (Nome,PassWord,Nivel_Maximo,Total_Ganho) values (?,?,?,?)";
+            comd.Parameters.AddWithValue("@Nome", Username);
+            comd.Parameters.AddWithValue("@PassWord", Password);
+            comd.Parameters.AddWithValue("@Nivel_Maximo", 0);
+            comd.Parameters.AddWithValue("@Total_Ganho", 0);
+            comd.Connection = con;
 
             try
             {
-                cn.Open();
-                cmd.ExecuteNonQuery();
+                con.Open();
+                comd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                MessageBox.Show(ex.ToString(),
                      ex.ToString());
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -52,16 +53,13 @@ namespace M11_TbF
         //
         public bool Utilizador_Existe(string Username)
         {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
             string query = "SELECT Nome FROM Utilizadores; ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand comd = new MySqlCommand(query, con);
 
             try
             {
-                cn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
+                con.Open();
+                MySqlDataReader dr = comd.ExecuteReader();
                 while (dr.Read())
                 {
 
@@ -79,7 +77,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
             return false;
         }
@@ -90,16 +88,13 @@ namespace M11_TbF
         //
         public void Utilizador_login(string Username, string Password)
         {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
             string query = "SELECT ID_Utilizador, Nome, PassWord FROM Utilizadores; ";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand comd = new MySqlCommand(query, con);
 
             try
             {
-                cn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
+                con.Open();
+                MySqlDataReader dr = comd.ExecuteReader();
                 while (dr.Read())
                 {
 
@@ -121,7 +116,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -131,20 +126,19 @@ namespace M11_TbF
         //
         public void Alterar_Nome_de_Utilizador(string Username, string Novo_Username)
         {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
+            
 
-            OleDbCommand cmd = new OleDbCommand();
+            MySqlCommand cmd = new MySqlCommand();
 
             try
             {
-                cn.Open();
+                con.Open();
 
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Nome = @Nome WHERE Nome = @Old_Nome;";
                 cmd.Parameters.AddWithValue("@Nome", Novo_Username);
                 cmd.Parameters.AddWithValue("@Old_Nome", Username);
-                cmd.Connection = cn;
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
 
             }
@@ -155,7 +149,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -165,18 +159,17 @@ namespace M11_TbF
         //
         public void Alterar_Password(string username, string Nova_Password)
         {
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            OleDbCommand cmd = new OleDbCommand();
+            MySqlCommand cmd = new MySqlCommand();
 
             try
             {
-                cn.Open();
+                con.Open();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Utilizadores SET [PassWord] = [@Password] WHERE [Nome] = [@Username];";
+                cmd.CommandText = "UPDATE Utilizadores SET PassWord = @Password WHERE Nome = @Username;";
                 cmd.Parameters.AddWithValue("@Password", Nova_Password);
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Connection = cn;
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
 
             }
@@ -187,7 +180,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -232,17 +225,15 @@ namespace M11_TbF
         //
         public int get_nivel_maximo(string Username)
         {
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
             string query = "SELECT Nome, Nivel_Maximo FROM Utilizadores;";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
 
-                cn.Open();
+                con.Open();
 
-                OleDbDataReader dr = cmd.ExecuteReader();
+                MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     if(dr.GetValue(0).ToString() == Username) { return int.Parse(dr.GetValue(1).ToString()); }
@@ -257,7 +248,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
             return 0;
         }
@@ -286,19 +277,17 @@ namespace M11_TbF
         //
         public int GetTotalGanho(string Username)
         {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
+            
             //////////////// Encontra qual o valor masximo antigo \\\\\\\\\\\\\\\\\\\\
             
 
             string query = "SELECT Nome, Total_Ganho FROM Utilizadores WHERE Nome ='" + Username + "';";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
-                cn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
+                con.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
 
 
                 while (dr.Read())
@@ -316,7 +305,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
             return 0;
         }
@@ -406,17 +395,16 @@ namespace M11_TbF
         //
         public void Reset(string username)
         {
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            OleDbCommand cmd = new OleDbCommand();
+            MySqlCommand cmd = new MySqlCommand();
 
             try
             {
-                cn.Open();
+                con.Open();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = 0, Nivel_Maximo = 0 WHERE Nome=@Username;";
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Connection = cn;
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
 
             }
@@ -427,7 +415,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
     }

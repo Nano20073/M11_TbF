@@ -481,6 +481,36 @@ namespace M11_TbF.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MySql_Data {
+            get {
+                object obj = ResourceManager.GetObject("MySql_Data", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;doc&gt;
+        ///    &lt;assembly&gt;
+        ///        &lt;name&gt;MySql.Data&lt;/name&gt;
+        ///    &lt;/assembly&gt;
+        ///    &lt;members&gt;
+        ///        &lt;member name=&quot;M:MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.GetPlugin(System.String,MySql.Data.MySqlClient.NativeDriver,System.Byte[])&quot;&gt;
+        ///            &lt;summary&gt;
+        ///            This is a factory method that is used only internally.  It creates an auth plugin based on the method type
+        ///            &lt;/summary&gt;
+        ///            &lt;param name=&quot;method&quot;&gt;&lt;/param&gt;
+        ///            &lt;param name=&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MySql_Data1 {
+            get {
+                return ResourceManager.GetString("MySql_Data1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap nivel1 {
