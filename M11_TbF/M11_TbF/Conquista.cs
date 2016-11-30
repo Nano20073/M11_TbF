@@ -12,7 +12,7 @@ namespace M11_TbF
 {
     class Conquista
     {
-        MySqlConnection con = new MySqlConnection("Server=fernandosilva.ddns.net; Database=movedb; Uid=Nano; Pwd=naointressa;");
+        MySqlConnection con = Connections.con;
 
 
         public bool Verificar_Conquista(int ID_Utilizador, int ID_Conquista)
@@ -24,7 +24,6 @@ namespace M11_TbF
 
             try
             {
-                con.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -33,11 +32,13 @@ namespace M11_TbF
                     {
                         if(int.Parse(dr.GetValue(0).ToString()) == ID_Conquista)
                         {
+                            dr.Close();
                             return true;
                         }                       
                     }
                 }
                 dr.Close();
+
             }
             catch (Exception ex)
             {
@@ -46,7 +47,6 @@ namespace M11_TbF
             }
             finally
             {
-                con.Close();
             }
             return false;
         }
@@ -59,24 +59,22 @@ namespace M11_TbF
         {
             MySqlCommand cmd = new MySqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into UtilizadorConquista ([ID_Conquista],[ID_Utilizador]) values (?,?)";
+            cmd.CommandText = "insert into UtilizadorConquista (ID_Conquista,ID_Utilizador) values (?,?)";
             cmd.Parameters.AddWithValue("@ID_Conquista", ID_Conquista);
             cmd.Parameters.AddWithValue("@ID_Utilizador", ID_Utilizador);
             cmd.Connection = con;
 
             try
             {
-                con.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                MessageBox.Show(ex.ToString(),
                      ex.ToString());
             }
             finally
             {
-                con.Close();
             }
         }
         //
@@ -89,8 +87,8 @@ namespace M11_TbF
             try
             {
                 con.Open();
-                string OleDBStatement = "Delete from UtilizadorConquista where ID_Utilizador =" + ID_Utilizador;
-                MySqlCommand cmd = new MySqlCommand(OleDBStatement, con);
+                string query = "Delete from UtilizadorConquista where ID_Utilizador =" + ID_Utilizador;
+                MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();

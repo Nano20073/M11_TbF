@@ -29,6 +29,7 @@ namespace M11_TbF
 
         private void Form_Conquistas_Load(object sender, EventArgs e)
         {
+            Connections.con.Open();
             label_utilizador.Select();
             label_utilizador.Text = Username_Atual;
             panel_layout.VerticalScroll.Value = 0;
@@ -71,6 +72,7 @@ namespace M11_TbF
                     }
                 }
             }
+            Connections.con.Close();
         }
 
         private void panel_Drag_MouseDown(object sender, MouseEventArgs e)

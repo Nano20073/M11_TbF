@@ -59,6 +59,7 @@ namespace M11_TbF
 
         private void AdicionarTotalGanhoEConquistas()
         {
+            
             ///////////////////////////////////////Total_Ganho\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
             if (Per.Nivel_Get().ToString() == "1") { User.AdicionarTotalGanho(0, Username_Atual); }
             if (Per.Nivel_Get().ToString() == "2") { User.AdicionarTotalGanho(0, Username_Atual); }
@@ -235,6 +236,7 @@ namespace M11_TbF
 
         private void Errou_a_Pergunta()
         {
+            Connections.con.Open();
             label_r1.Enabled = false;
             label_r2.Enabled = false;
             label_r3.Enabled = false;
@@ -245,7 +247,8 @@ namespace M11_TbF
             AdicionarTotalGanhoEConquistas();
             timer_background_errou.Start();
             FGO = new Form_Game_Over(this, Owner);
-            FGO.ShowDialog();     
+            FGO.ShowDialog();
+            Connections.con.Close();
         }
 
         private void timer_background_errou_Tick(object sender, EventArgs e)

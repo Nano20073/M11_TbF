@@ -12,7 +12,7 @@ namespace M11_TbF
 {
     class Utilizador
     {
-        MySqlConnection con = new MySqlConnection("Server=fernandosilva.ddns.net; Database=movedb; Uid=Nano; Pwd=naointressa;");
+        MySqlConnection con = Connections.con;
         private string Username_login="";
         private int ID_Utilizador;
 
@@ -190,21 +190,18 @@ namespace M11_TbF
         //
         public void Atualizar_Estatisticas(int nivel_maximo, string Username_atual)
             {
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
-            OleDbCommand cmd = new OleDbCommand();
+            MySqlCommand cmd = new MySqlCommand();
 
             try
             {
-                cn.Open();
 
                
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Utilizadores SET Nivel_Maximo = @Nivel_Maximo WHERE Nome = @Nome AND @Nivel_Maximo > Nivel_Maximo;";
                 cmd.Parameters.AddWithValue("@Nivel_Maximo", nivel_maximo-1);
                 cmd.Parameters.AddWithValue("@Nome", Username_atual);
-                cmd.Connection = cn;
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
 
             }
@@ -215,7 +212,6 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
             }
         }
         //
@@ -227,19 +223,20 @@ namespace M11_TbF
         {
             string query = "SELECT Nome, Nivel_Maximo FROM Utilizadores;";
             MySqlCommand cmd = new MySqlCommand(query, con);
+            int valuetoreturn =-1;
 
             try
             {
 
-                con.Open();
 
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    if(dr.GetValue(0).ToString() == Username) { return int.Parse(dr.GetValue(1).ToString()); }
+                    if(dr.GetValue(0).ToString() == Username) { valuetoreturn = int.Parse(dr.GetValue(1).ToString()); }
                 }
                 
                 dr.Close();
+                return valuetoreturn;
             }
             catch (Exception ex)
             {
@@ -248,7 +245,6 @@ namespace M11_TbF
             }
             finally
             {
-                con.Close();
             }
             return 0;
         }
@@ -283,20 +279,20 @@ namespace M11_TbF
 
             string query = "SELECT Nome, Total_Ganho FROM Utilizadores WHERE Nome ='" + Username + "';";
             MySqlCommand cmd = new MySqlCommand(query, con);
-
+            int valuetoreturn = -1;
             try
             {
-                con.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
 
 
                 while (dr.Read())
                 {
-                    return int.Parse(dr.GetValue(1).ToString());
+                    valuetoreturn =  int.Parse(dr.GetValue(1).ToString());
                 }
-                 
                 dr.Close();
+                return valuetoreturn;
                 
+
             }
             catch (Exception ex)
             {
@@ -305,7 +301,7 @@ namespace M11_TbF
             }
             finally
             {
-                con.Close();
+                
             }
             return 0;
         }
@@ -317,39 +313,37 @@ namespace M11_TbF
         public int GetTotalGanhoCONTA(int Valor_a_Adicionar, string Username)
         {
             int Valor_Maximo;
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
+            
             int Valor_Total_Anterior;
 
 
             string query = "SELECT Nome, Total_Ganho FROM Utilizadores WHERE Nome ='" + Username + "';";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
-                cn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
+                
+                MySqlDataReader dr = cmd.ExecuteReader();
 
 
                 while (dr.Read())
                 {
                     Valor_Total_Anterior = int.Parse(dr.GetValue(1).ToString());
                     Valor_Maximo = Valor_Total_Anterior + Valor_a_Adicionar;
+                    dr.Close();
                     return Valor_Maximo;
                 }
 
-                dr.Close();
+                //dr.Close();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                MessageBox.Show(ex.ToString(),
                      ex.ToString());
             }
             finally
             {
-                cn.Close();
             }
             return 0;
         }
@@ -360,32 +354,27 @@ namespace M11_TbF
         //
         public void AdicionarTotalGanho(int Valor_a_Adicionar, string Username)
         {
-            
-            OleDbConnection cn =
-                new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
 
             try { 
 
-                OleDbCommand cmmd = new OleDbCommand();
+                MySqlCommand cmmd = new MySqlCommand();
 
-                cn.Open();
                 cmmd.CommandType = CommandType.Text;
                 cmmd.CommandText = "UPDATE Utilizadores SET Total_Ganho = @Total_Ganho WHERE Nome=@Username;";
                 cmmd.Parameters.AddWithValue("@Total_Ganho", GetTotalGanhoCONTA(Valor_a_Adicionar, Username));
                 cmmd.Parameters.AddWithValue("@Username", Username);
-                cmmd.Connection = cn;
+                cmmd.Connection = con;
                 cmmd.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+                MessageBox.Show(ex.ToString(),
                      ex.ToString());
             }
             finally
             {
-                cn.Close();
+
             }           
         }
         //

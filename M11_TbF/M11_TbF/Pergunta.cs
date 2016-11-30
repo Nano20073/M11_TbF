@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace M11_TbF
 {
     class Pergunta
     {
 
+        MySqlConnection con = Connections.con;
 
         private int Nivel_da_Pergunta = 1;
         private int NPergunta = 0;
@@ -33,17 +35,15 @@ namespace M11_TbF
 
             NPergunta = rand.Next(5 * (Nivel_da_Pergunta - 1) + 1, 5 * (Nivel_da_Pergunta - 1) + 6);
 
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
-
             string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
 
-                cn.Open();
+                con.Open();
 
-                OleDbDataReader dr = cmd.ExecuteReader();
+                MySqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
@@ -66,7 +66,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
         }
         //
@@ -76,17 +76,16 @@ namespace M11_TbF
         //
         public bool Resposta_Verificar(string Resposta)
         {
-            OleDbConnection cn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M11_TbF_DB.accdb; Persist Security Info=False;");
 
             string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
             {
 
-                cn.Open();
+                con.Open();
 
-                OleDbDataReader dr = cmd.ExecuteReader();
+                MySqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
@@ -113,7 +112,7 @@ namespace M11_TbF
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
 
             return false;
