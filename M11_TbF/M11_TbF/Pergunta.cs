@@ -27,15 +27,11 @@ namespace M11_TbF
         private string Resposta_Correta;
 
 
-
         public void Pergunta_Set()
         {
 
-            var rand = new System.Random();
 
-            NPergunta = rand.Next(5 * (Nivel_da_Pergunta - 1) + 1, 5 * (Nivel_da_Pergunta - 1) + 6);
-
-            string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
+            string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + " Order By RAND() LIMIT 1";
             MySqlCommand cmd = new MySqlCommand(query, con);
 
             try
@@ -47,15 +43,14 @@ namespace M11_TbF
 
                 while (dr.Read())
                 {
-                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
-                    {
+                    
                         Pergunta_Atual = dr.GetValue(1).ToString();
                         Resposta1 = dr.GetValue(2).ToString();
                         Resposta2 = dr.GetValue(3).ToString();
                         Resposta3 = dr.GetValue(4).ToString();
                         Resposta4 = dr.GetValue(5).ToString();
                         Resposta_Correta = dr.GetValue(6).ToString();
-                    }
+                    
 
                 }
             }

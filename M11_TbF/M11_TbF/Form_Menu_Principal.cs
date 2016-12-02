@@ -19,12 +19,20 @@ namespace M11_TbF
         string Username_Atual;
         string pass;
         int ID_Utilizador;
-        public Form_Menu_Principal(string Username, string password, int ID_User)
+        bool IsAdmin = false;
+
+
+
+        public Form_Menu_Principal(string Username, string password, int ID_User, bool isadmin)
         {
+            IsAdmin = isadmin;
             ID_Utilizador = ID_User;
             pass = password;
             Username_Atual = Username;
             InitializeComponent();
+
+            if (isadmin == true)
+                button_gestao.Visible=true;
         }
 
         private void Form_Menu_Principal_Load(object sender, EventArgs e)
@@ -104,6 +112,20 @@ namespace M11_TbF
         private void button_sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_Gestao_Click(object sender, EventArgs e)
+        {
+            Form_gestao FG = new Form_gestao(this);
+            this.Hide();
+            FG.Show();
+            //if (label_utilizador.Text = Admin)
+            //    button_gestao.Show();
+        }
+
+        private void label_utilizador_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

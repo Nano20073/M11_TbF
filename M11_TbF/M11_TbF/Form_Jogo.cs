@@ -152,8 +152,10 @@ namespace M11_TbF
             if (tempo == 0)
             {
                 timer_tempo.Stop();
+                Connections.con.Open();
                 User.Atualizar_Estatisticas(Per.Nivel_Get(), Username_Atual);
                 AdicionarTotalGanhoEConquistas();
+                Connections.con.Close();
                 Form_Time_Out FTO = new Form_Time_Out(this, Owner);
                 FTO.ShowDialog();
             }

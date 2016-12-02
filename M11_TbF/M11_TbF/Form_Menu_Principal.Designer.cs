@@ -34,6 +34,7 @@
             this.button_minimizar = new System.Windows.Forms.Button();
             this.panel_Drag = new System.Windows.Forms.Panel();
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.button_gestao = new System.Windows.Forms.Button();
             this.button_Conquistas = new System.Windows.Forms.Button();
             this.button_Jogar = new System.Windows.Forms.Button();
             this.button_Estatisticas = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.label_utilizador.TabIndex = 4;
             this.label_utilizador.Text = "----";
             this.label_utilizador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_utilizador.Click += new System.EventHandler(this.label_utilizador_Click);
             // 
             // button_minimizar
             // 
@@ -98,6 +100,7 @@
             // panel_layout
             // 
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.button_gestao);
             this.panel_layout.Controls.Add(this.button_Conquistas);
             this.panel_layout.Controls.Add(this.button_Jogar);
             this.panel_layout.Controls.Add(this.button_Estatisticas);
@@ -111,6 +114,23 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 19;
+            // 
+            // button_gestao
+            // 
+            this.button_gestao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_gestao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_gestao.FlatAppearance.BorderSize = 3;
+            this.button_gestao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gestao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.button_gestao.ForeColor = System.Drawing.Color.White;
+            this.button_gestao.Location = new System.Drawing.Point(16, 361);
+            this.button_gestao.Name = "button_gestao";
+            this.button_gestao.Size = new System.Drawing.Size(153, 40);
+            this.button_gestao.TabIndex = 24;
+            this.button_gestao.Text = "Gestão";
+            this.button_gestao.UseVisualStyleBackColor = false;
+            this.button_gestao.Visible = false;
+            this.button_gestao.Click += new System.EventHandler(this.button_Gestao_Click);
             // 
             // button_Conquistas
             // 
@@ -237,5 +257,6 @@
         private System.Windows.Forms.Button button_Opcoes;
         private System.Windows.Forms.Button button_Jogar;
         private System.Windows.Forms.Button button_Conquistas;
+        private System.Windows.Forms.Button button_gestao;
     }
 }

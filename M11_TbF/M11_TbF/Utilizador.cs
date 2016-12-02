@@ -15,6 +15,7 @@ namespace M11_TbF
         MySqlConnection con = Connections.con;
         private string Username_login="";
         private int ID_Utilizador;
+        private bool IsAdmin = false;
 
 
         public void Criar_Utilizador(string Username, string Password)
@@ -88,7 +89,7 @@ namespace M11_TbF
         //
         public void Utilizador_login(string Username, string Password)
         {
-            string query = "SELECT ID_Utilizador, Nome, PassWord FROM Utilizadores; ";
+            string query = "SELECT ID_Utilizador, Nome, PassWord, privilegios FROM Utilizadores; ";
             MySqlCommand comd = new MySqlCommand(query, con);
 
             try
@@ -104,6 +105,9 @@ namespace M11_TbF
                         {
                             Username_login = Username;
                             ID_Utilizador = int.Parse(dr.GetValue(0).ToString());
+
+                            if (dr.GetValue(3).ToString() == "Admin")
+                                IsAdmin = true;
                         }
                     }
                 }
@@ -265,6 +269,15 @@ namespace M11_TbF
         public int ID_Utilizador_get()
         {
             return ID_Utilizador;
+        }
+        //
+        //
+        //
+        //
+        //
+        public bool isadmin_get()
+        {
+            return IsAdmin;
         }
         //
         //
