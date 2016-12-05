@@ -11,23 +11,31 @@ using System.Data.OleDb;
 
 namespace M11_TbF
 {
-    public partial class Form_Login : Form
+    public partial class Form : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
         string Username, Password;
 
-        public Form_Login()
+        public Form()
         {
             InitializeComponent();
             
+            
+        }
+
+        public void MudarUserControl(UserControl usercontrol)
+        {
+            panel_layout.Controls.Clear();
+            panel_layout.Controls.Add(usercontrol);
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
             User = new Utilizador();
             textBox_UserName.Select();
+            MudarUserControl(new UserControlLogin(this));            
         }
 
         private void button_Logar_Click(object sender, EventArgs e)
@@ -74,6 +82,11 @@ namespace M11_TbF
         private void panel_Drag_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
+        }
+
+        private void panel_layout_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void panel_Drag_MouseMove(object sender, MouseEventArgs e)

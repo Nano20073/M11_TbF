@@ -88,11 +88,11 @@
     <Compile Include="Form_gestao.Designer.cs">
       <DependentUpon>Form_gestao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
-      <DependentUpon>Form_Login.cs</DependentUpon>
+    <Compile Include="Form.Designer.cs">
+      <DependentUpon>Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Menu_Principal.cs">
       <SubType>Form</SubType>
@@ -143,6 +143,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserControlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLogin.Designer.cs">
+      <DependentUpon>UserControlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSignUP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSignUP.Designer.cs">
+      <DependentUpon>UserControlSignUP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilizador.cs" />
     <EmbeddedResource Include="Form_Ajuda_Publico.resx">
       <DependentUpon>Form_Ajuda_Publico.cs</DependentUpon>
@@ -162,8 +174,8 @@
     <EmbeddedResource Include="Form_gestao.resx">
       <DependentUpon>Form_gestao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
-      <DependentUpon>Form_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Form.resx">
+      <DependentUpon>Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu_Principal.resx">
       <DependentUpon>Form_Menu_Principal.cs</DependentUpon>
@@ -187,6 +199,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLogin.resx">
+      <DependentUpon>UserControlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSignUP.resx">
+      <DependentUpon>UserControlSignUP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="M11_TbF_DBDataSet.xsc">
       <DependentUpon>M11_TbF_DBDataSet.xsd</DependentUpon>

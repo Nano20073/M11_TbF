@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Conquistas : Form
+    public partial class Form_Conquistas : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
         Conquista Conq;
         Utilizador User;
         string Username_Atual;
-        Form Owner;
+        System.Windows.Forms.Form Owner;
         int ID_Utilizador;
-        public Form_Conquistas(string Username, Form f, int ID_User)
+        public Form_Conquistas(string Username, System.Windows.Forms.Form f, int ID_User)
         {
             ID_Utilizador = ID_User;
             Owner = f;
@@ -119,7 +119,7 @@ namespace M11_TbF
         {
             Owner.Close();
             this.Close();
-            Form_Login FLOGIN = new Form_Login();
+            Form FLOGIN = new Form();
             FLOGIN.Show();
         }
 

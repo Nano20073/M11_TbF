@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Ajuda_Publico : Form
+    public partial class Form_Ajuda_Publico : System.Windows.Forms.Form
     {
         string Pergunta1, Pergunta2, Pergunta3, Pergunta4;
 

@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Opcoes : Form
+    public partial class Form_Opcoes : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
         Conquista Conq;
-        Form Owner;
+        System.Windows.Forms.Form Owner;
         string Username_Atual;
         string password;
         int ID_Utilizador;
-        public Form_Opcoes(string Username, string pass, Form f, int ID_User)
+        public Form_Opcoes(string Username, string pass, System.Windows.Forms.Form f, int ID_User)
         {
             ID_Utilizador = ID_User;
             Username_Atual = Username;
@@ -158,7 +158,7 @@ namespace M11_TbF
         private void label_lgout_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form_Login F1 = new Form_Login();
+            Form F1 = new Form();
             F1.Show();
         }
 

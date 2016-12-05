@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Ajuda_Telefone : Form
+    public partial class Form_Ajuda_Telefone : System.Windows.Forms.Form
     {
         string Resposta;
         public Form_Ajuda_Telefone(string resposta)

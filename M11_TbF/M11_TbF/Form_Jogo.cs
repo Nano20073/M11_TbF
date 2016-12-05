@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Jogo : Form
+    public partial class Form_Jogo : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
@@ -18,7 +18,7 @@ namespace M11_TbF
         Conquista Conq;
         Utilizador User;
         Pergunta Per;
-        Form Owner;
+        System.Windows.Forms.Form Owner;
         Form_Game_Over FGO;
         Form_Ajuda_Telefone FAjdTel;
 
@@ -29,7 +29,7 @@ namespace M11_TbF
 
         string Username_Atual;
         int ID_Utilizador;
-        public Form_Jogo(Form f, string Username, int ID_User)
+        public Form_Jogo(System.Windows.Forms.Form f, string Username, int ID_User)
         {
             ID_Utilizador = ID_User;
             Owner = f;

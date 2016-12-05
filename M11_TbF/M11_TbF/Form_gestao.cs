@@ -11,11 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace M11_TbF
 {
-    public partial class Form_gestao : Form
+    public partial class Form_gestao : System.Windows.Forms.Form
     {
         MySqlConnection con = Connections.con;
-        Form owner;
-        public Form_gestao(Form f)
+        System.Windows.Forms.Form owner;
+        public Form_gestao(System.Windows.Forms.Form f)
         {
             owner = f;
             InitializeComponent();

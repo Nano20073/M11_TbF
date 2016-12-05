@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Game_Over : Form
+    public partial class Form_Game_Over : System.Windows.Forms.Form
     {
-        Form Jogo;
-        Form Owner;
+        System.Windows.Forms.Form Jogo;
+        System.Windows.Forms.Form Owner;
 
-        public Form_Game_Over(Form f, Form f2)
+        public Form_Game_Over(System.Windows.Forms.Form f, System.Windows.Forms.Form f2)
         {
             Owner = f2;
             Jogo = f;

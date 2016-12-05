@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_SignUp : Form
+    public partial class Form_SignUp : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
@@ -89,7 +89,7 @@ namespace M11_TbF
                             User.Criar_Utilizador(textBox_Username.Text, textBox_Password.Text);
                             MessageBox.Show("A conta foi criada.");
                             this.Close();
-                            Form_Login FL = new Form_Login();
+                            Form FL = new Form();
                             FL.Show();
                         }
                     }
@@ -111,7 +111,7 @@ namespace M11_TbF
 
         private void label_entrar_login_Click(object sender, EventArgs e)
         {
-            Form_Login FL = new Form_Login();
+            Form FL = new Form();
             FL.Show();
             this.Close();
         }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Menu_Principal : Form
+    public partial class Form_Menu_Principal : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
@@ -45,7 +45,7 @@ namespace M11_TbF
         private void button_logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Login FLOGIN = new Form_Login();
+            Form FLOGIN = new Form();
             FLOGIN.Show();
         }
 
@@ -105,7 +105,7 @@ namespace M11_TbF
         private void label_logout_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form_Login F1 = new Form_Login();
+            Form F1 = new Form();
             F1.Show();
         }
 

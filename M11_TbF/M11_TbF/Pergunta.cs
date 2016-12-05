@@ -71,46 +71,52 @@ namespace M11_TbF
         //
         public bool Resposta_Verificar(string Resposta)
         {
-
-            string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
-            MySqlCommand cmd = new MySqlCommand(query, con);
-
-            try
+            if (Resposta == Resposta_Correta)
             {
+                Nivel_da_Pergunta++;
+                return true;
+            }
+            else
+                return false;
+            //string query = "SELECT ID_Pergunta, Pergunta, Resposta1, Resposta2, Resposta3, Resposta4, Resposta_Correta, Nivel FROM Perguntas WHERE Nivel=" + Nivel_da_Pergunta.ToString() + ";";
+            //MySqlCommand cmd = new MySqlCommand(query, con);
 
-                con.Open();
+            //try
+            //{
 
-                MySqlDataReader dr = cmd.ExecuteReader();
+            //    con.Open();
 
-                while (dr.Read())
-                {
-                    if (dr.GetValue(0).ToString() == NPergunta.ToString())
-                    {
-                        if (dr.GetValue(6).ToString() == Resposta)
-                        {
-                            Nivel_da_Pergunta++;
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
+            //    MySqlDataReader dr = cmd.ExecuteReader();
+
+            //    while (dr.Read())
+            //    {
+            //        if (dr.GetValue(0).ToString() == NPergunta.ToString())
+            //        {
+            //            if (dr.GetValue(6).ToString() == Resposta)
+            //            {
+            //                Nivel_da_Pergunta++;
+            //                return true;
+            //            }
+            //            else
+            //            {
+            //                return false;
+            //            }
+            //        }
                         
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
-                     ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("{0}: Exception: Unable to connect or retrieve data from data source: .",
+            //         ex.ToString());
+            //}
+            //finally
+            //{
+            //    con.Close();
+            //}
 
-            return false;
+            //return false;
         }
         //
         //

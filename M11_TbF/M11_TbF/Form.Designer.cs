@@ -1,6 +1,6 @@
 ﻿namespace M11_TbF
 {
-    partial class Form_Login
+    partial class Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.label_UserName = new System.Windows.Forms.Label();
             this.label_PassWord = new System.Windows.Forms.Label();
             this.button_Logar = new System.Windows.Forms.Button();
@@ -189,6 +189,7 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 11;
+            this.panel_layout.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_layout_Paint);
             // 
             // label_LOGIN
             // 

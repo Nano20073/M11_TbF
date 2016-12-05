@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace M11_TbF
 {
-    public partial class Form_Estatisticas : Form
+    public partial class Form_Estatisticas : System.Windows.Forms.Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
         Utilizador User;
         string Username_Atual;
-        Form Owner;
+        System.Windows.Forms.Form Owner;
 
-        public Form_Estatisticas(string Username, Form f)
+        public Form_Estatisticas(string Username, System.Windows.Forms.Form f)
         {
             Owner = f;
             Username_Atual = Username;
@@ -76,7 +76,7 @@ namespace M11_TbF
         {
             Owner.Close();
             this.Close();
-            Form_Login FLOGIN = new Form_Login();
+            Form FLOGIN = new Form();
             FLOGIN.Show();
         }
     }
