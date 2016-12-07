@@ -127,5 +127,15 @@ namespace M11_TbF
         {
 
         }
+
+        private void label_linha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_layout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

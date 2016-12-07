@@ -34,20 +34,20 @@
             this.button_criar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_layout = new System.Windows.Forms.Panel();
-            this.label_SIGN_UP = new System.Windows.Forms.Label();
+            this.label_sign2 = new System.Windows.Forms.Label();
+            this.label_passcoincide = new System.Windows.Forms.Label();
+            this.label_sign = new System.Windows.Forms.Label();
+            this.label_UserPass = new System.Windows.Forms.Label();
+            this.panel_layout2 = new System.Windows.Forms.Panel();
+            this.label_JTemCnt = new System.Windows.Forms.Label();
             this.label_entrar_login = new System.Windows.Forms.Label();
+            this.label_SIGN_UP = new System.Windows.Forms.Label();
             this.textBox_ConfPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button_minimizar = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
-            this.label_JTemCnt = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
-            this.panel_layout2 = new System.Windows.Forms.Panel();
-            this.label_UserPass = new System.Windows.Forms.Label();
-            this.label_passcoincide = new System.Windows.Forms.Label();
-            this.label_sign = new System.Windows.Forms.Label();
-            this.label_sign2 = new System.Windows.Forms.Label();
             this.panel_layout.SuspendLayout();
             this.panel_layout2.SuspendLayout();
             this.SuspendLayout();
@@ -121,22 +121,80 @@
             this.panel_layout.Controls.Add(this.button_criar);
             this.panel_layout.Controls.Add(this.label1);
             this.panel_layout.Controls.Add(this.label2);
-            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Location = new System.Drawing.Point(718, 0);
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 21;
             // 
-            // label_SIGN_UP
+            // label_sign2
             // 
-            this.label_SIGN_UP.AutoSize = true;
-            this.label_SIGN_UP.BackColor = System.Drawing.Color.Transparent;
-            this.label_SIGN_UP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label_SIGN_UP.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_SIGN_UP.Location = new System.Drawing.Point(12, 46);
-            this.label_SIGN_UP.Name = "label_SIGN_UP";
-            this.label_SIGN_UP.Size = new System.Drawing.Size(77, 20);
-            this.label_SIGN_UP.TabIndex = 28;
-            this.label_SIGN_UP.Text = "SIGN UP";
+            this.label_sign2.AutoSize = true;
+            this.label_sign2.BackColor = System.Drawing.Color.Transparent;
+            this.label_sign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label_sign2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_sign2.Location = new System.Drawing.Point(13, 107);
+            this.label_sign2.Name = "label_sign2";
+            this.label_sign2.Size = new System.Drawing.Size(22, 17);
+            this.label_sign2.TabIndex = 33;
+            this.label_sign2.Text = "☉";
+            // 
+            // label_passcoincide
+            // 
+            this.label_passcoincide.AutoSize = true;
+            this.label_passcoincide.BackColor = System.Drawing.Color.Transparent;
+            this.label_passcoincide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label_passcoincide.ForeColor = System.Drawing.Color.Red;
+            this.label_passcoincide.Location = new System.Drawing.Point(31, 108);
+            this.label_passcoincide.Name = "label_passcoincide";
+            this.label_passcoincide.Size = new System.Drawing.Size(140, 16);
+            this.label_passcoincide.TabIndex = 32;
+            this.label_passcoincide.Text = "Passwords coincidem";
+            // 
+            // label_sign
+            // 
+            this.label_sign.AutoSize = true;
+            this.label_sign.BackColor = System.Drawing.Color.Transparent;
+            this.label_sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label_sign.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_sign.Location = new System.Drawing.Point(13, 79);
+            this.label_sign.Name = "label_sign";
+            this.label_sign.Size = new System.Drawing.Size(22, 17);
+            this.label_sign.TabIndex = 32;
+            this.label_sign.Text = "☉";
+            // 
+            // label_UserPass
+            // 
+            this.label_UserPass.AutoSize = true;
+            this.label_UserPass.BackColor = System.Drawing.Color.Transparent;
+            this.label_UserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.label_UserPass.ForeColor = System.Drawing.Color.Red;
+            this.label_UserPass.Location = new System.Drawing.Point(31, 73);
+            this.label_UserPass.Name = "label_UserPass";
+            this.label_UserPass.Size = new System.Drawing.Size(147, 32);
+            this.label_UserPass.TabIndex = 31;
+            this.label_UserPass.Text = "User e Pass têm de ter \r\nentre 3-10 caracteres";
+            // 
+            // panel_layout2
+            // 
+            this.panel_layout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout2.Controls.Add(this.label_JTemCnt);
+            this.panel_layout2.Controls.Add(this.label_entrar_login);
+            this.panel_layout2.Location = new System.Drawing.Point(0, 358);
+            this.panel_layout2.Name = "panel_layout2";
+            this.panel_layout2.Size = new System.Drawing.Size(182, 45);
+            this.panel_layout2.TabIndex = 26;
+            // 
+            // label_JTemCnt
+            // 
+            this.label_JTemCnt.AutoSize = true;
+            this.label_JTemCnt.BackColor = System.Drawing.Color.Transparent;
+            this.label_JTemCnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label_JTemCnt.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_JTemCnt.Location = new System.Drawing.Point(12, 2);
+            this.label_JTemCnt.Name = "label_JTemCnt";
+            this.label_JTemCnt.Size = new System.Drawing.Size(128, 17);
+            this.label_JTemCnt.TabIndex = 25;
+            this.label_JTemCnt.Text = "Já tem uma conta?";
             // 
             // label_entrar_login
             // 
@@ -151,6 +209,18 @@
             this.label_entrar_login.TabIndex = 24;
             this.label_entrar_login.Text = "Entre aqui";
             this.label_entrar_login.Click += new System.EventHandler(this.label_entrar_login_Click);
+            // 
+            // label_SIGN_UP
+            // 
+            this.label_SIGN_UP.AutoSize = true;
+            this.label_SIGN_UP.BackColor = System.Drawing.Color.Transparent;
+            this.label_SIGN_UP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label_SIGN_UP.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label_SIGN_UP.Location = new System.Drawing.Point(12, 46);
+            this.label_SIGN_UP.Name = "label_SIGN_UP";
+            this.label_SIGN_UP.Size = new System.Drawing.Size(77, 20);
+            this.label_SIGN_UP.TabIndex = 28;
+            this.label_SIGN_UP.Text = "SIGN UP";
             // 
             // textBox_ConfPassword
             // 
@@ -206,18 +276,6 @@
             this.button_sair.UseVisualStyleBackColor = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
-            // label_JTemCnt
-            // 
-            this.label_JTemCnt.AutoSize = true;
-            this.label_JTemCnt.BackColor = System.Drawing.Color.Transparent;
-            this.label_JTemCnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label_JTemCnt.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_JTemCnt.Location = new System.Drawing.Point(12, 2);
-            this.label_JTemCnt.Name = "label_JTemCnt";
-            this.label_JTemCnt.Size = new System.Drawing.Size(128, 17);
-            this.label_JTemCnt.TabIndex = 25;
-            this.label_JTemCnt.Text = "Já tem uma conta?";
-            // 
             // textBox_Password
             // 
             this.textBox_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -242,64 +300,6 @@
             this.textBox_Username.Size = new System.Drawing.Size(153, 23);
             this.textBox_Username.TabIndex = 23;
             this.textBox_Username.TextChanged += new System.EventHandler(this.textBox_Username_TextChanged);
-            // 
-            // panel_layout2
-            // 
-            this.panel_layout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel_layout2.Controls.Add(this.label_JTemCnt);
-            this.panel_layout2.Controls.Add(this.label_entrar_login);
-            this.panel_layout2.Location = new System.Drawing.Point(0, 358);
-            this.panel_layout2.Name = "panel_layout2";
-            this.panel_layout2.Size = new System.Drawing.Size(182, 45);
-            this.panel_layout2.TabIndex = 26;
-            // 
-            // label_UserPass
-            // 
-            this.label_UserPass.AutoSize = true;
-            this.label_UserPass.BackColor = System.Drawing.Color.Transparent;
-            this.label_UserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label_UserPass.ForeColor = System.Drawing.Color.Red;
-            this.label_UserPass.Location = new System.Drawing.Point(31, 73);
-            this.label_UserPass.Name = "label_UserPass";
-            this.label_UserPass.Size = new System.Drawing.Size(147, 32);
-            this.label_UserPass.TabIndex = 31;
-            this.label_UserPass.Text = "User e Pass têm de ter \r\nentre 3-10 caracteres";
-            // 
-            // label_passcoincide
-            // 
-            this.label_passcoincide.AutoSize = true;
-            this.label_passcoincide.BackColor = System.Drawing.Color.Transparent;
-            this.label_passcoincide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label_passcoincide.ForeColor = System.Drawing.Color.Red;
-            this.label_passcoincide.Location = new System.Drawing.Point(31, 108);
-            this.label_passcoincide.Name = "label_passcoincide";
-            this.label_passcoincide.Size = new System.Drawing.Size(140, 16);
-            this.label_passcoincide.TabIndex = 32;
-            this.label_passcoincide.Text = "Passwords coincidem";
-            // 
-            // label_sign
-            // 
-            this.label_sign.AutoSize = true;
-            this.label_sign.BackColor = System.Drawing.Color.Transparent;
-            this.label_sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.label_sign.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_sign.Location = new System.Drawing.Point(13, 79);
-            this.label_sign.Name = "label_sign";
-            this.label_sign.Size = new System.Drawing.Size(18, 17);
-            this.label_sign.TabIndex = 32;
-            this.label_sign.Text = "☉";
-            // 
-            // label_sign2
-            // 
-            this.label_sign2.AutoSize = true;
-            this.label_sign2.BackColor = System.Drawing.Color.Transparent;
-            this.label_sign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
-            this.label_sign2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_sign2.Location = new System.Drawing.Point(13, 107);
-            this.label_sign2.Name = "label_sign2";
-            this.label_sign2.Size = new System.Drawing.Size(18, 17);
-            this.label_sign2.TabIndex = 33;
-            this.label_sign2.Text = "☉";
             // 
             // Form_SignUp
             // 

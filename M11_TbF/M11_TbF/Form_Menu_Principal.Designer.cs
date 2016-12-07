@@ -114,6 +114,7 @@
             this.panel_layout.Name = "panel_layout";
             this.panel_layout.Size = new System.Drawing.Size(182, 403);
             this.panel_layout.TabIndex = 19;
+            this.panel_layout.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_layout_Paint);
             // 
             // button_gestao
             // 
@@ -217,6 +218,7 @@
             this.label_linha.Name = "label_linha";
             this.label_linha.Size = new System.Drawing.Size(160, 1);
             this.label_linha.TabIndex = 22;
+            this.label_linha.Click += new System.EventHandler(this.label_linha_Click);
             // 
             // Form_Menu_Principal
             // 
