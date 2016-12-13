@@ -167,6 +167,7 @@
             this.button_minimizar.TabIndex = 27;
             this.button_minimizar.Text = "_";
             this.button_minimizar.UseVisualStyleBackColor = true;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
             // 
             // button_sair
             // 

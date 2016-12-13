@@ -155,6 +155,12 @@
     <Compile Include="UserControlMenu.Designer.cs">
       <DependentUpon>UserControlMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlOpção.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlOpção.Designer.cs">
+      <DependentUpon>UserControlOpção.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSignUP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlMenu.resx">
       <DependentUpon>UserControlMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlOpção.resx">
+      <DependentUpon>UserControlOpção.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSignUP.resx">
       <DependentUpon>UserControlSignUP.cs</DependentUpon>

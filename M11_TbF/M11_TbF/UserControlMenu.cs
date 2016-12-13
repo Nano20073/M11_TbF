@@ -74,9 +74,11 @@ namespace M11_TbF
 
         private void button_Opcoes_Click(object sender, EventArgs e)
         {
-            frm.Hide();
-            Form_Opcoes FOPCOES = new Form_Opcoes(Username_Atual, pass, frm, ID_Utilizador);
-            FOPCOES.Show();
+            //frm.Hide();
+            //Form_Opcoes FOPCOES = new Form_Opcoes(Username_Atual, pass, frm, ID_Utilizador);
+            //FOPCOES.Show();
+
+            frm.MudarUserControl(new UserControlOpção(Username_Atual, pass, frm, ID_Utilizador));
         }
 
         private void button_gestao_Click(object sender, EventArgs e)
@@ -84,6 +86,11 @@ namespace M11_TbF
             Form_gestao FG = new Form_gestao(frm);
             frm.Hide();
             FG.Show();
+        }
+
+        private void button_minimizar_Click(object sender, EventArgs e)
+        {
+            frm.WindowState = FormWindowState.Minimized;
         }
     }
 }

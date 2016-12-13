@@ -1,13 +1,13 @@
 ﻿namespace M11_TbF
 {
-    partial class Form_Opcoes
+    partial class UserControlOpção
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,17 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Opcoes));
             this.panel_layout = new System.Windows.Forms.Panel();
+            this.button_minimizar = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
             this.label_ToolTipPassword = new System.Windows.Forms.Label();
             this.label_ToolTipUsername = new System.Windows.Forms.Label();
             this.label_lgout = new System.Windows.Forms.Label();
@@ -57,20 +57,14 @@
             this.label_utilizador = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_OPCOES = new System.Windows.Forms.Label();
-            this.button_minimizar = new System.Windows.Forms.Button();
-            this.button_sair = new System.Windows.Forms.Button();
-            this.panel_Drag = new System.Windows.Forms.Panel();
-            this.panel_MiniSair = new System.Windows.Forms.Panel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel_layout.SuspendLayout();
-            this.panel_Drag.SuspendLayout();
-            this.panel_MiniSair.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_layout
             // 
-            this.panel_layout.AutoScroll = true;
             this.panel_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.panel_layout.Controls.Add(this.button_minimizar);
+            this.panel_layout.Controls.Add(this.button_sair);
             this.panel_layout.Controls.Add(this.label_ToolTipPassword);
             this.panel_layout.Controls.Add(this.label_ToolTipUsername);
             this.panel_layout.Controls.Add(this.label_lgout);
@@ -97,10 +91,39 @@
             this.panel_layout.Controls.Add(this.label_utilizador);
             this.panel_layout.Controls.Add(this.label1);
             this.panel_layout.Controls.Add(this.label_OPCOES);
-            this.panel_layout.Location = new System.Drawing.Point(720, 0);
+            this.panel_layout.Location = new System.Drawing.Point(0, 4);
             this.panel_layout.Name = "panel_layout";
-            this.panel_layout.Size = new System.Drawing.Size(182, 404);
-            this.panel_layout.TabIndex = 20;
+            this.panel_layout.Size = new System.Drawing.Size(180, 421);
+            this.panel_layout.TabIndex = 21;
+            // 
+            // button_minimizar
+            // 
+            this.button_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimizar.ForeColor = System.Drawing.Color.White;
+            this.button_minimizar.Location = new System.Drawing.Point(112, 3);
+            this.button_minimizar.Name = "button_minimizar";
+            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.button_minimizar.TabIndex = 49;
+            this.button_minimizar.Text = "_";
+            this.button_minimizar.UseVisualStyleBackColor = false;
+            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
+            // 
+            // button_sair
+            // 
+            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button_sair.ForeColor = System.Drawing.Color.White;
+            this.button_sair.Location = new System.Drawing.Point(135, 3);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(24, 24);
+            this.button_sair.TabIndex = 48;
+            this.button_sair.Text = "x";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // label_ToolTipPassword
             // 
@@ -114,7 +137,6 @@
             this.label_ToolTipPassword.TabIndex = 47;
             this.label_ToolTipPassword.Text = "?";
             this.label_ToolTipPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.label_ToolTipPassword, "Tem de ter entre 3-10 caracteres");
             // 
             // label_ToolTipUsername
             // 
@@ -128,7 +150,6 @@
             this.label_ToolTipUsername.TabIndex = 26;
             this.label_ToolTipUsername.Text = "?";
             this.label_ToolTipUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.label_ToolTipUsername, "Tem de ter entre 3-10 caracteres");
             // 
             // label_lgout
             // 
@@ -411,122 +432,50 @@
             this.label_OPCOES.Text = "OPÇÕES";
             this.label_OPCOES.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button_minimizar
-            // 
-            this.button_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_minimizar.ForeColor = System.Drawing.Color.White;
-            this.button_minimizar.Location = new System.Drawing.Point(132, 0);
-            this.button_minimizar.Name = "button_minimizar";
-            this.button_minimizar.Size = new System.Drawing.Size(24, 24);
-            this.button_minimizar.TabIndex = 17;
-            this.button_minimizar.Text = "_";
-            this.button_minimizar.UseVisualStyleBackColor = false;
-            this.button_minimizar.Click += new System.EventHandler(this.button_minimizar_Click);
-            // 
-            // button_sair
-            // 
-            this.button_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button_sair.ForeColor = System.Drawing.Color.White;
-            this.button_sair.Location = new System.Drawing.Point(155, 0);
-            this.button_sair.Name = "button_sair";
-            this.button_sair.Size = new System.Drawing.Size(24, 24);
-            this.button_sair.TabIndex = 3;
-            this.button_sair.Text = "x";
-            this.button_sair.UseVisualStyleBackColor = false;
-            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
-            // 
-            // panel_Drag
-            // 
-            this.panel_Drag.BackColor = System.Drawing.Color.Transparent;
-            this.panel_Drag.Controls.Add(this.panel_MiniSair);
-            this.panel_Drag.Location = new System.Drawing.Point(0, 0);
-            this.panel_Drag.Name = "panel_Drag";
-            this.panel_Drag.Size = new System.Drawing.Size(899, 27);
-            this.panel_Drag.TabIndex = 24;
-            this.panel_Drag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseDown);
-            this.panel_Drag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseMove);
-            this.panel_Drag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Drag_MouseUp);
-            // 
-            // panel_MiniSair
-            // 
-            this.panel_MiniSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.panel_MiniSair.Controls.Add(this.button_minimizar);
-            this.panel_MiniSair.Controls.Add(this.button_sair);
-            this.panel_MiniSair.Location = new System.Drawing.Point(720, 1);
-            this.panel_MiniSair.Name = "panel_MiniSair";
-            this.panel_MiniSair.Size = new System.Drawing.Size(179, 26);
-            this.panel_MiniSair.TabIndex = 0;
-            this.panel_MiniSair.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MiniSair_MouseDown);
-            this.panel_MiniSair.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MiniSair_MouseMove);
-            this.panel_MiniSair.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MiniSair_MouseUp);
-            // 
-            // toolTip
-            // 
-            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // Form_Opcoes
+            // UserControlOpção
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::M11_TbF.Properties.Resources.FormBG;
-            this.ClientSize = new System.Drawing.Size(900, 404);
-            this.ControlBox = false;
-            this.Controls.Add(this.panel_Drag);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.Controls.Add(this.panel_layout);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(900, 404);
-            this.MinimumSize = new System.Drawing.Size(900, 404);
-            this.Name = "Form_Opcoes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Opções";
-            this.toolTip.SetToolTip(this, "Têm de ter entre 3-10 caracteres");
-            this.Load += new System.EventHandler(this.Form_Opcoes_Load);
+            this.Name = "UserControlOpção";
+            this.Size = new System.Drawing.Size(178, 425);
             this.panel_layout.ResumeLayout(false);
             this.panel_layout.PerformLayout();
-            this.panel_Drag.ResumeLayout(false);
-            this.panel_MiniSair.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel_layout;
+        private System.Windows.Forms.Label label_ToolTipPassword;
+        private System.Windows.Forms.Label label_ToolTipUsername;
+        private System.Windows.Forms.Label label_lgout;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_Reset;
-        private System.Windows.Forms.Button button_minimizar;
-        private System.Windows.Forms.Button button_sair;
-        private System.Windows.Forms.Panel panel_Drag;
-        private System.Windows.Forms.Label label_OPCOES;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_voltar;
-        private System.Windows.Forms.Label label_logout;
-        private System.Windows.Forms.Label label_utilizador;
-        private System.Windows.Forms.Label label_linha;
-        private System.Windows.Forms.TextBox textBox_ConfirmarNovoUsername;
-        private System.Windows.Forms.Label label_ConfirmarNovoUsername;
-        private System.Windows.Forms.TextBox textBox_NovoUtilizador;
-        private System.Windows.Forms.Label label_NovoUsername;
-        private System.Windows.Forms.Label label_MudarPass;
-        private System.Windows.Forms.Label label_MudarUsername;
+        private System.Windows.Forms.Button button_AlterarPassword;
+        private System.Windows.Forms.Button button_AlterarUsername;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_ConfirmarNovaPassword;
         private System.Windows.Forms.TextBox textBox_NovaPassword;
         private System.Windows.Forms.Label label_ConfirmarMudarPassword;
         private System.Windows.Forms.Label label_MudarPassword;
-        private System.Windows.Forms.Button button_AlterarPassword;
-        private System.Windows.Forms.Button button_AlterarUsername;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_MudarPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel_MiniSair;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label_lgout;
-        private System.Windows.Forms.Label label_ToolTipUsername;
-        private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Label label_ToolTipPassword;
+        private System.Windows.Forms.Label label_MudarUsername;
+        private System.Windows.Forms.TextBox textBox_ConfirmarNovoUsername;
+        private System.Windows.Forms.Label label_ConfirmarNovoUsername;
+        private System.Windows.Forms.TextBox textBox_NovoUtilizador;
+        private System.Windows.Forms.Label label_NovoUsername;
+        private System.Windows.Forms.Label label_linha;
+        private System.Windows.Forms.Label label_logout;
+        private System.Windows.Forms.Button button_voltar;
+        private System.Windows.Forms.Label label_utilizador;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_OPCOES;
+        private System.Windows.Forms.Button button_minimizar;
+        private System.Windows.Forms.Button button_sair;
     }
 }
